@@ -3,16 +3,21 @@ import { MDXProvider } from "@mdx-js/react";
 import Link from "next/link";
 import Head from "next/head";
 import type { AppProps } from "next/app";
+import TextSection from "../components/TextSection";
+import { H1, H2, H3, H4 } from "../components/Headline";
+import Codeblock from "../components/Codeblock";
+import Blockquote from "../components/Blockquote";
+import InlineCode from "../components/InlineCode";
 
 const mdxComponents = {
-  h1: () => <h1 className="text-grey-500"></h1>,
-  h2: () => <h2 className="text-grey-300"></h2>,
-  // h3: H3,
-  // h4: H4,
-  // wrapper: TextSection,
-  // code: Codeblock,
-  // inlineCode: InlineCode,
-  // blockquote: Blockquote,
+  h1: H1,
+  h2: H2,
+  h3: H3,
+  h4: H4,
+  wrapper: TextSection,
+  code: Codeblock,
+  inlineCode: InlineCode,
+  blockquote: Blockquote,
 };
 
 function MyApp({ Component, pageProps }: AppProps) {
