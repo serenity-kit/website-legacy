@@ -1,9 +1,7 @@
 export default function Home() {
   return (
     <main>
-      <h1 className="text-purple-500 leading-normal">
-        Welcome to Lausbub Notes
-      </h1>
+      <h1 className="text-grey-500">Welcome to Lausbub Notes</h1>
     </main>
   );
 }

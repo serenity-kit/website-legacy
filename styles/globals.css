@@ -1,4 +1,17 @@
 @tailwind base;
+
+a,
+a:visited,
+a:active {
+  color: #000;
+  text-decoration: underline;
+}
+
+a:hover {
+  color: #718096;
+  text-decoration: underline;
+}
+
 @tailwind components;
 @tailwind utilities;
 
