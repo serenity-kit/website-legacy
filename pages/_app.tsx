@@ -29,9 +29,22 @@ function MyApp({ Component, pageProps }: AppProps) {
       </Head>
 
       <header>
-        <Link href="/">
-          <a>Lausbub Notes</a>
-        </Link>
+        <div>
+          <Link href="/">
+            <a>Lausbub Notes</a>
+          </Link>
+        </div>
+
+        <ul>
+          <li>
+            <Link href="/roadmap">
+              <a>Roadmap</a>
+            </Link>
+            <Link href="/faq">
+              <a>FAQ</a>
+            </Link>
+          </li>
+        </ul>
       </header>
 
       <MDXProvider components={mdxComponents}>
