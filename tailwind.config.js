@@ -1,6 +1,11 @@
 module.exports = {
   purge: [],
   theme: {
+    listStyleType: {
+      none: "none",
+      circle: "circle",
+      decimal: "decimal",
+    },
     extend: {},
   },
   variants: {

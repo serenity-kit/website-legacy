@@ -8,6 +8,7 @@ import { H1, H2, H3, H4 } from "../components/Headline";
 import Codeblock from "../components/Codeblock";
 import Blockquote from "../components/Blockquote";
 import InlineCode from "../components/InlineCode";
+import UnorderedList from "../components/UnorderedList";
 
 const mdxComponents = {
   h1: H1,
@@ -18,6 +19,7 @@ const mdxComponents = {
   code: Codeblock,
   inlineCode: InlineCode,
   blockquote: Blockquote,
+  ul: UnorderedList,
 };
 
 function MyApp({ Component, pageProps }: AppProps) {
@@ -28,18 +30,26 @@ function MyApp({ Component, pageProps }: AppProps) {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <header>
-        <div>
-          <Link href="/">
-            <a>Lausbub Notes</a>
-          </Link>
-        </div>
-
-        <ul>
+      <header className="max-w-2xl mx-4 md:mx-auto my-8">
+        <ul className="flex items-center space-x-3">
+          <li className="mr-6">
+            <Link href="/">
+              <a className="no-underline flex items-center">
+                <img
+                  src="/icon.png"
+                  alt="Logo"
+                  style={{ height: 48, width: 48 }}
+                />
+                Lausbub Notes
+              </a>
+            </Link>
+          </li>
           <li>
             <Link href="/roadmap">
               <a>Roadmap</a>
             </Link>
+          </li>
+          <li>
             <Link href="/faq">
               <a>FAQ</a>
             </Link>
@@ -47,25 +57,30 @@ function MyApp({ Component, pageProps }: AppProps) {
         </ul>
       </header>
 
-      <MDXProvider components={mdxComponents}>
-        <Component {...pageProps} />
-      </MDXProvider>
+      <main>
+        <MDXProvider components={mdxComponents}>
+          <Component {...pageProps} />
+        </MDXProvider>
+      </main>
 
-      <footer>
-        <ul>
+      <footer className="max-w-2xl mx-4 md:mx-auto my-8">
+        <ul className="flex items-center space-x-3">
           <li>
             <Link href="/privacy-policy">
               <a>Privacy Policy</a>
             </Link>
+          </li>
+          <li>
             <Link href="/terms-and-conditions">
               <a>Terms & Conditions</a>
             </Link>
+          </li>
+          <li>
             <Link href="/imprint">
               <a>Imprint</a>
             </Link>
           </li>
         </ul>
-        Made by Lausbub Team
       </footer>
     </>
   );
