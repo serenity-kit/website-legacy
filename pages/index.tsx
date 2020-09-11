@@ -12,6 +12,15 @@ export default function Home() {
         <li>Offline first</li>
         <li>End to end encrypted</li>
         <li>Collaborative editing</li>
+        <li>Platform independent</li>
+      </UnorderedList>
+      <H2>Clients</H2>
+      <UnorderedList>
+        <li>iOS (iPhone & iPad)</li>
+        <li>Android</li>
+        <li>macOS (coming soon)</li>
+        <li>Windows (coming soon)</li>
+        <li>Linux (coming 2021)</li>
       </UnorderedList>
       <p>
         <br />
