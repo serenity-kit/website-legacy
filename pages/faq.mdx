@@ -12,4 +12,18 @@ At the moment Heroku is used for the servers and the database.
 
 While Heroku offers a great service long term we want to migrate to a European hosting provider to have the data and company under the same jusitication.
 
-##
+## Why does server location matter if the content is end to end encrypted?
+
+While the content itself is encrypted, there is still meta data like who shares documents with whom and when updates have been made.
+
+This can be valuable information and that's why we care to have the encrypted data in a secure location.
+
+## Why are there no passwords to authenticate?
+
+You devices have stored secret keys which are used to authenticate yourself with the server using public-key cryptography.
+
+This is also one of the reasons why it's recommended to connect multi devices. Loosing your one and only key would mean that your account would be lost.
+
+## Why is the protocol not Open Source?
+
+We initially started out with the ambition to have the protocol Open Source, but noticed while developing the application the protocol constantly changed. And while the current version is stable, we already plenty of optimizations in the backlog (some of them breaking changes) and don't feel comfortable packaging the current state into something we need to document and possibly maintain.
