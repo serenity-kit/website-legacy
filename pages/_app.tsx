@@ -45,12 +45,12 @@ function MyApp({ Component, pageProps }: AppProps) {
             </Link>
           </li>
           <li>
-            <Link href="/roadmap">
+            <Link href="/en/notes/roadmap">
               <a>Roadmap</a>
             </Link>
           </li>
           <li>
-            <Link href="/faq">
+            <Link href="/en/notes/faq">
               <a>FAQ</a>
             </Link>
           </li>
@@ -66,17 +66,17 @@ function MyApp({ Component, pageProps }: AppProps) {
       <footer className="max-w-2xl mx-4 md:mx-auto my-8">
         <ul className="flex items-center space-x-3">
           <li>
-            <Link href="/privacy-policy">
+            <Link href="/en/notes/privacy-policy">
               <a>Privacy Policy</a>
             </Link>
           </li>
           <li>
-            <Link href="/terms-and-conditions">
+            <Link href="/en/notes/terms-and-conditions">
               <a>Terms & Conditions</a>
             </Link>
           </li>
           <li>
-            <Link href="/imprint">
+            <Link href="/en/notes/imprint">
               <a>Imprint</a>
             </Link>
           </li>

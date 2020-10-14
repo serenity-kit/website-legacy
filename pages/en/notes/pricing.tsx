@@ -1,18 +1,22 @@
-import { useEffect, useRef } from "react";
+import { useEffect } from "react";
 import Head from "next/head";
-import TextSection from "../components/TextSection";
+import TextSection from "../../../components/TextSection";
+
+declare global {
+  interface Window {
+    Paddle: any;
+  }
+}
 
 type PlanId = 633265 | 633266 | 633267 | 633268;
 
 export default function Home() {
-  const Paddle = window.Paddle;
-
   useEffect(() => {
-    Paddle.Setup({ vendor: 120986 });
+    window.Paddle.Setup({ vendor: 120986 });
   });
 
   const openCheckout = (planId: PlanId) => {
-    Paddle.Checkout.open({ product: planId });
+    window.Paddle.Checkout.open({ product: planId });
   };
 
   return (
