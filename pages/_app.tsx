@@ -26,7 +26,7 @@ function MyApp({ Component, pageProps }: AppProps) {
   return (
     <>
       <Head>
-        <title>Notes</title>
+        <title>Serenity Notes</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
@@ -40,7 +40,7 @@ function MyApp({ Component, pageProps }: AppProps) {
                   alt="Logo"
                   style={{ height: 48, width: 48 }}
                 />
-                Lausbub Notes
+                Serenity Notes
               </a>
             </Link>
           </li>
