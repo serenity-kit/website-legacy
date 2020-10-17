@@ -3,12 +3,15 @@ import { MDXProvider } from "@mdx-js/react";
 import Link from "next/link";
 import Head from "next/head";
 import type { AppProps } from "next/app";
+import { createClient, Provider } from "urql";
 import TextSection from "../components/TextSection";
 import { H1, H2, H3, H4 } from "../components/Headline";
 import Codeblock from "../components/Codeblock";
 import Blockquote from "../components/Blockquote";
 import InlineCode from "../components/InlineCode";
 import UnorderedList from "../components/UnorderedList";
+
+const client = createClient({ url: "http://localhost:4000/graphql" });
 
 const mdxComponents = {
   h1: H1,
@@ -24,7 +27,7 @@ const mdxComponents = {
 
 function MyApp({ Component, pageProps }: AppProps) {
   return (
-    <>
+    <Provider value={client}>
       <Head>
         <title>Serenity Notes</title>
         <link rel="icon" href="/favicon.ico" />
@@ -52,6 +55,11 @@ function MyApp({ Component, pageProps }: AppProps) {
           <li>
             <Link href="/en/notes/faq">
               <a>FAQ</a>
+            </Link>
+          </li>
+          <li>
+            <Link href="/en/login">
+              <a>Billing Login</a>
             </Link>
           </li>
         </ul>
@@ -82,7 +90,7 @@ function MyApp({ Component, pageProps }: AppProps) {
           </li>
         </ul>
       </footer>
-    </>
+    </Provider>
   );
 }
 
