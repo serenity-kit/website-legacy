@@ -2,8 +2,10 @@ import "../styles/globals.css";
 import { MDXProvider } from "@mdx-js/react";
 import Link from "next/link";
 import Head from "next/head";
+import { useRouter } from "next/router";
 import type { AppProps } from "next/app";
-import { createClient, Provider } from "urql";
+import { createClient, Provider, useMutation } from "urql";
+import Cookies from "js-cookie";
 import TextSection from "../components/TextSection";
 import { H1, H2, H3, H4 } from "../components/Headline";
 import Codeblock from "../components/Codeblock";
@@ -33,7 +35,38 @@ const mdxComponents = {
   ul: UnorderedList,
 };
 
+const LogoutBillingAccountMutation = `
+mutation logoutBillingAccount {
+  logoutBillingAccount {
+    success
+  }
+}`;
+
+const LogoutLink: React.FC = (props) => {
+  const router = useRouter();
+  const [, logoutBillingAccount] = useMutation(LogoutBillingAccountMutation);
+
+  return (
+    <Link href="/">
+      <a
+        onClick={async (evt) => {
+          evt.preventDefault();
+          await logoutBillingAccount();
+          router.push("/");
+        }}
+      >
+        {props.children}
+      </a>
+    </Link>
+  );
+};
+
 function MyApp({ Component, pageProps }: AppProps) {
+  let isLoggedIn = false;
+  if (process.browser && Cookies.get("billing_auth_active") === "true") {
+    isLoggedIn = true;
+  }
+
   return (
     <Provider value={client}>
       <Head>
@@ -65,11 +98,24 @@ function MyApp({ Component, pageProps }: AppProps) {
               <a>FAQ</a>
             </Link>
           </li>
-          <li>
-            <Link href="/en/login">
-              <a>Billing Login</a>
-            </Link>
-          </li>
+          {isLoggedIn ? (
+            <>
+              <li>
+                <Link href="/en/billing-account">
+                  <a>Billing Account</a>
+                </Link>
+              </li>
+              <li>
+                <LogoutLink>Logout</LogoutLink>
+              </li>
+            </>
+          ) : (
+            <li>
+              <Link href="/en/login">
+                <a>Billing Login</a>
+              </Link>
+            </li>
+          )}
         </ul>
       </header>
 

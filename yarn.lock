@@ -3395,6 +3395,11 @@ jest-worker@24.9.0:
     merge-stream "^2.0.0"
     supports-color "^6.1.0"
 
+js-cookie@3.0.0-rc.1:
+  version "3.0.0-rc.1"
+  resolved "https://registry.yarnpkg.com/js-cookie/-/js-cookie-3.0.0-rc.1.tgz#20f31aa587434855a2b8394542ba38d9f84a3889"
+  integrity sha512-UG5OeBDTwBLXm+d7djWjQ+AzZXeRHbQ04Wk1uWYG1BdsmTZa0ET4E3DF5yRF+4U0yv+2N80Bg22DcjVcWidMqA==
+
 "js-tokens@^3.0.0 || ^4.0.0", js-tokens@^4.0.0:
   version "4.0.0"
   resolved "https://registry.yarnpkg.com/js-tokens/-/js-tokens-4.0.0.tgz#19203fb59991df98e3a287050d4647cdeaf32499"
