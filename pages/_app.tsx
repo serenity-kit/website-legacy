@@ -11,7 +11,15 @@ import Blockquote from "../components/Blockquote";
 import InlineCode from "../components/InlineCode";
 import UnorderedList from "../components/UnorderedList";
 
-const client = createClient({ url: "http://localhost:4000/graphql" });
+const client = createClient({
+  url:
+    process.env.NODE_ENV === "development"
+      ? "http://localhost:4000/graphql"
+      : "https://api.serenity.re/graphql",
+  fetchOptions: {
+    credentials: "include",
+  },
+});
 
 const mdxComponents = {
   h1: H1,
