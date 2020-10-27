@@ -1,8 +1,8 @@
 import * as React from "react";
 import { NextPage } from "next";
 import { useQuery, useMutation } from "urql";
-import TextSection from "../components/TextSection";
-import { H1 } from "../components/Headline";
+import TextSection from "../../components/TextSection";
+import { H1 } from "../../components/Headline";
 
 function compareByCreatedAtAndId(a, b) {
   if (new Date(a.createdAt) < new Date(b.createdAt)) return -1;

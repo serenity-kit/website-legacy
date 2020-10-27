@@ -2,8 +2,8 @@ import * as React from "react";
 import { NextPage } from "next";
 import { useRouter } from "next/router";
 import { useMutation } from "urql";
-import TextSection from "../components/TextSection";
-import { H1 } from "../components/Headline";
+import TextSection from "../../components/TextSection";
+import { H1 } from "../../components/Headline";
 
 const SendBillingAccountAuthEmailMutation = `
   mutation sendBillingAccountAuthEmail($input: SendBillingAccountAuthEmailInput!) {

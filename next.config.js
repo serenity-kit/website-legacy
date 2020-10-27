@@ -13,10 +13,11 @@ const config = {
       },
     ];
   },
-  i18n: {
-    locales: ["en"],
-    defaultLocale: "en",
-  },
+  // TODO caused issues with the redirect
+  // i18n: {
+  //   locales: ["en"],
+  //   defaultLocale: "en",
+  // },
 };
 
 module.exports = withMDX(config);

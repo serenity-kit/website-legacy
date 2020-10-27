@@ -1,7 +1,7 @@
 import * as React from "react";
 import { NextPage } from "next";
-import TextSection from "../../components/TextSection";
-import { H1 } from "../../components/Headline";
+import TextSection from "../../../components/TextSection";
+import { H1 } from "../../../components/Headline";
 
 const ImprintPage: NextPage = () => {
   return (

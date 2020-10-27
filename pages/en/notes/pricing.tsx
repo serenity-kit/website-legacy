@@ -1,6 +1,6 @@
 import { useEffect } from "react";
 import Head from "next/head";
-import TextSection from "../../components/TextSection";
+import TextSection from "../../../components/TextSection";
 
 declare global {
   interface Window {

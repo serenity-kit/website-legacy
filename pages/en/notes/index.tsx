@@ -1,6 +1,6 @@
-import TextSection from "../../components/TextSection";
-import UnorderedList from "../../components/UnorderedList";
-import { H1, H2 } from "../../components/Headline";
+import TextSection from "../../../components/TextSection";
+import UnorderedList from "../../../components/UnorderedList";
+import { H1, H2 } from "../../../components/Headline";
 
 export default function Home() {
   return (
