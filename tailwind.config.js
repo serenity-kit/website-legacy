@@ -12,4 +12,7 @@ module.exports = {
     textColor: ["responsive", "hover", "focus", "active", "group-hover"],
   },
   plugins: [],
+  future: {
+    removeDeprecatedGapUtilities: true,
+  },
 };

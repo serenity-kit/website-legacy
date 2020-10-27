@@ -13,6 +13,10 @@ const config = {
       },
     ];
   },
+  i18n: {
+    locales: ["en"],
+    defaultLocale: "en",
+  },
 };
 
 module.exports = withMDX(config);

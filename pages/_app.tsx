@@ -2,6 +2,7 @@ import "../styles/globals.css";
 import { MDXProvider } from "@mdx-js/react";
 import Link from "next/link";
 import Head from "next/head";
+import Image from 'next/image'
 import { useRouter } from "next/router";
 import type { AppProps } from "next/app";
 import { createClient, Provider, useMutation } from "urql";
@@ -33,6 +34,7 @@ const mdxComponents = {
   inlineCode: InlineCode,
   blockquote: Blockquote,
   ul: UnorderedList,
+  img: (props) => <Image {...props} unsized />
 };
 
 const LogoutBillingAccountMutation = `
@@ -79,10 +81,11 @@ function MyApp({ Component, pageProps }: AppProps) {
           <li className="mr-6">
             <Link href="/">
               <a className="no-underline flex items-center">
-                <img
+                <Image
                   src="/icon.png"
                   alt="Logo"
-                  style={{ height: 48, width: 48 }}
+                  width="48"
+                  height="48"
                 />
                 Serenity Notes
               </a>
