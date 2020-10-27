@@ -12,10 +12,10 @@
     "@next/mdx": "^9.5.2",
     "graphql": "^15.3.0",
     "js-cookie": "3.0.0-rc.1",
-    "next": "9.5.2",
+    "next": "^10.0.0",
     "prism-react-renderer": "^1.1.1",
-    "react": "16.13.1",
-    "react-dom": "16.13.1",
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1",
     "urql": "^1.10.1"
   },
   "devDependencies": {
