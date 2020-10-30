@@ -1,6 +1,7 @@
 import TextSection from "../../../components/TextSection";
 import UnorderedList from "../../../components/UnorderedList";
 import { H1, H2 } from "../../../components/Headline";
+import SubscribeForm from "../../../components/SuscribeForm";
 
 export default function Home() {
   return (
@@ -26,6 +27,7 @@ export default function Home() {
         <br />
         Coming soon …
       </p>
+      <SubscribeForm />
     </TextSection>
   );
 }
