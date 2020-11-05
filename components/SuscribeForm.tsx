@@ -85,84 +85,66 @@ const SubscribeForm: React.FC<Props> = ({
   const isSuccess = Boolean(response);
 
   return (
-    <section className="max-w-2xl mx-4 md:mx-auto my-8 text-section">
-      <hr />
-      <div className="mt-8 max-w-xs">
-        <H2>{header}</H2>
-
-        <Formik
-          initialValues={{
-            email_address: "",
-            first_name: "",
-          }}
-          validationSchema={SubscribeSchema}
-          onSubmit={submit}
-        >
-          {() => (
-            <Form>
-              <label
-                htmlFor="first_name"
-                className="block text-sm mt-4 mb-1 text-gray-700"
-              >
-                <div>
-                  First Name{" "}
-                  <ErrorMessage
-                    name="first_name"
-                    component="span"
-                    className="text-red-500 italic"
-                  />
-                </div>
-              </label>
-              <Field
-                id="first_name"
-                aria-required="false"
-                name="first_name"
-                placeholder="Jane"
-                type="text"
-                className="shadow appearance-none border border-black rounded w-full py-2 px-3 leading-tight"
-              />
-              <label
-                htmlFor="email"
-                className="block text-sm  mt-2 mb-1 text-gray-700"
-              >
-                <div>
-                  Email{" "}
-                  <ErrorMessage
-                    name="email_address"
-                    component="span"
-                    className="text-red-500 text-xs italic"
-                  />
-                </div>
-              </label>
-              <Field
-                id="email"
-                aria-required="true"
-                name="email_address"
-                placeholder="jane@acme.com"
-                type="email"
-                className="shadow appearance-none border border-black rounded w-full py-2 px-3 leading-tight"
-              />
-              <button
-                className="rounded text-white bg-black hover:bg-gray-800 py-2 px-4 border border-black shadow mt-6"
-                type="submit"
-              >
-                {!pending && "Subscribe"}
-                {pending && "Submitting…"}
-              </button>
-            </Form>
-          )}
-        </Formik>
-        {isSuccess && !pending && (
-          <div className="mt-4 text-green-500">
-            Great, I just sent you an email with the confirmation link. Please
-            check your inbox!
-          </div>
+    <div className="mt-5 sm:max-w-lg sm:mx-auto sm:text-center lg:text-left lg:mx-0">
+      <p className="text-base font-medium text-gray-900">
+        Sign up to get notified when it’s ready.
+      </p>
+      <Formik
+        initialValues={{
+          email_address: "",
+          first_name: "",
+        }}
+        validationSchema={SubscribeSchema}
+        onSubmit={submit}
+      >
+        {() => (
+          <Form className="mt-3">
+            <Field
+              id="first_name"
+              aria-required="false"
+              name="first_name"
+              placeholder="Enter your first name"
+              type="text"
+              className="appearance-none block w-full px-3 py-3 border border-gray-300 text-base leading-6 rounded-md placeholder-gray-500 shadow-sm focus:outline-none focus:placeholder-gray-400 focus:shadow-outline-blue focus:border-blue-300 transition duration-150 ease-in-out sm:flex-1"
+            />
+            <ErrorMessage
+              name="first_name"
+              component="div"
+              className="text-red-500 text-s italic"
+            />
+            <Field
+              id="email"
+              aria-required="true"
+              name="email_address"
+              placeholder="Enter your email"
+              type="email"
+              className="mt-2 appearance-none block w-full px-3 py-3 border border-gray-300 text-base leading-6 rounded-md placeholder-gray-500 shadow-sm focus:outline-none focus:placeholder-gray-400 focus:shadow-outline-blue focus:border-blue-300 transition duration-150 ease-in-out sm:flex-1"
+            />
+            <ErrorMessage
+              name="email_address"
+              component="div"
+              className="text-red-500 text-s italic"
+            />
+            <button
+              className="mt-2 w-full px-6 py-3 border border-transparent text-base leading-6 font-medium rounded-md text-white bg-gray-800 shadow-sm hover:bg-gray-700 focus:outline-none focus:border-gray-900 focus:shadow-outline-gray active:bg-gray-900 transition duration-150 ease-in-out sm:flex-shrink-0 sm:inline-flex sm:items-center sm:w-auto"
+              type="submit"
+            >
+              {!pending && "Notify me"}
+              {pending && "Submitting…"}
+            </button>
+          </Form>
         )}
-        {errorMessage && (
-          <div className="mt-4 text-red-500 italic">{errorMessage}</div>
-        )}
-      </div>
-    </section>
+      </Formik>
+      {isSuccess && !pending && (
+        <div className="mt-4 text-green-500">
+          Great, sent you an email with the confirmation link. Please check your
+          inbox!
+        </div>
+      )}
+      {errorMessage && (
+        <div className="mt-4 text-red-500 italic">{errorMessage}</div>
+      )}
+    </div>
   );
 };
 

@@ -11,7 +11,7 @@ module.exports = {
   variants: {
     textColor: ["responsive", "hover", "focus", "active", "group-hover"],
   },
-  plugins: [],
+  plugins: [require("@tailwindcss/ui")],
   future: {
     removeDeprecatedGapUtilities: true,
   },

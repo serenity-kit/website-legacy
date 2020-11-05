@@ -17,7 +17,7 @@ const ImprintPage: NextPage = () => {
         Johann Knoll Gasse 9<br />
         1210 Wien, Österreich
       </p>
-      <p>nik@nikgraf.com</p>
+      <p>hi@serenity.re</p>
       <p>UID-Nr: ATU66204868</p>
       <p>Gewerbeordnung: www.ris.bka.gv.at</p>
       <p>
