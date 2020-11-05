@@ -1,18 +1,11 @@
 module.exports = {
-  purge: [],
-  theme: {
-    listStyleType: {
-      none: "none",
-      circle: "circle",
-      decimal: "decimal",
-    },
-    extend: {},
-  },
-  variants: {
-    textColor: ["responsive", "hover", "focus", "active", "group-hover"],
+  purge: {
+    layers: ["base", "components", "utilities"],
+    content: ["./components/**/*.tsx", "./pages/**/*.tsx", "./pages/**/*.mdx"],
   },
   plugins: [require("@tailwindcss/ui")],
   future: {
     removeDeprecatedGapUtilities: true,
+    purgeLayersByDefault: true,
   },
 };

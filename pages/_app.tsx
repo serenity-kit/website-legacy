@@ -39,7 +39,7 @@ const mdxComponents = {
   // inlineCode: InlineCode,
   // blockquote: Blockquote,
   // ul: UnorderedList,
-  img: (props) => <Image {...props} unsized />,
+  img: (props) => <Image {...props} layout="fill" />,
 };
 
 function MyApp({ Component, pageProps }: AppProps) {

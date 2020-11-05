@@ -107,8 +107,7 @@ export default function Hero() {
                 />
               </svg>
               <div className="relative mx-auto w-full rounded-lg lg:max-w-md">
-                <Image
-                  unsized
+                <img
                   className="w-full"
                   src="/preview.png"
                   alt="Screenshot of Serenity Notes on an iPhone and iPad"
