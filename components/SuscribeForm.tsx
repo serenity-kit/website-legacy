@@ -42,13 +42,9 @@ type ConvertKitBody = {
   email_address: string;
 };
 
-type Props = {
-  header?: string;
-};
+type Props = {};
 
-const SubscribeForm: React.FC<Props> = ({
-  header = "Stay up to date by joining the Newsletter",
-}) => {
+const SubscribeForm: React.FC<Props> = () => {
   const [state, dispatch] = React.useReducer(fetchReducer, {
     error: null,
     response: null,

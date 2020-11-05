@@ -106,24 +106,33 @@ function MyApp({ Component, pageProps }: AppProps) {
           </main>
         </div>
       </div>
-      <footer className="max-w-2xl mx-4 md:mx-auto my-8">
-        <ul className="flex items-center space-x-3">
-          <li>
-            <Link href="/en/notes/privacy-policy">
-              <a>Privacy Policy</a>
-            </Link>
-          </li>
-          <li>
-            <Link href="/en/notes/terms-and-conditions">
-              <a>Terms & Conditions</a>
-            </Link>
-          </li>
-          <li>
-            <Link href="/en/notes/imprint">
-              <a>Imprint</a>
-            </Link>
-          </li>
-        </ul>
+
+      <footer className="bg-white">
+        <div className="max-w-screen-xl mx-auto py-12 px-4 overflow-hidden space-y-8 sm:px-6 lg:px-8">
+          <nav className="-mx-5 -my-2 flex flex-wrap justify-center">
+            <div className="px-5 py-2">
+              <Link href="/en/notes/privacy-policy">
+                <a className="text-base leading-6 text-gray-500 hover:text-gray-900">
+                  Privacy Policy
+                </a>
+              </Link>
+            </div>
+            <div className="px-5 py-2">
+              <Link href="/en/notes/terms-and-conditions">
+                <a className="text-base leading-6 text-gray-500 hover:text-gray-900">
+                  Terms & Conditions
+                </a>
+              </Link>
+            </div>
+            <div className="px-5 py-2">
+              <Link href="/en/notes/imprint">
+                <a className="text-base leading-6 text-gray-500 hover:text-gray-900">
+                  Imprint
+                </a>
+              </Link>
+            </div>
+          </nav>
+        </div>
       </footer>
     </Provider>
   );

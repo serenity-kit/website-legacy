@@ -81,7 +81,7 @@ export default function Navigation() {
             <Link href="/en/notes/faq">
               <a className="ml-10">FAQ</a>
             </Link>
-            {/* {isLoggedIn ? (
+            {isLoggedIn ? (
               <>
                 <Link href="/en/billing-account">
                   <a className="ml-10">Billing Account</a>
@@ -90,9 +90,9 @@ export default function Navigation() {
               </>
             ) : (
               <Link href="/en/login">
-                <a className="ml-10">Billing Login</a>
+                <a className="ml-10">Login</a>
               </Link>
-            )} */}
+            )}
           </div>
         </div>
       </nav>
@@ -170,7 +170,7 @@ export default function Navigation() {
                     className="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50 focus:outline-none focus:text-gray-900 focus:bg-gray-50 transition duration-150 ease-in-out"
                     role="menuitem"
                   >
-                    Billing Login
+                    Login
                   </a>
                 </Link>
               )}
