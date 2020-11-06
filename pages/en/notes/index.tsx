@@ -181,7 +181,7 @@ export default function Home() {
             <div className="lg:grid lg:grid-flow-row-dense lg:grid-cols-2 lg:gap-8 lg:items-center">
               <div className="lg:col-start-2">
                 <h4 className="text-2xl leading-8 font-extrabold text-gray-900 tracking-tight sm:text-3xl sm:leading-9">
-                  Signup with an Email, Phone number or Password
+                  Sign up without an Email, Phone number or Password
                 </h4>
                 <p className="mt-3 text-lg leading-7 text-gray-500">
                   You can sign up in seconds with one click. No email, phone
