@@ -132,10 +132,10 @@ export default function Home() {
               </svg>
               <div className="relative mx-10 shadow-2xl border-4 border-white">
                 <Video
-                  title="Signup"
+                  title="Editing"
                   sources={[
                     {
-                      src: "/videos-v1/signup.mp4",
+                      src: "/videos-v1/editing.mp4",
                       type: "video/mp4",
                     },
                   ]}
@@ -419,10 +419,10 @@ export default function Home() {
                 </svg>
                 <div className="relative mx-10 shadow-2xl border-4 border-white">
                   <Video
-                    title="Signup"
+                    title="Link Device"
                     sources={[
                       {
-                        src: "/videos-v1/signup.mp4",
+                        src: "/videos-v1/link-device.mp4",
                         type: "video/mp4",
                       },
                     ]}
