@@ -101,7 +101,7 @@ const SubscribeForm: React.FC<Props> = () => {
               name="first_name"
               placeholder="Enter your first name"
               type="text"
-              className="appearance-none block w-full px-3 py-3 border border-gray-300 text-base leading-6 rounded-md placeholder-gray-500 shadow-sm focus:outline-none focus:placeholder-gray-400 focus:shadow-outline-blue focus:border-blue-300 transition duration-150 ease-in-out sm:flex-1"
+              className="appearance-none block w-full px-3 py-3 border border-gray-300 text-base leading-6 rounded-md placeholder-gray-500 shadow-sm focus:outline-none focus:placeholder-gray-400 focus:ring-blue focus:border-blue-300 transition duration-150 ease-in-out sm:flex-1"
             />
             <ErrorMessage
               name="first_name"
@@ -114,7 +114,7 @@ const SubscribeForm: React.FC<Props> = () => {
               name="email_address"
               placeholder="Enter your email"
               type="email"
-              className="mt-2 appearance-none block w-full px-3 py-3 border border-gray-300 text-base leading-6 rounded-md placeholder-gray-500 shadow-sm focus:outline-none focus:placeholder-gray-400 focus:shadow-outline-blue focus:border-blue-300 transition duration-150 ease-in-out sm:flex-1"
+              className="mt-2 appearance-none block w-full px-3 py-3 border border-gray-300 text-base leading-6 rounded-md placeholder-gray-500 shadow-sm focus:outline-none focus:placeholder-gray-400 focus:ring-blue focus:border-blue-300 transition duration-150 ease-in-out sm:flex-1"
             />
             <ErrorMessage
               name="email_address"
@@ -122,7 +122,7 @@ const SubscribeForm: React.FC<Props> = () => {
               className="text-red-500 text-s italic"
             />
             <button
-              className="mt-2 w-full px-6 py-3 border border-transparent text-base leading-6 font-medium rounded-md text-white bg-gray-800 shadow-sm hover:bg-gray-700 focus:outline-none focus:border-gray-900 focus:shadow-outline-gray active:bg-gray-900 transition duration-150 ease-in-out sm:flex-shrink-0 sm:inline-flex sm:items-center sm:w-auto"
+              className="mt-2 w-full px-6 py-3 border border-transparent text-base leading-6 font-medium rounded-md text-white bg-gray-800 shadow-sm hover:bg-gray-700 focus:outline-none focus:border-gray-900 focus:ring-gray active:bg-gray-900 transition duration-150 ease-in-out sm:flex-shrink-0 sm:inline-flex sm:items-center sm:w-auto"
               type="submit"
             >
               {!pending && "Notify me"}

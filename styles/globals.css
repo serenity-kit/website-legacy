@@ -1,7 +1,7 @@
 @tailwind base;
 
 a,
-a:visited,
+/* a:visited, */ /* breaks the link buttons style */
 a:active {
   color: #000;
   text-decoration: underline;

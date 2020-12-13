@@ -102,7 +102,7 @@ export default function Navigation() {
       {/* <div className="absolute top-0 inset-x-0 p-2 transition transform origin-top-right md:hidden">
         <div className="rounded-lg shadow-md">
           <div
-            className="rounded-lg bg-white shadow-xs overflow-hidden"
+            className="rounded-lg bg-white ring-1 ring-black ring-opacity-5 overflow-hidden"
             role="menu"
             aria-orientation="vertical"
             aria-labelledby="main-menu"

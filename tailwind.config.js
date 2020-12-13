@@ -3,9 +3,9 @@ module.exports = {
     layers: ["base", "components", "utilities"],
     content: ["./components/**/*.tsx", "./pages/**/*.tsx", "./pages/**/*.mdx"],
   },
-  plugins: [require("@tailwindcss/ui")],
-  future: {
-    removeDeprecatedGapUtilities: true,
-    purgeLayersByDefault: true,
-  },
+  plugins: [
+    require("@tailwindcss/forms"),
+    require("@tailwindcss/typography"),
+    require("@tailwindcss/aspect-ratio"),
+  ],
 };
