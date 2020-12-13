@@ -75,11 +75,14 @@ export default function Navigation() {
           </div>
 
           <div className="md:block md:ml-10">
-            <Link href="/en/notes/roadmap">
-              <a>Roadmap</a>
+            <Link href="/en/notes/pricing">
+              <a>Pricing</a>
             </Link>
             <Link href="/en/notes/faq">
               <a className="ml-10">FAQ</a>
+            </Link>
+            <Link href="/en/notes/roadmap">
+              <a className="ml-10">Roadmap</a>
             </Link>
             {isLoggedIn ? (
               <>
