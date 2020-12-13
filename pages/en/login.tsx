@@ -180,25 +180,48 @@ const LoginPage: NextPage = () => {
                 }
               }}
             >
-              <p>
-                We sent you a temporary login code to {state.email}. Please
-                check your inbox.
+              <p className="text-sm mt-8 mb-4">
+                We sent you a temporary login code to{" "}
+                <span className="font-mono">{state.email}</span>. Please check
+                your inbox.
               </p>
-              <label>
-                Login Code
-                <input
-                  type="text"
-                  placeholder="xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx"
-                  value={state.emailToken}
-                  onChange={(event) => {
-                    dispatch({
-                      type: "UPDATE_EMAIL_TOKEN",
-                      emailToken: event.target.value,
-                    });
-                  }}
-                />
-              </label>
-              <button>{state.authenticate ? "Login …" : "Login"}</button>
+
+              <div>
+                <label
+                  htmlFor="loginCode"
+                  className="block text-sm font-medium leading-5 text-gray-700"
+                >
+                  Login Code
+                </label>
+                <div className="mt-1 rounded-md shadow-sm">
+                  <input
+                    id="loginCode"
+                    required
+                    className="appearance-none block w-full px-3 py-2 border border-gray-300 rounded-md placeholder-gray-400 focus:outline-none focus:ring-blue focus:border-blue-300 transition duration-150 ease-in-out sm:text-sm sm:leading-5"
+                    type="text"
+                    placeholder="xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx"
+                    value={state.emailToken}
+                    onChange={(event) => {
+                      dispatch({
+                        type: "UPDATE_EMAIL_TOKEN",
+                        emailToken: event.target.value,
+                      });
+                    }}
+                  />
+                </div>
+              </div>
+
+              <div className="mt-6">
+                <span className="block w-full rounded-md shadow-sm">
+                  <button
+                    type="submit"
+                    className="w-full flex justify-center py-2 px-4 border border-transparent text-sm font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-500 focus:outline-none focus:border-indigo-700 focus:ring-indigo active:bg-indigo-700 transition duration-150 ease-in-out"
+                  >
+                    {state.authenticate ? "Login …" : "Login"}
+                  </button>
+                </span>
+              </div>
+
               {state.authenticateFailed ? (
                 <FormError>
                   Something went wrong during the authentication.

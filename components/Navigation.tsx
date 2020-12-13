@@ -1,4 +1,3 @@
-import Head from "next/head";
 import Image from "next/image";
 import Link from "next/link";
 import Cookies from "js-cookie";
@@ -19,6 +18,7 @@ const LogoutLink: React.FC = (props) => {
   return (
     <Link href="/">
       <a
+        className="ml-10"
         onClick={async (evt) => {
           evt.preventDefault();
           await logoutBillingAccount();
