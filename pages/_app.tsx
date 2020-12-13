@@ -33,7 +33,9 @@ const mdxComponents = {
   // h3: H3,
   // h4: H4,
   wrapper: ({ children }) => (
-    <div className="prose prose-lg text-gray-500 mx-auto">{children}</div>
+    <div className="max-w-7xl mx-auto py-24 px-4 sm:px-6 lg:px-8">
+      <div className="prose prose-lg text-gray-500 mx-auto">{children}</div>
+    </div>
   ),
   // code: Codeblock,
   // inlineCode: InlineCode,

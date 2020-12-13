@@ -42,7 +42,7 @@ export default function Navigation() {
       <nav className="relative max-w-screen-xl mx-auto flex items-center justify-between px-4 sm:px-6">
         <div className="flex items-center flex-1">
           <div className="flex items-center justify-between w-full md:w-auto">
-            <Link href="/">
+            <Link href="/en/notes">
               <a className="no-underline flex items-center">
                 <Image src="/icon.png" alt="Logo" width="48" height="48" />
                 Serenity Notes
