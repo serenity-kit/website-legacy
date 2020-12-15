@@ -1,5 +1,5 @@
-import { useEffect, useState } from "react";
-import Head from "next/head";
+import { useEffect, useState, useCallback } from "react";
+import { useRouter } from "next/router";
 import PricingFeature from "../../../components/PricingFeature";
 
 declare global {
@@ -11,6 +11,7 @@ declare global {
 type PlanId = 633265 | 633266 | 633267 | 633268;
 
 export default function Home() {
+  const router = useRouter();
   const [billedYearly, setBilledYearly] = useState<boolean>(true);
   useEffect(() => {
     const script = document.createElement("script");
@@ -22,9 +23,16 @@ export default function Home() {
     document.body.appendChild(script);
   }, []);
 
+  function successCallback(data) {
+    alert(
+      `Thanks for signing up. You now will be redirected to the billing login page where you can sign in via email verfication using ${data.user.email}.`
+    );
+    router.push(`/en/login#email=${data.user.email}`);
+  }
+
   const openCheckout = (planId: PlanId) => {
     // TODO check if paddle exists and if not wait for it
-    window.Paddle.Checkout.open({ product: planId });
+    window.Paddle.Checkout.open({ product: planId, successCallback });
   };
 
   return (
