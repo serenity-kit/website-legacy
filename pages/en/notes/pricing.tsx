@@ -24,10 +24,9 @@ export default function Home() {
   }, []);
 
   function successCallback(data) {
-    alert(
-      `Thanks for signing up. You now will be redirected to the billing login page where you can sign in via email verfication using ${data.user.email}.`
+    router.push(
+      `/en/login#${btoa(JSON.stringify({ email: data.user.email }))}`
     );
-    router.push(`/en/login#email=${data.user.email}`);
   }
 
   const openCheckout = (planId: PlanId) => {

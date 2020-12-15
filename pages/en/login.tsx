@@ -85,6 +85,9 @@ function loginReducer(state: State, action): State {
 
 const LoginPage: NextPage = () => {
   const router = useRouter();
+  const [showSignupSuccessInfo, setShowSignupSuccessInfo] = React.useState(
+    false
+  );
   const [state, dispatch] = React.useReducer(loginReducer, {
     email: "",
     emailToken: "",
@@ -101,6 +104,23 @@ const LoginPage: NextPage = () => {
     AuthenticateBillingAccountMutation
   );
 
+  // only run on the client
+  React.useLayoutEffect(() => {
+    if (window.location.hash) {
+      try {
+        const hash = window.location.hash.substr(1);
+        const data = JSON.parse(atob(hash));
+        if (data.email) {
+          setShowSignupSuccessInfo(true);
+          dispatch({
+            type: "UPDATE_EMAIL",
+            email: data.email,
+          });
+        }
+      } catch (err) {}
+    }
+  }, []);
+
   return (
     <div className="max-w-7xl mx-auto py-24 px-4 sm:px-6 lg:px-8">
       <div className="sm:mx-auto sm:w-full sm:max-w-md">
@@ -108,6 +128,17 @@ const LoginPage: NextPage = () => {
           Sign in to your billing account
         </h1>
       </div>
+
+      {showSignupSuccessInfo ? (
+        <div className="mt-8 sm:mx-auto sm:w-full sm:max-w-md">
+          <p className="bg-green-100 py-8 px-4 shadow sm:rounded-lg sm:px-10 text-green-800">
+            Thank you for signing up!
+            <br />
+            We are setting up your account. This might take a minute. After that
+            you can sign into your billing account using an email verfication.
+          </p>
+        </div>
+      ) : null}
 
       <div className="mt-8 sm:mx-auto sm:w-full sm:max-w-md">
         <div className="bg-white py-8 px-4 shadow sm:rounded-lg sm:px-10">
