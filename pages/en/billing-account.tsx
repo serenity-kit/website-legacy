@@ -162,12 +162,12 @@ const BillingAccountPage: NextPage = () => {
                   <table className="min-w-full divide-y divide-gray-200">
                     <thead className="bg-gray-50">
                       <tr>
-                        <th
+                        {/* <th
                           scope="col"
                           className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider"
                         >
                           License Key
-                        </th>
+                        </th> */}
                         <th
                           scope="col"
                           className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider"
@@ -175,7 +175,10 @@ const BillingAccountPage: NextPage = () => {
                           User ID
                         </th>
                         <th scope="col" className="relative px-6 py-3">
-                          <span className="sr-only">Reset License Key</span>
+                          <span className="sr-only">
+                            {/* Reset License Key */}
+                            Disconnect User
+                          </span>
                         </th>
                       </tr>
                     </thead>
@@ -185,11 +188,11 @@ const BillingAccountPage: NextPage = () => {
                         .map((license) => {
                           return (
                             <tr key={license.id}>
-                              <td className="px-6 py-4">
+                              {/* <td className="px-6 py-4">
                                 <div className="flex items-center font-mono text-sm">
                                   {license.token}
                                 </div>
-                              </td>
+                              </td> */}
                               <td className="px-6 py-4">
                                 <form
                                   className="flex"
@@ -231,7 +234,8 @@ const BillingAccountPage: NextPage = () => {
                                     }
                                   }}
                                 >
-                                  Reset License Key
+                                  {/* Reset License Key */}
+                                  Disconnect User
                                 </button>
                               </td>
                             </tr>

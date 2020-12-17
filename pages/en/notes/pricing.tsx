@@ -198,7 +198,7 @@ export default function Home() {
                     Link up to 10 devices per user
                   </PricingFeature>
                   <PricingFeature>Email Support</PricingFeature>
-                  <PricingFeature>License Manager</PricingFeature>
+                  {/* <PricingFeature>License Manager</PricingFeature> */}
                 </ul>
               </div>
             </div>
