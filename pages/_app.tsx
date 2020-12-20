@@ -6,6 +6,8 @@ import Image from "next/image";
 import type { AppProps } from "next/app";
 import { createClient, Provider } from "urql";
 import Navigation from "../components/Navigation";
+import * as React from "react";
+import Cookies from "js-cookie";
 
 const client = createClient({
   url:
@@ -39,6 +41,14 @@ const mdxComponents = {
 };
 
 function MyApp({ Component, pageProps }: AppProps) {
+  const [isLoggedIn, setIsLoggedIn] = React.useState(false);
+  // to leverage static SSR on Vercel the cookie is only checked client-side
+  React.useLayoutEffect(() => {
+    if (Cookies.get("billing_auth_active") === "true") {
+      setIsLoggedIn(true);
+    }
+  });
+
   return (
     <Provider value={client}>
       <Head>
@@ -92,7 +102,7 @@ function MyApp({ Component, pageProps }: AppProps) {
 
         <div className="relative pt-6 pb-16 md:pb-20 lg:pb-24 xl:pb-32">
           <header>
-            <Navigation />
+            <Navigation isLoggedIn={isLoggedIn} />
           </header>
 
           <main>

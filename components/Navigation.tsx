@@ -2,8 +2,10 @@ import Image from "next/image";
 import Link from "next/link";
 import { useRouter } from "next/router";
 import { useMutation } from "urql";
-import * as React from "react";
-import Cookies from "js-cookie";
+
+type Props = {
+  isLoggedIn: boolean;
+};
 
 const LogoutBillingAccountMutation = `
 mutation logoutBillingAccount {
@@ -32,15 +34,7 @@ const LogoutLink: React.FC = (props) => {
   );
 };
 
-export default function Navigation() {
-  const [isLoggedIn, setIsLoggedIn] = React.useState(false);
-  // to leverage static SSR on Vercel the cookie is only checked client-side
-  React.useLayoutEffect(() => {
-    if (Cookies.get("billing_auth_active") === "true") {
-      setIsLoggedIn(true);
-    }
-  });
-
+export default function Navigation(props: Props) {
   return (
     <>
       <nav className="relative max-w-screen-xl mx-auto flex items-center justify-between px-4 sm:px-6">
@@ -88,7 +82,7 @@ export default function Navigation() {
             <Link href="/en/notes/roadmap">
               <a className="ml-10">Roadmap</a>
             </Link>
-            {isLoggedIn ? (
+            {props.isLoggedIn ? (
               <>
                 <Link href="/en/billing-account">
                   <a className="ml-10">Billing Account</a>
