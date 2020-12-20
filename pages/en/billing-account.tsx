@@ -50,6 +50,58 @@ mutation addUserToLicense($input: AddUserToLicenseInput!) {
   }
 }`;
 
+type UserIdFormProps = {
+  addUserToLicense: (any) => void;
+  license: {
+    id: string;
+    userId?: string;
+  };
+};
+
+const UserIdForm: React.FC<UserIdFormProps> = (props) => {
+  const licenseUserIdValue = props.license.userId || "";
+  const [value, setValue] = React.useState(licenseUserIdValue);
+  // update the form in case the license.userId is updated (e.g. reset)
+  const licenseUserIdRef = React.useRef(licenseUserIdValue);
+  React.useEffect(() => {
+    if (licenseUserIdRef.current !== licenseUserIdValue) {
+      licenseUserIdRef.current = licenseUserIdValue;
+      setValue(licenseUserIdValue);
+    }
+  });
+
+  return (
+    <form
+      className="flex"
+      onSubmit={async (evt) => {
+        evt.preventDefault();
+        await props.addUserToLicense({
+          input: {
+            licenseId: props.license.id,
+            userId: value.trim(),
+          },
+        });
+      }}
+    >
+      <input
+        type="text"
+        value={value}
+        onChange={(event) => {
+          setValue(event.target.value);
+        }}
+        placeholder="xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx"
+        className="shadow-sm focus:ring-indigo-500 focus:border-indigo-500 block w-full sm:text-sm border-gray-300 rounded-md"
+      />
+      <button
+        className="ml-2 inline-flex items-center px-2.5 py-1.5 border border-transparent text-xs font-medium rounded shadow-sm text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 disabled:opacity-50"
+        disabled={props.license.userId === value}
+      >
+        Connect to User
+      </button>
+    </form>
+  );
+};
+
 const BillingAccountPage: NextPage = () => {
   const [{ fetching, data, error }] = useQuery({ query: BillingAccountQuery });
   const [
@@ -147,9 +199,9 @@ const BillingAccountPage: NextPage = () => {
                   aria-hidden="true"
                 >
                   <path
-                    fill-rule="evenodd"
+                    fillRule="evenodd"
                     d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7 4a1 1 0 11-2 0 1 1 0 012 0zm-1-9a1 1 0 00-1 1v4a1 1 0 102 0V6a1 1 0 00-1-1z"
-                    clip-rule="evenodd"
+                    clipRule="evenodd"
                   />
                 </svg>
               </div>
@@ -194,34 +246,16 @@ const BillingAccountPage: NextPage = () => {
                                 </div>
                               </td> */}
                               <td className="px-6 py-4">
-                                <form
-                                  className="flex"
-                                  onSubmit={async (evt) => {
-                                    evt.preventDefault();
-                                    await addUserToLicense({
-                                      input: {
-                                        licenseId: license.id,
-                                        // @ts-ignore
-                                        userId: evt.target.elements.userId.value.trim(),
-                                      },
-                                    });
-                                  }}
-                                >
-                                  <input
-                                    name="userId"
-                                    type="text"
-                                    placeholder="xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx"
-                                    className="shadow-sm focus:ring-indigo-500 focus:border-indigo-500 block w-full sm:text-sm border-gray-300 rounded-md"
-                                  />
-                                  <button className="ml-2 inline-flex items-center px-2.5 py-1.5 border border-transparent text-xs font-medium rounded shadow-sm text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
-                                    Connect to User
-                                  </button>
-                                </form>
+                                <UserIdForm
+                                  addUserToLicense={addUserToLicense}
+                                  license={license}
+                                />
                               </td>
                               <td className="px-6 py-4 text-right text-sm font-medium">
                                 <button
                                   type="button"
-                                  className="inline-flex items-center px-2.5 py-1.5 border border-gray-300 shadow-sm text-xs font-medium rounded text-gray-700 bg-white hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
+                                  className="inline-flex items-center px-2.5 py-1.5 border border-gray-300 shadow-sm text-xs font-medium rounded text-gray-700 bg-white hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500  disabled:opacity-50"
+                                  style={{ height: 46 }}
                                   onClick={async () => {
                                     if (
                                       window.confirm(
@@ -233,6 +267,7 @@ const BillingAccountPage: NextPage = () => {
                                       });
                                     }
                                   }}
+                                  disabled={!license.userId}
                                 >
                                   {/* Reset License Key */}
                                   Disconnect User

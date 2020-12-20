@@ -8,4 +8,9 @@ module.exports = {
     require("@tailwindcss/typography"),
     require("@tailwindcss/aspect-ratio"),
   ],
+  variants: {
+    extend: {
+      opacity: ["disabled"],
+    },
+  },
 };
