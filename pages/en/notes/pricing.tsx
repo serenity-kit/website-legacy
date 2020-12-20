@@ -120,8 +120,7 @@ export default function Home() {
                   Personal Pro
                 </h2>
                 <p className="mt-4 text-sm text-gray-500 h-11">
-                  Capture your thoughts in private name() {} and collaborate
-                  with others
+                  Capture your thoughts in private and collaborate with others
                 </p>
                 <p className="mt-8 h-14">
                   <span className="text-4xl font-extrabold text-gray-900">
@@ -150,7 +149,7 @@ export default function Home() {
                 <ul className="mt-6 space-y-4">
                   <PricingFeature>Unlimited Notes</PricingFeature>
                   <PricingFeature>
-                    Collaborate with up to 100 people per note
+                    Collaborate with up to 50 people per note
                   </PricingFeature>
                   <PricingFeature>Link up to 10 devices</PricingFeature>
                   <PricingFeature>Email Support</PricingFeature>
@@ -192,13 +191,13 @@ export default function Home() {
                 <ul className="mt-6 space-y-4">
                   <PricingFeature>Unlimited Notes</PricingFeature>
                   <PricingFeature>
-                    Collaborate with up to 400 people per note
+                    Collaborate with up to 100 people per note
                   </PricingFeature>
                   <PricingFeature>
                     Link up to 10 devices per user
                   </PricingFeature>
                   <PricingFeature>Email Support</PricingFeature>
-                  {/* <PricingFeature>License Manager</PricingFeature> */}
+                  <PricingFeature>Unified Billing Management</PricingFeature>
                 </ul>
               </div>
             </div>
