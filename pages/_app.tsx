@@ -43,7 +43,7 @@ const mdxComponents = {
 function MyApp({ Component, pageProps }: AppProps) {
   const [isLoggedIn, setIsLoggedIn] = React.useState(false);
   // to leverage static SSR on Vercel the cookie is only checked client-side
-  React.useLayoutEffect(() => {
+  React.useEffect(() => {
     if (Cookies.get("billing_auth_active") === "true") {
       setIsLoggedIn(true);
     }
