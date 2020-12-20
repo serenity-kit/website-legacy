@@ -5,12 +5,6 @@ import Head from "next/head";
 import Image from "next/image";
 import type { AppProps } from "next/app";
 import { createClient, Provider } from "urql";
-import TextSection from "../components/TextSection";
-import { H1, H2, H3, H4 } from "../components/Headline";
-import Codeblock from "../components/Codeblock";
-import Blockquote from "../components/Blockquote";
-import InlineCode from "../components/InlineCode";
-import UnorderedList from "../components/UnorderedList";
 import Navigation from "../components/Navigation";
 
 const client = createClient({
