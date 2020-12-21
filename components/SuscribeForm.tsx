@@ -83,7 +83,7 @@ const SubscribeForm: React.FC<Props> = () => {
   return (
     <div className="mt-5 sm:max-w-lg sm:mx-auto sm:text-center lg:text-left lg:mx-0">
       <p className="text-base font-medium text-gray-900">
-        Sign up to get notified when it’s ready.
+        Sign up to our newsletter to learn about our progress.
       </p>
       <Formik
         initialValues={{

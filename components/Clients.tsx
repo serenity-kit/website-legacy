@@ -1,3 +1,6 @@
+import Image from "next/image";
+import AppStoreBadge from "./AppStoreBadge";
+
 export default function Hero() {
   return (
     <div className="bg-gray-50 overflow-hidden">
@@ -50,6 +53,12 @@ export default function Hero() {
                 <p className="mt-2 text-base leading-6 text-gray-500">
                   iPhones and iPads are supported.
                 </p>
+                <a
+                  className="mt-4 block"
+                  href="https://apps.apple.com/at/app/serenity-notes/id1544162074"
+                >
+                  <AppStoreBadge />
+                </a>
               </div>
             </div>
             <div className="mt-10 sm:mt-0">
@@ -60,6 +69,17 @@ export default function Hero() {
                 <p className="mt-2 text-base leading-6 text-gray-500">
                   Phones and tablets are supported.
                 </p>
+                <a
+                  className="mt-1 -ml-4 block"
+                  href="https://play.google.com/store/apps/details?id=re.serenity.notes"
+                >
+                  <Image
+                    src="/google-play-badge.png"
+                    alt="Download on Google Play"
+                    width="232.56"
+                    height="90"
+                  />
+                </a>
               </div>
             </div>
             <div className="mt-10 sm:mt-0">
