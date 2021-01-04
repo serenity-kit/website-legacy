@@ -73,7 +73,7 @@ export default function Home() {
                   <div className="flex">
                     <div className="ml-4">
                       <h5 className="text-lg leading-6 font-medium text-gray-900">
-                        Checklists (coming soon …)
+                        Checklists
                       </h5>
                       <p className="mt-2 text-base leading-6 text-gray-500">
                         With Checklists you can keep track of Todos inside your
@@ -82,18 +82,18 @@ export default function Home() {
                     </div>
                   </div>
                 </li>
-                {/* <li className="mt-10">
+                <li className="mt-10">
                   <div className="flex">
                     <div className="ml-4">
                       <h5 className="text-lg leading-6 font-medium text-gray-900">
                         Media (coming soon …)
                       </h5>
                       <p className="mt-2 text-base leading-6 text-gray-500">
-                        Add Images, Videos or Recordings to enrich your notes.
+                        Add Images, Videos or Attachments to enrich your notes.
                       </p>
                     </div>
                   </div>
-                </li> */}
+                </li>
               </ul>
             </div>
 
