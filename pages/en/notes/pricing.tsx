@@ -42,10 +42,9 @@ export default function Home() {
             <h1 className="text-5xl font-extrabold text-gray-900 sm:text-center">
               Pricing Plans
             </h1>
-            {/* <p className="mt-5 text-xl text-gray-500 sm:text-center">
-              Start building for free, then add a site plan to go live. Account
-              plans unlock additional features.
-            </p> */}
+            <p className="mt-5 text-xl text-gray-500 sm:text-center">
+              We need to charge, because we can't sell your data.
+            </p>
             <div className="relative self-center mt-6 bg-gray-100 rounded-lg p-0.5 flex sm:mt-8">
               <button
                 type="button"
