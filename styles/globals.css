@@ -21,3 +21,7 @@ body {
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
   color: #1f1f1f;
 }
+
+:root {
+  --plyr-color-main: #4454cf;
+}

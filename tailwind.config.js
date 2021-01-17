@@ -13,4 +13,15 @@ module.exports = {
       opacity: ["disabled"],
     },
   },
+  theme: {
+    extend: {
+      colors: {
+        primary: {
+          dark: "#3E4FCE",
+          DEFAULT: "#4454CF",
+          light: "#5367DB",
+        },
+      },
+    },
+  },
 };

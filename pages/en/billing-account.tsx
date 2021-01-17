@@ -90,10 +90,10 @@ const UserIdForm: React.FC<UserIdFormProps> = (props) => {
           setValue(event.target.value);
         }}
         placeholder="xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx"
-        className="shadow-sm focus:ring-indigo-500 focus:border-indigo-500 block w-full sm:text-sm border-gray-300 rounded-md"
+        className="shadow-sm focus:ring-primary focus:border-primary-dark block w-full sm:text-sm border-gray-300 rounded-md"
       />
       <button
-        className="ml-2 inline-flex items-center px-2.5 py-1.5 border border-transparent text-xs font-medium rounded shadow-sm text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 disabled:opacity-50"
+        className="ml-2 inline-flex items-center px-2.5 py-1.5 border border-transparent text-xs font-medium rounded shadow-sm text-white bg-primary hover:bg-primary-light focus:outline-none focus:ring-2 focus:ring-offset-2 focus:bg-primary-dark  disabled:opacity-50"
         disabled={props.license.userId === value}
       >
         Connect to User
@@ -254,7 +254,7 @@ const BillingAccountPage: NextPage = () => {
                               <td className="px-6 py-4 text-right text-sm font-medium">
                                 <button
                                   type="button"
-                                  className="inline-flex items-center px-2.5 py-1.5 border border-gray-300 shadow-sm text-xs font-medium rounded text-gray-700 bg-white hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500  disabled:opacity-50"
+                                  className="inline-flex items-center px-2.5 py-1.5 border border-gray-300 shadow-sm text-xs font-medium rounded text-gray-700 bg-white hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary-dark  disabled:opacity-50"
                                   style={{ height: 46 }}
                                   onClick={async () => {
                                     if (

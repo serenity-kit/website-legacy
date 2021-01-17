@@ -53,7 +53,7 @@ export default function Home() {
                   event.preventDefault();
                   setBilledYearly(false);
                 }}
-                className={`relative w-1/2 rounded-md py-2 text-sm font-medium text-gray-700 whitespace-nowrap focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:z-10 sm:w-auto sm:px-8 ${
+                className={`relative w-1/2 rounded-md py-2 text-sm font-medium text-gray-700 whitespace-nowrap focus:outline-none focus:ring-2 focus:ring-primary-dark focus:z-10 sm:w-auto sm:px-8 ${
                   billedYearly
                     ? "border border-transparent"
                     : "bg-white border-gray-200 shadow-sm"
@@ -67,7 +67,7 @@ export default function Home() {
                   event.preventDefault();
                   setBilledYearly(true);
                 }}
-                className={`ml-0.5 relative w-1/2 rounded-md py-2 text-sm font-medium text-gray-700 whitespace-nowrap focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:z-10 sm:w-auto sm:px-8 ${
+                className={`ml-0.5 relative w-1/2 rounded-md py-2 text-sm font-medium text-gray-700 whitespace-nowrap focus:outline-none focus:ring-2 focus:ring-primary-dark focus:z-10 sm:w-auto sm:px-8 ${
                   billedYearly
                     ? "bg-white border-gray-200 shadow-sm"
                     : "border border-transparent"

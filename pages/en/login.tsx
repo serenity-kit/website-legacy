@@ -185,7 +185,7 @@ const LoginPage: NextPage = () => {
                 <span className="block w-full rounded-md shadow-sm">
                   <button
                     type="submit"
-                    className="w-full flex justify-center py-2 px-4 border border-transparent text-sm font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-500 focus:outline-none focus:border-indigo-700 focus:ring-indigo active:bg-indigo-700 transition duration-150 ease-in-out"
+                    className="w-full flex justify-center py-2 px-4 border border-transparent text-sm font-medium rounded-md text-white bg-primary hover:bg-primary-light focus:outline-none focus:border-primary-dark focus:ring-primary active:bg-primary-dark transition duration-150 ease-in-out"
                   >
                     {state.sendingEmail ? "Continue …" : "Continue"}
                   </button>
@@ -246,7 +246,7 @@ const LoginPage: NextPage = () => {
                 <span className="block w-full rounded-md shadow-sm">
                   <button
                     type="submit"
-                    className="w-full flex justify-center py-2 px-4 border border-transparent text-sm font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-500 focus:outline-none focus:border-indigo-700 focus:ring-indigo active:bg-indigo-700 transition duration-150 ease-in-out"
+                    className="w-full flex justify-center py-2 px-4 border border-transparent text-sm font-medium rounded-md text-white bg-primary hover:bg-primary-light focus:outline-none focus:border-primary-dark focus:ring-primary active:bg-primary-dark transition duration-150 ease-in-out"
                   >
                     {state.authenticate ? "Login …" : "Login"}
                   </button>

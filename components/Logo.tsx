@@ -23,8 +23,8 @@ const Logo = ({ width, height }: { width: number; height: number }) => (
         y2="11.371"
         gradientUnits="userSpaceOnUse"
       >
-        <stop offset="0.5" stop-opacity="0" />
-        <stop offset="1" stop-opacity="0.4" />
+        <stop offset="0.5" stopOpacity="0" />
+        <stop offset="1" stopOpacity="0.4" />
       </linearGradient>
     </defs>
     <g style={{ isolation: "isolate" }}>
