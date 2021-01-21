@@ -1,5 +1,5 @@
-import Image from "next/image";
 import AppStoreBadge from "./AppStoreBadge";
+import GooglePlayBadge from "./GooglePlayBadge";
 
 export default function Hero() {
   return (
@@ -70,15 +70,10 @@ export default function Hero() {
                   Phones and tablets are supported.
                 </p>
                 <a
-                  className="mt-1 -ml-4 block"
+                  className="mt-4 block"
                   href="https://play.google.com/store/apps/details?id=re.serenity.notes"
                 >
-                  <Image
-                    src="/google-play-badge.png"
-                    alt="Download on Google Play"
-                    width="232.56"
-                    height="90"
-                  />
+                  <GooglePlayBadge />
                 </a>
               </div>
             </div>
