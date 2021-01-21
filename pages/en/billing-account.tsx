@@ -212,7 +212,7 @@ const BillingAccountPage: NextPage = () => {
               <div className="py-2 align-middle inline-block min-w-full sm:px-6 lg:px-8">
                 <div className="shadow overflow-hidden border-b border-gray-200 sm:rounded-lg">
                   <table className="min-w-full divide-y divide-gray-200">
-                    <thead className="bg-gray-50">
+                    <thead className="bg-background">
                       <tr>
                         {/* <th
                           scope="col"
@@ -254,7 +254,7 @@ const BillingAccountPage: NextPage = () => {
                               <td className="px-6 py-4 text-right text-sm font-medium">
                                 <button
                                   type="button"
-                                  className="inline-flex items-center px-2.5 py-1.5 border border-gray-300 shadow-sm text-xs font-medium rounded text-gray-700 bg-white hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary-dark  disabled:opacity-50"
+                                  className="inline-flex items-center px-2.5 py-1.5 border border-gray-300 shadow-sm text-xs font-medium rounded text-gray-700 bg-white hover:bg-background focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary-dark  disabled:opacity-50"
                                   style={{ height: 46 }}
                                   onClick={async () => {
                                     if (

@@ -8,7 +8,7 @@ export default function Home() {
       <Hero />
       <Clients />
 
-      <div className="bg-gray-50 overflow-hidden">
+      <div className="bg-background overflow-hidden">
         <div className="relative max-w-xl mx-auto px-4 sm:px-6 lg:px-8 lg:max-w-screen-xl">
           <svg
             className="hidden lg:block absolute left-full transform -translate-x-1/2 -translate-y-1/4"
@@ -240,7 +240,7 @@ export default function Home() {
           </div>
         </div>
       </div>
-      <div className="bg-gray-50 overflow-hidden pb-16">
+      <div className="bg-background overflow-hidden pb-16">
         <div className="relative max-w-xl mx-auto px-4 sm:px-6 lg:px-8 lg:max-w-screen-xl">
           <svg
             className="hidden lg:block absolute left-full transform -translate-x-1/2 -translate-y-1/4"

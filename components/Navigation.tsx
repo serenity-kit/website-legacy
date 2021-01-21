@@ -144,7 +144,7 @@ export default function Navigation(props) {
             <div className="px-2 pt-2 pb-3">
               <Link href="/en/notes/roadmap">
                 <a
-                  className="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50 focus:outline-none focus:text-gray-900 focus:bg-gray-50 transition duration-150 ease-in-out"
+                  className="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-background focus:outline-none focus:text-gray-900 focus:bg-background transition duration-150 ease-in-out"
                   role="menuitem"
                 >
                   Roadmap
@@ -152,7 +152,7 @@ export default function Navigation(props) {
               </Link>
               <Link href="/en/notes/faq">
                 <a
-                  className="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50 focus:outline-none focus:text-gray-900 focus:bg-gray-50 transition duration-150 ease-in-out"
+                  className="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-background focus:outline-none focus:text-gray-900 focus:bg-background transition duration-150 ease-in-out"
                   role="menuitem"
                 >
                   FAQ
@@ -162,7 +162,7 @@ export default function Navigation(props) {
                 <>
                   <Link href="/en/billing-account">
                     <a
-                      className="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50 focus:outline-none focus:text-gray-900 focus:bg-gray-50 transition duration-150 ease-in-out"
+                      className="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-background focus:outline-none focus:text-gray-900 focus:bg-background transition duration-150 ease-in-out"
                       role="menuitem"
                     >
                       Billing Account
@@ -173,7 +173,7 @@ export default function Navigation(props) {
               ) : (
                 <Link href="/en/login">
                   <a
-                    className="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50 focus:outline-none focus:text-gray-900 focus:bg-gray-50 transition duration-150 ease-in-out"
+                    className="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-background focus:outline-none focus:text-gray-900 focus:bg-background transition duration-150 ease-in-out"
                     role="menuitem"
                   >
                     Login
