@@ -1,11 +1,23 @@
 import Hero from "../../../components/Hero";
 import Clients from "../../../components/Clients";
 import Video from "../../../components/Video";
+import SubscribeForm from "../../../components/SuscribeForm";
 
 export default function Home() {
   return (
     <>
       <Hero />
+      <div className="bg-white flex justify-center">
+        <div className=" max-w-7xl mx-auto py-6 px-4 sm:px-6 lg:py-10 lg:px-8">
+          <h2 className="inline text-3xl font-extrabold tracking-tight text-gray-900 sm:block sm:text-4xl">
+            Sign up for our newsletter{" "}
+          </h2>
+          <p className="inline text-3xl font-extrabold tracking-tight text-primary sm:block sm:text-4xl">
+            to receive news and product updates
+          </p>
+          <SubscribeForm />
+        </div>
+      </div>
       <Clients />
 
       <div className="bg-background overflow-hidden">

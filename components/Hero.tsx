@@ -1,5 +1,5 @@
-import Image from "next/image";
-import SubscribeForm from "./SuscribeForm";
+import AppStoreBadge from "./AppStoreBadge";
+import GooglePlayBadge from "./GooglePlayBadge";
 
 export default function Hero() {
   return (
@@ -60,7 +60,25 @@ export default function Hero() {
                 still have an excellent offline-first experience. Of course on
                 all platforms.
               </p>
-              <SubscribeForm />
+              <div className="mt-5 sm:max-w-lg sm:mx-auto sm:text-center lg:text-left lg:mx-0">
+                <p className="text-base font-medium text-gray-900">
+                  Download the app and sign up for free.
+                </p>
+                <div className="mt-4 mb-4 flex justify-start md:justify-center lg:justify-start">
+                  <a
+                    className="block"
+                    href="https://apps.apple.com/at/app/serenity-notes/id1544162074"
+                  >
+                    <AppStoreBadge />
+                  </a>
+                  <a
+                    className="ml-4 block"
+                    href="https://play.google.com/store/apps/details?id=re.serenity.notes"
+                  >
+                    <GooglePlayBadge />
+                  </a>
+                </div>
+              </div>
             </div>
             <div className="mt-12 relative sm:max-w-lg sm:mx-auto lg:mt-0 lg:max-w-none lg:mx-0 lg:col-span-6 lg:flex lg:items-center">
               <svg

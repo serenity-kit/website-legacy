@@ -103,7 +103,7 @@ export default function Hero() {
                   Linux
                 </h4>
                 <p className="mt-2 text-base leading-6 text-gray-500">
-                  Coming late 2021.
+                  Coming 2022.
                 </p>
               </div>
             </div>
