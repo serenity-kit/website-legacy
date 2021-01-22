@@ -1,3 +1,4 @@
+import Image from "next/image";
 import AppStoreBadge from "./AppStoreBadge";
 import GooglePlayBadge from "./GooglePlayBadge";
 
@@ -51,12 +52,22 @@ export default function Hero() {
               <div className="relative mx-auto w-full rounded-lg lg:max-w-md lg:-mt-20">
                 <div className="w-3/4 relative left-1/4">
                   <div className="device tablet">
-                    <img src="/tablet-preview.png" />
+                    <Image
+                      src="/tablet-preview.png"
+                      alt="Tablet editor view of Serenity Notes"
+                      width={365}
+                      height={488}
+                    />
                   </div>
                 </div>
                 <div className="w-2/5 absolute bottom-0">
                   <div className="device phone">
-                    <img src="/phone-preview.png" />
+                    <Image
+                      src="/phone-preview.png"
+                      alt="Phone editor view of Serenity Notes"
+                      width={189}
+                      height={337}
+                    />
                   </div>
                 </div>
               </div>

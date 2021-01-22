@@ -41,7 +41,7 @@ body {
 .device img {
   width: 100%;
   border-radius: 4px;
-  border: 1px solid rgba(0, 0, 0, 0.24);
+  border: 1px solid rgba(0, 0, 0, 0.24) !important;
 }
 
 .device::before,
