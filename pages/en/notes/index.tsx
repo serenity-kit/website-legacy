@@ -7,8 +7,8 @@ export default function Home() {
   return (
     <>
       <Hero />
-      <div className="bg-white flex justify-center">
-        <div className=" max-w-7xl mx-auto py-6 px-4 sm:px-6 lg:py-10 lg:px-8">
+      <div className="bg-background flex justify-center sm:py-12 md:py-20 xl:py-24">
+        <div className=" max-w-7xl mx-auto py-6 px-4 sm:px-6 lg:py-6 lg:px-8">
           <h2 className="inline text-3xl font-extrabold tracking-tight text-gray-900 sm:block sm:text-4xl">
             Sign up for our newsletter{" "}
           </h2>
@@ -22,39 +22,6 @@ export default function Home() {
 
       <div className="bg-background overflow-hidden">
         <div className="relative max-w-xl mx-auto px-4 sm:px-6 lg:px-8 lg:max-w-screen-xl">
-          <svg
-            className="hidden lg:block absolute left-full transform -translate-x-1/2 -translate-y-1/4"
-            width="404"
-            height="784"
-            fill="none"
-            viewBox="0 0 404 784"
-          >
-            <defs>
-              <pattern
-                id="b1e6e422-73f8-40a6-b5d9-c8586e37e0e7"
-                x="0"
-                y="0"
-                width="20"
-                height="20"
-                patternUnits="userSpaceOnUse"
-              >
-                <rect
-                  x="0"
-                  y="0"
-                  width="4"
-                  height="4"
-                  className="text-gray-200"
-                  fill="currentColor"
-                />
-              </pattern>
-            </defs>
-            <rect
-              width="404"
-              height="784"
-              fill="url(#b1e6e422-73f8-40a6-b5d9-c8586e37e0e7)"
-            />
-          </svg>
-
           <div className="relative mt-12 lg:mt-24 lg:grid lg:grid-cols-2 lg:gap-8 lg:items-center">
             <div className="relative">
               <h4 className="text-2xl leading-8 font-extrabold text-gray-900 tracking-tight sm:text-3xl sm:leading-9">

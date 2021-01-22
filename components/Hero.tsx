@@ -4,48 +4,6 @@ import GooglePlayBadge from "./GooglePlayBadge";
 export default function Hero() {
   return (
     <div className="relative bg-white overflow-hidden">
-      <div className="hidden lg:block lg:absolute lg:inset-0">
-        <svg
-          className="absolute top-0 left-1/2 transform translate-x-64 -translate-y-8"
-          width="640"
-          height="784"
-          fill="none"
-          viewBox="0 0 640 784"
-        >
-          <defs>
-            <pattern
-              id="9ebea6f4-a1f5-4d96-8c4e-4c2abf658047"
-              x="118"
-              y="0"
-              width="20"
-              height="20"
-              patternUnits="userSpaceOnUse"
-            >
-              <rect
-                x="0"
-                y="0"
-                width="4"
-                height="4"
-                className="text-gray-200"
-                fill="currentColor"
-              />
-            </pattern>
-          </defs>
-          <rect
-            y="72"
-            width="640"
-            height="640"
-            className="text-gray-50"
-            fill="currentColor"
-          />
-          <rect
-            x="118"
-            width="404"
-            height="784"
-            fill="url(#9ebea6f4-a1f5-4d96-8c4e-4c2abf658047)"
-          />
-        </svg>
-      </div>
       <div className="relative pt-6 pb-16 md:pb-20 lg:pb-24 xl:pb-32">
         <main className="mt-8 mx-auto max-w-screen-xl px-4 sm:mt-12 sm:px-6 md:mt-20 xl:mt-24">
           <div className="lg:grid lg:grid-cols-12 lg:gap-8">
@@ -60,9 +18,9 @@ export default function Hero() {
                 still have an excellent offline-first experience. Of course on
                 all platforms.
               </p>
-              <div className="mt-5 sm:max-w-lg sm:mx-auto sm:text-center lg:text-left lg:mx-0">
+              <div className="mt-14 sm:max-w-lg sm:mx-auto sm:text-center lg:text-left lg:mx-0">
                 <p className="text-base font-medium text-gray-900">
-                  Download the app and sign up for free.
+                  Download the app and sign up for free
                 </p>
                 <div className="mt-4 mb-4 flex justify-start md:justify-center lg:justify-start">
                   <a
@@ -79,54 +37,28 @@ export default function Hero() {
                   </a>
                 </div>
               </div>
+              <svg
+                className="hidden lg:block absolute right-0 inset-y-0 h-full w-48 text-white transform translate-x-1/2"
+                fill="currentColor"
+                viewBox="0 0 100 100"
+                preserveAspectRatio="none"
+                aria-hidden="true"
+              >
+                <polygon points="50,0 100,0 50,100 0,100" />
+              </svg>
             </div>
             <div className="mt-12 relative sm:max-w-lg sm:mx-auto lg:mt-0 lg:max-w-none lg:mx-0 lg:col-span-6 lg:flex lg:items-center">
-              <svg
-                className="absolute top-0 left-1/2 transform -translate-x-1/2 -translate-y-8 scale-75 origin-top sm:scale-100 lg:hidden"
-                width="640"
-                height="784"
-                fill="none"
-                viewBox="0 0 640 784"
-              >
-                <defs>
-                  <pattern
-                    id="4f4f415c-a0e9-44c2-9601-6ded5a34a13e"
-                    x="118"
-                    y="0"
-                    width="20"
-                    height="20"
-                    patternUnits="userSpaceOnUse"
-                  >
-                    <rect
-                      x="0"
-                      y="0"
-                      width="4"
-                      height="4"
-                      className="text-gray-200"
-                      fill="currentColor"
-                    />
-                  </pattern>
-                </defs>
-                <rect
-                  y="72"
-                  width="640"
-                  height="640"
-                  className="text-gray-50"
-                  fill="currentColor"
-                />
-                <rect
-                  x="118"
-                  width="404"
-                  height="784"
-                  fill="url(#4f4f415c-a0e9-44c2-9601-6ded5a34a13e)"
-                />
-              </svg>
-              <div className="relative mx-auto w-full rounded-lg lg:max-w-md">
-                <img
-                  className="w-full"
-                  src="/preview.png"
-                  alt="Screenshot of Serenity Notes on an iPhone and iPad"
-                />
+              <div className="relative mx-auto w-full rounded-lg lg:max-w-md lg:-mt-20">
+                <div className="w-3/4 relative left-1/4">
+                  <div className="device tablet">
+                    <img src="/tablet-preview.png" />
+                  </div>
+                </div>
+                <div className="w-2/5 absolute bottom-0">
+                  <div className="device phone">
+                    <img src="/phone-preview.png" />
+                  </div>
+                </div>
               </div>
             </div>
           </div>
