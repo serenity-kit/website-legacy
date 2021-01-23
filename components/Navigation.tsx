@@ -12,13 +12,31 @@ mutation logoutBillingAccount {
   }
 }`;
 
+const NavAnchor: React.FC<
+  React.DetailedHTMLProps<
+    React.AnchorHTMLAttributes<HTMLAnchorElement>,
+    HTMLAnchorElement
+  >
+> = (props) => {
+  return (
+    <a
+      {...props}
+      className={`inline-block font-semibold no-underline hover:no-underline cursor-pointer py-2 px-2 ${
+        props.className || ""
+      }`}
+    >
+      {props.children}
+    </a>
+  );
+};
+
 const LogoutLink: React.FC = (props) => {
   const router = useRouter();
   const [, logoutBillingAccount] = useMutation(LogoutBillingAccountMutation);
 
   return (
     <Link href="/">
-      <a
+      <NavAnchor
         className="ml-10"
         onClick={async (evt) => {
           evt.preventDefault();
@@ -27,7 +45,7 @@ const LogoutLink: React.FC = (props) => {
         }}
       >
         {props.children}
-      </a>
+      </NavAnchor>
     </Link>
   );
 };
@@ -77,26 +95,26 @@ export default function Navigation(props) {
             </div> */}
           </div>
 
-          <div className="md:block md:ml-10">
+          <div className="md:block md:ml-8">
             <Link href="/en/notes/pricing">
-              <a>Pricing</a>
+              <NavAnchor>Pricing</NavAnchor>
             </Link>
             <Link href="/en/notes/faq">
-              <a className="ml-10">FAQ</a>
+              <NavAnchor className="ml-6">FAQ</NavAnchor>
             </Link>
             <Link href="/en/notes/roadmap">
-              <a className="ml-10">Roadmap</a>
+              <NavAnchor className="ml-6">Roadmap</NavAnchor>
             </Link>
             {isLoggedIn ? (
               <>
                 <Link href="/en/billing-account">
-                  <a className="ml-10">Billing Account</a>
+                  <NavAnchor className="ml-6">Billing Account</NavAnchor>
                 </Link>
                 <LogoutLink>Logout</LogoutLink>
               </>
             ) : (
               <Link href="/en/login">
-                <a className="ml-10">Login</a>
+                <NavAnchor className="ml-6">Login</NavAnchor>
               </Link>
             )}
           </div>
