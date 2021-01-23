@@ -55,7 +55,7 @@ export default function Hero() {
                 </div>
               </div>
             </div>
-            <div className="mt-12 pt-16 sm:max-w-lg sm:mx-auto lg:max-w-none lg:mx-0 lg:flex lg:items-center lg:w-1/2 lg:-mt-24 lg:flex-grow ">
+            <div className="mt-12 pt-16 sm:max-w-lg sm:mx-auto lg:max-w-none lg:mx-0 lg:flex lg:items-center lg:w-1/2 lg:-mt-32 lg:flex-grow ">
               <div className="relative mx-auto w-full rounded-lg lg:max-w-md">
                 <div
                   className="bg-background lg:hidden absolute -mt-16"
