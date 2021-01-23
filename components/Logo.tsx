@@ -11,9 +11,9 @@ const Logo = ({ width, height }: { width: number; height: number }) => (
         y2="8.282"
         gradientUnits="userSpaceOnUse"
       >
-        <stop offset="0" stop-color="#130177" />
-        <stop offset="0.337" stop-color="#1c00bc" />
-        <stop offset="1" stop-color="#2899f8" />
+        <stop offset="0" stopColor="#130177" />
+        <stop offset="0.337" stopColor="#1c00bc" />
+        <stop offset="1" stopColor="#2899f8" />
       </linearGradient>
       <linearGradient
         id="b"
