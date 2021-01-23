@@ -7,18 +7,6 @@ export default function Home() {
   return (
     <>
       <Hero />
-      <div className="bg-background flex justify-center sm:py-12 md:py-20 xl:py-24">
-        <div className=" max-w-7xl mx-auto py-6 px-4 sm:px-6 lg:py-6 lg:px-8">
-          <h2 className="inline text-3xl font-extrabold tracking-tight text-gray-900 sm:block sm:text-4xl">
-            Sign up for our newsletter{" "}
-          </h2>
-          <p className="inline text-3xl font-extrabold tracking-tight text-primary sm:block sm:text-4xl">
-            to receive news and product updates
-          </p>
-          <SubscribeForm />
-        </div>
-      </div>
-      <Clients />
 
       <div className="bg-background overflow-hidden">
         <div className="relative max-w-xl mx-auto px-4 sm:px-6 lg:px-8 lg:max-w-screen-xl">
@@ -410,6 +398,19 @@ export default function Home() {
               </div>
             </div>
           </div>
+        </div>
+      </div>
+      <Clients />
+
+      <div className="bg-background flex justify-center py-16 lg:py-20 xl:py-24">
+        <div className=" max-w-7xl mx-auto py-6 px-4 sm:px-6 lg:py-6 lg:px-8">
+          <h2 className="inline text-3xl font-extrabold tracking-tight text-gray-900 sm:block sm:text-4xl">
+            Sign up for our newsletter{" "}
+          </h2>
+          <p className="inline text-3xl font-extrabold tracking-tight text-primary sm:block sm:text-4xl">
+            to receive news and product updates
+          </p>
+          <SubscribeForm />
         </div>
       </div>
     </>

@@ -1,7 +1,6 @@
 import React from "react";
 import { Formik, Field, Form, ErrorMessage } from "formik";
 import * as Yup from "yup";
-import { H2 } from "./Headline";
 
 const SubscribeSchema = Yup.object().shape({
   email_address: Yup.string()
