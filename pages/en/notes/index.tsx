@@ -10,7 +10,7 @@ export default function Home() {
 
       <div className="bg-background overflow-hidden">
         <div className="relative max-w-xl mx-auto px-4 sm:px-6 lg:px-8 lg:max-w-screen-xl">
-          <div className="relative mt-12 lg:mt-24 lg:grid lg:grid-cols-2 lg:gap-8 lg:items-center">
+          <div className="relative my-12 lg:my-24 lg:grid lg:grid-cols-2 lg:gap-8 lg:items-center">
             <div className="relative">
               <h4 className="text-2xl leading-8 font-extrabold text-gray-900 tracking-tight sm:text-3xl sm:leading-9">
                 Seamless editing experience
@@ -143,6 +143,102 @@ export default function Home() {
               fill="url(#64e643ad-2176-4f86-b3d7-f2c5da3b6a6d)"
             />
           </svg>
+        </div>
+      </div>
+
+      <div className="py-16 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="lg:text-center">
+            <h2 className="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl">
+              Security & Privacy
+            </h2>
+            <p className="mt-4 max-w-2xl text-xl text-gray-500 lg:mx-auto">
+              By leveraging state of the art end-to-end encryption you get the
+              control to decide who can access your data
+            </p>
+          </div>
+
+          <div className="mt-10">
+            <dl className="space-y-10 md:space-y-0 md:grid md:grid-cols-2 md:gap-x-8 md:gap-y-10">
+              <div className="flex">
+                <div>
+                  <dt className="text-lg leading-6 font-medium text-gray-900">
+                    How is your data secured?
+                  </dt>
+                  <dd className="mt-2 text-lg text-gray-500">
+                    All notes are encrypted and a note can only be decrypted by
+                    the devices of its collaborators. In addition contact and
+                    device names are encrypted and only accessibly by your
+                    devices. This means Serenity's servers can't decrypt any of
+                    your content. The servers only act as a transport service of
+                    encrypted data between devices.
+                  </dd>
+                </div>
+              </div>
+
+              <div className="flex">
+                <div>
+                  <dt className="text-lg leading-6 font-medium text-gray-900">
+                    What technology is used?
+                  </dt>
+                  <dd className="mt-2 text-lg  text-gray-500">
+                    The encryption is based on the{" "}
+                    <a href="https://signal.org/docs/specifications/doubleratchet/">
+                      Double Ratchet Algorithm
+                    </a>{" "}
+                    popularised by <a href="https://signal.org/">Signal</a>. It
+                    uses the{" "}
+                    <a href="https://gitlab.matrix.org/matrix-org/olm">
+                      Olm and Megaolm
+                    </a>{" "}
+                    implementation which is powering the end-to-end encryption
+                    of the <a href="https://matrix.org/">Matrix Protocol</a>.
+                    Serenity's protocol is inspired by the Matrix protocol but
+                    optimized for shared data. The Serenity Notes client will be
+                    open sourced soon and more details on the protocol will
+                    follow …
+                  </dd>
+                </div>
+              </div>
+            </dl>
+          </div>
+        </div>
+      </div>
+
+      <div className="bg-background overflow-hidden pb-16">
+        <div className="relative max-w-xl mx-auto px-4 sm:px-6 lg:px-8 lg:max-w-screen-xl">
+          <svg
+            className="hidden lg:block absolute left-full transform -translate-x-1/2 -translate-y-1/4"
+            width="404"
+            height="784"
+            fill="none"
+            viewBox="0 0 404 784"
+          >
+            <defs>
+              <pattern
+                id="b1e6e422-73f8-40a6-b5d9-c8586e37e0e7"
+                x="0"
+                y="0"
+                width="20"
+                height="20"
+                patternUnits="userSpaceOnUse"
+              >
+                <rect
+                  x="0"
+                  y="0"
+                  width="4"
+                  height="4"
+                  className="text-gray-200"
+                  fill="currentColor"
+                />
+              </pattern>
+            </defs>
+            <rect
+              width="404"
+              height="784"
+              fill="url(#b1e6e422-73f8-40a6-b5d9-c8586e37e0e7)"
+            />
+          </svg>
 
           <div className="relative mt-12 sm:mt-16 lg:mt-24">
             <div className="lg:grid lg:grid-flow-row-dense lg:grid-cols-2 lg:gap-8 lg:items-center">
@@ -205,42 +301,6 @@ export default function Home() {
               </div>
             </div>
           </div>
-        </div>
-      </div>
-      <div className="bg-background overflow-hidden pb-16">
-        <div className="relative max-w-xl mx-auto px-4 sm:px-6 lg:px-8 lg:max-w-screen-xl">
-          <svg
-            className="hidden lg:block absolute left-full transform -translate-x-1/2 -translate-y-1/4"
-            width="404"
-            height="784"
-            fill="none"
-            viewBox="0 0 404 784"
-          >
-            <defs>
-              <pattern
-                id="b1e6e422-73f8-40a6-b5d9-c8586e37e0e7"
-                x="0"
-                y="0"
-                width="20"
-                height="20"
-                patternUnits="userSpaceOnUse"
-              >
-                <rect
-                  x="0"
-                  y="0"
-                  width="4"
-                  height="4"
-                  className="text-gray-200"
-                  fill="currentColor"
-                />
-              </pattern>
-            </defs>
-            <rect
-              width="404"
-              height="784"
-              fill="url(#b1e6e422-73f8-40a6-b5d9-c8586e37e0e7)"
-            />
-          </svg>
 
           <div className="relative mt-12 lg:mt-24 lg:grid lg:grid-cols-2 lg:gap-8 lg:items-center">
             <div className="relative">
@@ -400,6 +460,7 @@ export default function Home() {
           </div>
         </div>
       </div>
+
       <Clients />
 
       <div className="bg-background flex justify-center py-16 lg:py-20 xl:py-24">
