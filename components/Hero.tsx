@@ -25,7 +25,7 @@ export default function Hero() {
         <div className="relative pt-6 pb-16 lg:pb-24 xl:pb-32 h-full">
           <main className="mt-8 mx-auto max-w-screen-xl px-4 sm:mt-12 sm:px-6 md:mt-20 xl:mt-24 lg:flex h-full">
             <div className="sm:text-center md:max-w-2xl md:mx-auto lg:mx-0 lg:text-left lg:max-w-none lg:w-1/2 lg:flex-shrink">
-              <h2 className="mt-1 text-3xl tracking-tight leading-10 font-extrabold text-gray-900 sm:leading-none sm:text-5xl lg:text-4xl xl:text-5xl">
+              <h2 className="mt-1 text-3xl tracking-tight leading-10 font-semibold text-gray-900 sm:leading-none sm:text-5xl lg:text-4xl xl:text-5xl">
                 End-to-end encrypted
                 <br />
                 <span className="text-primary">collaborative notes</span>

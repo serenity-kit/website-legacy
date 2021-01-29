@@ -124,7 +124,7 @@ const LoginPage: NextPage = () => {
   return (
     <div className="max-w-7xl mx-auto py-24 px-4 sm:px-6 lg:px-8">
       <div className="sm:mx-auto sm:w-full sm:max-w-md">
-        <h1 className="mt-6 text-center text-3xl leading-9 font-extrabold text-gray-900">
+        <h1 className="mt-6 text-center text-3xl leading-9 font-semibold text-gray-900">
           Sign in to your billing account
         </h1>
       </div>

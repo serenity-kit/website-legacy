@@ -39,7 +39,7 @@ export default function Home() {
       <div>
         <div className="max-w-7xl mx-auto py-24 px-4 sm:px-6 lg:px-8">
           <div className="sm:flex sm:flex-col sm:align-center">
-            <h1 className="text-5xl font-extrabold text-gray-900 sm:text-center">
+            <h1 className="text-5xl font-semibold text-gray-900 sm:text-center">
               Pricing Plans
             </h1>
             <p className="mt-5 text-xl text-gray-500 sm:text-center">
@@ -87,7 +87,7 @@ export default function Home() {
                   Ideal to get started
                 </p>
                 <p className="mt-8 h-14">
-                  <span className="text-4xl font-extrabold text-gray-900">
+                  <span className="text-4xl font-semibold text-gray-900">
                     $0
                   </span>
                 </p>
@@ -122,7 +122,7 @@ export default function Home() {
                   Capture your thoughts in private and collaborate with others
                 </p>
                 <p className="mt-8 h-14">
-                  <span className="text-4xl font-extrabold text-gray-900">
+                  <span className="text-4xl font-semibold text-gray-900">
                     ${billedYearly ? "4" : "5"}
                   </span>
                   <span className="text-sm font-medium text-gray-500">
@@ -165,7 +165,7 @@ export default function Home() {
                   Enable everyone in your organization to collaborate
                 </p>
                 <p className="mt-8 h-14">
-                  <span className="text-4xl font-extrabold text-gray-900">
+                  <span className="text-4xl font-semibold text-gray-900">
                     ${billedYearly ? "8" : "10"}
                   </span>
                   <span className="text-sm font-medium text-gray-500">

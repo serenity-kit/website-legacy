@@ -40,7 +40,7 @@ export default function Hero() {
 
         <div className="relative lg:grid lg:grid-cols-3 lg:gap-x-8">
           <div className="lg:col-span-1">
-            <h3 className="text-3xl leading-9 font-extrabold tracking-tight text-gray-900 sm:text-4xl sm:leading-10">
+            <h3 className="text-3xl leading-9 font-semibold tracking-tight text-gray-900 sm:text-4xl sm:leading-10">
               Multi-platform support
             </h3>
           </div>
