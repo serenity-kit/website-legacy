@@ -43,6 +43,20 @@ function MyApp({ Component, pageProps }: AppProps) {
     <Provider value={client}>
       <Head>
         <title>Serenity Notes</title>
+        {/* preload fonts */}
+        <link
+          rel="preload"
+          href="/fonts/basiercircle-regular-webfont.woff2"
+          as="font"
+          type="font/woff2"
+        />
+        <link
+          rel="preload"
+          href="/fonts/basiercircle-semibold-webfont.woff2"
+          as="font"
+          type="font/woff2"
+        />
+        {/* favicon */}
         <link
           rel="apple-touch-icon"
           sizes="180x180"
