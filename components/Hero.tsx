@@ -28,7 +28,7 @@ export default function Hero() {
               <h2 className="mt-1 text-3xl tracking-tight leading-10 font-extrabold text-gray-900 sm:leading-none sm:text-5xl lg:text-4xl xl:text-5xl">
                 End-to-end encrypted
                 <br />
-                <span className="text-primary">collaborative Notes</span>
+                <span className="text-primary">collaborative notes</span>
               </h2>
               <p className="mt-3 text-base text-gray-500 sm:mt-5 sm:text-xl lg:text-lg xl:text-xl lg:pr-8">
                 You should be able to decide who can access your data, while

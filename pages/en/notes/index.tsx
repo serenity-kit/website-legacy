@@ -24,42 +24,30 @@ export default function Home() {
 
               <ul className="mt-10">
                 <li>
-                  <div className="flex">
-                    <div className="ml-4">
-                      <h5 className="text-lg leading-6 font-medium text-gray-900">
-                        Body text, Headlines, Lists
-                      </h5>
-                      <p className="mt-2 text-base leading-6 text-gray-500">
-                        The editor offers simple, but effective list of
-                        formatting options.
-                      </p>
-                    </div>
-                  </div>
+                  <h5 className="text-lg leading-6 font-medium text-gray-900">
+                    Body text, Headlines, Lists
+                  </h5>
+                  <p className="mt-2 text-base leading-6 text-gray-500">
+                    The editor offers a simple, but effective list of formatting
+                    options.
+                  </p>
                 </li>
                 <li className="mt-10">
-                  <div className="flex">
-                    <div className="ml-4">
-                      <h5 className="text-lg leading-6 font-medium text-gray-900">
-                        Checklists
-                      </h5>
-                      <p className="mt-2 text-base leading-6 text-gray-500">
-                        With Checklists you can keep track of Todos inside your
-                        notes.
-                      </p>
-                    </div>
-                  </div>
+                  <h5 className="text-lg leading-6 font-medium text-gray-900">
+                    Checklists
+                  </h5>
+                  <p className="mt-2 text-base leading-6 text-gray-500">
+                    With Checklists you can keep track of to-dos within your
+                    notes.
+                  </p>
                 </li>
                 <li className="mt-10">
-                  <div className="flex">
-                    <div className="ml-4">
-                      <h5 className="text-lg leading-6 font-medium text-gray-900">
-                        Media (coming soon …)
-                      </h5>
-                      <p className="mt-2 text-base leading-6 text-gray-500">
-                        Add Images, Videos or Attachments to enrich your notes.
-                      </p>
-                    </div>
-                  </div>
+                  <h5 className="text-lg leading-6 font-medium text-gray-900">
+                    Media (coming soon …)
+                  </h5>
+                  <p className="mt-2 text-base leading-6 text-gray-500">
+                    Add Images, Videos or Attachments to enrich your notes.
+                  </p>
                 </li>
               </ul>
             </div>
@@ -168,7 +156,7 @@ export default function Home() {
                   <dd className="mt-2 text-lg text-gray-500">
                     All notes are encrypted and a note can only be decrypted by
                     the devices of its collaborators. In addition contact and
-                    device names are encrypted and only accessibly by your
+                    device names are encrypted and can only be accessed by your
                     devices. This means Serenity's servers can't decrypt any of
                     your content. The servers only act as a transport service of
                     encrypted data between devices.

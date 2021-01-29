@@ -146,12 +146,12 @@ export default function Home() {
                   What's included
                 </h3>
                 <ul className="mt-6 space-y-4">
-                  <PricingFeature>Unlimited Notes</PricingFeature>
+                  <PricingFeature>Unlimited notes</PricingFeature>
                   <PricingFeature>
                     Collaborate with up to 50 people per note
                   </PricingFeature>
                   <PricingFeature>Link up to 10 devices</PricingFeature>
-                  <PricingFeature>Email Support</PricingFeature>
+                  <PricingFeature>Email support</PricingFeature>
                 </ul>
               </div>
             </div>
@@ -188,14 +188,14 @@ export default function Home() {
                   What's included
                 </h3>
                 <ul className="mt-6 space-y-4">
-                  <PricingFeature>Unlimited Notes</PricingFeature>
+                  <PricingFeature>Unlimited notes</PricingFeature>
                   <PricingFeature>
                     Collaborate with up to 100 people per note
                   </PricingFeature>
                   <PricingFeature>
                     Link up to 10 devices per user
                   </PricingFeature>
-                  <PricingFeature>Email Support</PricingFeature>
+                  <PricingFeature>Email support</PricingFeature>
                   <PricingFeature>Unified Billing Management</PricingFeature>
                 </ul>
               </div>
