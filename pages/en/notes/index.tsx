@@ -85,7 +85,7 @@ export default function Home() {
                   fill="url(#ca9667ae-9f92-4be7-abcb-9e3d727f2941)"
                 />
               </svg>
-              <div className="relative mx-10 shadow-2xl border-4 border-white">
+              <div className="relative mx-10 shadow-2xl border-4 border-white rounded">
                 <Video
                   title="Editing"
                   sources={[
@@ -275,7 +275,7 @@ export default function Home() {
                     fill="url(#e80155a9-dfde-425a-b5ea-1f6fadd20131)"
                   />
                 </svg>
-                <div className="relative mx-10 shadow-2xl border-4 border-white">
+                <div className="relative mx-10 shadow-2xl border-4 border-white rounded">
                   <Video
                     title="Signup"
                     sources={[
@@ -339,7 +339,7 @@ export default function Home() {
                   fill="url(#ca9667ae-9f92-4be7-abcb-9e3d727f2941)"
                 />
               </svg>
-              <div className="relative mx-10 shadow-2xl border-4 border-white">
+              <div className="relative mx-10 shadow-2xl border-4 border-white rounded">
                 <Video
                   title="Add a contact and collaborate on a note"
                   sources={[
@@ -432,7 +432,7 @@ export default function Home() {
                     fill="url(#e80155a9-dfde-425a-b5ea-1f6fadd20131)"
                   />
                 </svg>
-                <div className="relative mx-10 shadow-2xl border-4 border-white">
+                <div className="relative mx-10 shadow-2xl border-4 border-white rounded">
                   <Video
                     title="Link Device"
                     sources={[

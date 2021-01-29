@@ -16,7 +16,7 @@ const FormError: React.FC<Props> = (props) => (
     }}
     options={{
       muted: true,
-      controls: ["play-large", "play", "progress", "fullscreen"],
+      controls: ["play-large", "progress", "fullscreen"],
     }}
     className={
       props.className ? `plyr-react plyr ${props.className}` : "plyr-react plyr"
