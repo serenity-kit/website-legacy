@@ -19,7 +19,7 @@ const client = createClient({
 
 const mdxComponents = {
   h1: ({ children }) => (
-    <h1 className="mt-2 mb-8 text-3xl text-center leading-8 font-semibold tracking-tight text-gray-900 sm:text-4xl sm:leading-10">
+    <h1 className="mt-2 mb-8 text-3xl text-center leading-8 font-semibold text-gray-900 sm:text-4xl sm:leading-10">
       {children}
     </h1>
   ),
