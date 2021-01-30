@@ -119,7 +119,8 @@ export default function Home() {
                   Personal Pro
                 </h2>
                 <p className="mt-4 text-sm text-gray-500 h-11">
-                  Capture your thoughts in private and collaborate with others
+                  Capture your thoughts in private and collaborate securely with
+                  others
                 </p>
                 <p className="mt-8 h-14">
                   <span className="text-4xl font-semibold text-gray-900">
@@ -196,7 +197,7 @@ export default function Home() {
                     Link up to 10 devices per user
                   </PricingFeature>
                   <PricingFeature>Email support</PricingFeature>
-                  <PricingFeature>Unified Billing Management</PricingFeature>
+                  <PricingFeature>Unified billing management</PricingFeature>
                 </ul>
               </div>
             </div>
@@ -222,8 +223,8 @@ export default function Home() {
                   What's included
                 </h3>
                 <ul className="mt-6 space-y-4">
-                  <PricingFeature>Custom Limits</PricingFeature>
-                  <PricingFeature>Cloud or On-Premise Hosting</PricingFeature>
+                  <PricingFeature>Custom limits</PricingFeature>
+                  <PricingFeature>Cloud or on-premise hosting</PricingFeature>
                   <PricingFeature>Custom contract</PricingFeature>
                 </ul>
               </div>
