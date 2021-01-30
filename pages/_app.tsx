@@ -76,6 +76,24 @@ function MyApp({ Component, pageProps }: AppProps) {
         />
         <link rel="manifest" href="/site.webmanifest"></link>
         <link rel="icon" href="/favicon.ico" />
+        <title>Serenity Notes</title>
+        <meta
+          name="description"
+          content="End-to-end encrypted collaborative notes"
+        />
+        <meta property="og:locale" content="en_US" />
+        <meta property="og:type" content="website" />
+        <meta property="og:title" content="Serenity Notes" />
+        <meta
+          property="og:description"
+          content="End-to-end encrypted collaborative notes"
+        />
+        {/* <meta property="og:url" content={`https://www.serenity.re/{TODO}`} />
+        <meta property="og:site_name" content="Serenity Notes" />
+        <meta property="og:image" content={TODO} />
+        <meta property="og:image:secure_url" content={TODO} />
+        <meta property="og:image:width" content={TODO} />
+        <meta property="og:image:height" content={TODO} /> */}
       </Head>
 
       <div className="relative bg-white overflow-hidden">
