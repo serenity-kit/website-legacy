@@ -81,9 +81,9 @@ const SubscribeForm: React.FC<Props> = () => {
 
   return (
     <div className="mt-5 sm:max-w-lg sm:mx-auto sm:text-center lg:text-left lg:mx-0">
-      <p className="text-base font-medium text-gray-900">
+      {/* <p className="text-base font-medium text-gray-900">
         Sign up to our newsletter to learn about our progress.
-      </p>
+      </p> */}
       <Formik
         initialValues={{
           email_address: "",

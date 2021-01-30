@@ -51,7 +51,7 @@ export default function Hero() {
                   iOS
                 </h4>
                 <p className="mt-2 text-base leading-6 text-gray-500">
-                  iPhones and iPads are supported.
+                  iPhones and iPads are supported
                 </p>
                 <a
                   className="mt-4 block"
@@ -67,7 +67,7 @@ export default function Hero() {
                   Android
                 </h4>
                 <p className="mt-2 text-base leading-6 text-gray-500">
-                  Phones and tablets are supported.
+                  Phones and tablets are supported
                 </p>
                 <a
                   className="mt-4 block"
@@ -83,7 +83,7 @@ export default function Hero() {
                   macOS
                 </h4>
                 <p className="mt-2 text-base leading-6 text-gray-500">
-                  Coming early 2021.
+                  Coming early 2021
                 </p>
               </div>
             </div>
@@ -93,7 +93,7 @@ export default function Hero() {
                   Windows
                 </h4>
                 <p className="mt-2 text-base leading-6 text-gray-500">
-                  Coming early 2021.
+                  Coming early 2021
                 </p>
               </div>
             </div>
@@ -103,7 +103,7 @@ export default function Hero() {
                   Linux
                 </h4>
                 <p className="mt-2 text-base leading-6 text-gray-500">
-                  Coming 2022.
+                  Coming 2022
                 </p>
               </div>
             </div>

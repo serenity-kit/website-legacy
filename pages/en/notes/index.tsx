@@ -232,13 +232,14 @@ export default function Home() {
             <div className="lg:grid lg:grid-flow-row-dense lg:grid-cols-2 lg:gap-8 lg:items-center">
               <div className="lg:col-start-2">
                 <h4 className="text-2xl leading-8 font-semibold text-gray-900 sm:text-3xl sm:leading-9">
-                  Sign up without an Email, Phone number or Password
+                  Sign up without an email, phone number or password
                 </h4>
                 <p className="mt-3 text-lg leading-7 text-gray-500">
-                  You can sign up in seconds with one click. No email, phone
-                  number or password is needed since the secret keys generated
-                  and stored on your device convert your device to your key to
-                  authenticate with the servers or collaborators.
+                  Sign up in seconds with just one click without the necessity
+                  of providing an email, phone number or password. The secret
+                  keys generated and stored on your device convert your device
+                  into the authentication mechanism with servers and
+                  collaborators.
                 </p>
               </div>
 
@@ -293,15 +294,15 @@ export default function Home() {
           <div className="relative mt-12 lg:mt-24 lg:grid lg:grid-cols-2 lg:gap-8 lg:items-center">
             <div className="relative">
               <h4 className="text-2xl leading-8 font-semibold text-gray-900 sm:text-3xl sm:leading-9">
-                Collaborator securely
+                Collaborate securely
               </h4>
               <p className="mt-3 text-lg leading-7 text-gray-500">
-                Adding another contact only requires your to connect once by
+                Adding another contact only requires you to connect once by
                 sending your contact an invitation code.
               </p>
               <p className="mt-3 text-lg leading-7 text-gray-500">
-                In the video your can see how a new contact is added and an
-                existing note shared with this new contact. Further the notes is
+                The video shows how a new contact is added and how an existing
+                note is shared with the new contact. Furthermore the note is
                 updated and synced to the contact's device.
               </p>
             </div>
@@ -394,8 +395,8 @@ export default function Home() {
                 </h4>
                 <p className="mt-3 text-lg leading-7 text-gray-500">
                   While it's important to collaborate with others, it's also
-                  very relevant to have your data available on all your devices.
-                  Of course also synchronized securely.
+                  very relevant to have your data available and securely
+                  synchronized across all your devices.
                 </p>
               </div>
 
