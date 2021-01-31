@@ -2,7 +2,7 @@ import * as React from "react";
 import { NextPage } from "next";
 import { useRouter } from "next/router";
 import { useMutation } from "urql";
-import FormError from "../../components/FormError";
+import FormError from "../../../components/FormError";
 
 const SendBillingAccountAuthEmailMutation = `
   mutation sendBillingAccountAuthEmail($input: SendBillingAccountAuthEmailInput!) {
@@ -205,7 +205,7 @@ const LoginPage: NextPage = () => {
                   input: { emailToken: state.emailToken },
                 });
                 if (result?.data?.authenticateBillingAccount?.success) {
-                  router.push("/en/billing-account");
+                  router.push("/en/notes/billing-account");
                 } else {
                   dispatch({ type: "AUTHENTICATE_FAILED" });
                 }

@@ -3,7 +3,7 @@ import Clients from "../../../components/Clients";
 import Video from "../../../components/Video";
 import SubscribeForm from "../../../components/SuscribeForm";
 
-export default function Home() {
+export default function NotesHome() {
   return (
     <>
       <Hero />

@@ -136,13 +136,13 @@ export default function Navigation(props) {
             </Link>
             {isLoggedIn ? (
               <>
-                <Link href="/en/billing-account">
+                <Link href="/en/notes/billing-account">
                   <NavAnchor className="ml-6">Billing Account</NavAnchor>
                 </Link>
                 <LogoutLink>Logout</LogoutLink>
               </>
             ) : (
-              <Link href="/en/login">
+              <Link href="/en/notes/login">
                 <NavAnchor className="ml-6">Login</NavAnchor>
               </Link>
             )}
@@ -216,7 +216,7 @@ export default function Navigation(props) {
               </Link>
               {isLoggedIn ? (
                 <>
-                  <Link href="/en/billing-account">
+                  <Link href="/en/notes/billing-account">
                     <MobileEntry onClick={() => setMobileDropdownOpen(false)}>
                       Billing Account
                     </MobileEntry>
@@ -224,7 +224,7 @@ export default function Navigation(props) {
                   <LogoutLink>Logout</LogoutLink>
                 </>
               ) : (
-                <Link href="/en/login">
+                <Link href="/en/notes/login">
                   <MobileEntry onClick={() => setMobileDropdownOpen(false)}>
                     Login
                   </MobileEntry>

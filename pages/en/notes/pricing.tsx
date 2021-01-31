@@ -25,7 +25,7 @@ export default function Home() {
 
   function successCallback(data) {
     router.push(
-      `/en/login#${btoa(JSON.stringify({ email: data.user.email }))}`
+      `/en/notes/login#${btoa(JSON.stringify({ email: data.user.email }))}`
     );
   }
 
