@@ -128,8 +128,8 @@ export default function Navigation(props) {
             <Link href="/en/notes/pricing">
               <NavAnchor>Pricing</NavAnchor>
             </Link>
-            <Link href="/en/notes/faq">
-              <NavAnchor className="ml-6">FAQ</NavAnchor>
+            <Link href="/en/notes/support">
+              <NavAnchor className="ml-6">Support</NavAnchor>
             </Link>
             <Link href="/en/notes/roadmap">
               <NavAnchor className="ml-6">Roadmap</NavAnchor>
@@ -204,9 +204,9 @@ export default function Navigation(props) {
                   Pricing
                 </MobileEntry>
               </Link>
-              <Link href="/en/notes/faq">
+              <Link href="/en/notes/support">
                 <MobileEntry onClick={() => setMobileDropdownOpen(false)}>
-                  FAQ
+                  Support
                 </MobileEntry>
               </Link>
               <Link href="/en/notes/roadmap">
