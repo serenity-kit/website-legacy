@@ -182,9 +182,13 @@ export default function NotesHome() {
                     implementation which is powering the end-to-end encryption
                     of the <a href="https://matrix.org/">Matrix Protocol</a>.
                     Serenity's protocol is inspired by the Matrix protocol but
-                    optimized for shared data. The Serenity Notes client will be
-                    open sourced soon and more details on the protocol will
-                    follow …
+                    optimized for shared data. The source code of Serenity Notes
+                    iOS and Android client has been open sourced and is
+                    available{" "}
+                    <a href="https://github.com/SerenityNotes/serenity-notes-clients">
+                      here
+                    </a>
+                    . More details on the protocol will follow in the future …
                   </dd>
                 </div>
               </div>

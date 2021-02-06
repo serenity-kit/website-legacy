@@ -93,7 +93,7 @@ const Footer = () => (
                 </li>
               </ul>
             </div>
-            <div className="mt-12 md:mt-0">
+            {/* <div className="mt-12 md:mt-0">
               <span className="text-sm font-semibold text-gray-400 tracking-wider uppercase">
                 Serenity Sdk
               </span>
@@ -106,7 +106,7 @@ const Footer = () => (
                   </Link>
                 </li>
               </ul>
-            </div>
+            </div> */}
           </div>
           <div className="md:grid md:grid-cols-2 md:gap-8">
             {/* <div>
