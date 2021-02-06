@@ -97,7 +97,7 @@ function MyApp({ Component, pageProps }: AppProps) {
       </Head>
 
       <div className="relative bg-white overflow-hidden">
-        <div className="relative pt-4 pb-16 md:pb-20 lg:pb-24 xl:pb-32">
+        <div className="relative pt-4 pb-8">
           <header>
             <Navigation />
           </header>
