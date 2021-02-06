@@ -1,17 +1,4 @@
 @tailwind base;
-
-a,
-/* a:visited, */ /* breaks the link buttons style */
-a:active {
-  color: #000;
-  text-decoration: underline;
-}
-
-a:hover {
-  color: #718096;
-  text-decoration: underline;
-}
-
 @tailwind components;
 @tailwind utilities;
 
@@ -43,6 +30,18 @@ body {
     Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue,
     sans-serif;
   color: #1f1f1f;
+}
+
+a,
+/* a:visited, */ /* breaks the link buttons style */
+a:active {
+  color: #000;
+  text-decoration: underline;
+}
+
+a:hover {
+  color: #718096;
+  text-decoration: underline;
 }
 
 :root {
