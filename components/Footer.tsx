@@ -147,9 +147,9 @@ const Footer = () => (
                 </li>
 
                 <li>
-                  <Link href="/en/notes/terms-and-conditions">
+                  <Link href="/en/notes/terms-of-service">
                     <a className="text-base text-gray-500 hover:text-gray-900 no-underline">
-                      Terms & Conditions
+                      Terms of Service
                     </a>
                   </Link>
                 </li>
