@@ -8,7 +8,7 @@ export default function useOutsideClick(
 
   const callback = useCallback((e: MouseEvent) => {
     const outsideClick = refs.every((ref) => {
-      return !ref.current.contains(e.target as Element);
+      return !ref.current?.contains(e.target as Element);
     });
     if (outsideClick) {
       savedHandler.current(e);

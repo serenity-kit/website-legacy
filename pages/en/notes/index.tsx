@@ -1,6 +1,7 @@
 import Hero from "../../../components/Hero";
 import Clients from "../../../components/Clients";
 import Video from "../../../components/Video";
+import ProductComparison from "../../../components/ProductComparison";
 import SubscribeForm from "../../../components/SuscribeForm";
 
 export default function NotesHome() {
@@ -196,6 +197,8 @@ export default function NotesHome() {
           </div>
         </div>
       </div>
+
+      <ProductComparison />
 
       <div className="bg-background overflow-hidden pb-16">
         <div className="relative max-w-xl mx-auto px-4 sm:px-6 lg:px-8 lg:max-w-screen-xl">
@@ -464,7 +467,7 @@ export default function NotesHome() {
           <p className="inline text-3xl font-semibold text-primary sm:block sm:text-4xl">
             to receive news and product updates
           </p>
-          <SubscribeForm />
+          <SubscribeForm convertkitFormId="1781726" />
         </div>
       </div>
     </>

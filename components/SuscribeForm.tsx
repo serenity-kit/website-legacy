@@ -41,9 +41,11 @@ type ConvertKitBody = {
   email_address: string;
 };
 
-type Props = {};
+type Props = {
+  convertkitFormId: string;
+};
 
-const SubscribeForm: React.FC<Props> = () => {
+const SubscribeForm: React.FC<Props> = (props) => {
   const [state, dispatch] = React.useReducer(fetchReducer, {
     error: null,
     response: null,
@@ -53,14 +55,17 @@ const SubscribeForm: React.FC<Props> = () => {
 
   const submit = (values: ConvertKitBody) => {
     dispatch({ type: "fetching" });
-    fetch("https://app.convertkit.com/forms/1781726/subscriptions", {
-      method: "post",
-      body: JSON.stringify(values),
-      headers: {
-        Accept: "application/json",
-        "Content-Type": "application/json",
-      },
-    })
+    fetch(
+      `https://app.convertkit.com/forms/${props.convertkitFormId}/subscriptions`,
+      {
+        method: "post",
+        body: JSON.stringify(values),
+        headers: {
+          Accept: "application/json",
+          "Content-Type": "application/json",
+        },
+      }
+    )
       .then((response) => response.json())
       .then(
         (response) => {
@@ -132,8 +137,8 @@ const SubscribeForm: React.FC<Props> = () => {
       </Formik>
       {isSuccess && !pending && (
         <div className="mt-4 text-green-500">
-          Great, sent you an email with the confirmation link. Please check your
-          inbox!
+          Great, we sent you an email with the confirmation link. Please check
+          your inbox!
         </div>
       )}
       {errorMessage && (
