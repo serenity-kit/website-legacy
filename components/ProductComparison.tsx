@@ -51,10 +51,10 @@ const products = [
 
 const ProductComparison = () => (
   <div className="bg-white">
-    <h3 className="mt-2 text-center text-2xl leading-8 font-semibold text-gray-900">
+    <h3 className="px-4 mt-2 sm:text-center text-2xl leading-8 font-semibold text-gray-900">
       Compare Applications
     </h3>
-    <div className="max-w-7xl mx-auto bg-white pb-16 sm:pb-24 pt-16 sm:px-6 lg:px-8">
+    <div className="max-w-7xl mx-auto bg-white pb-16 sm:pb-24 pt-8 sm:pt-16 sm:px-6 lg:px-8">
       <table className="w-full h-px table-fixed">
         <caption className="sr-only">
           Encryption comparison of various applications
@@ -107,7 +107,7 @@ const ProductComparison = () => (
           })}
         </tbody>
       </table>
-      <div className="text-gray-500">
+      <div className="text-gray-500 px-4">
         <p>* Encrypt individual notes using a password</p>
         <p>** Not encrypted by default, but can be set up</p>
       </div>

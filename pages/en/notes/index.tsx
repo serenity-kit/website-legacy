@@ -137,11 +137,11 @@ export default function NotesHome() {
 
       <div className="py-16 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="lg:text-center">
-            <h2 className="mt-2 text-3xl leading-8 font-semibold text-gray-900 sm:text-4xl">
+          <div className="md:text-center">
+            <h2 className="mt-2 leading-8 font-semibold text-gray-900 text-2xl sm:text-3xl">
               Security & Privacy
             </h2>
-            <p className="mt-4 max-w-2xl text-xl text-gray-500 lg:mx-auto">
+            <p className="mt-4 max-w-2xl text-xl text-gray-500 md:mx-auto">
               By leveraging state of the art end-to-end encryption you get the
               control to decide who can access your data
             </p>
@@ -238,7 +238,7 @@ export default function NotesHome() {
           <div className="relative mt-12 sm:mt-16 lg:mt-24">
             <div className="lg:grid lg:grid-flow-row-dense lg:grid-cols-2 lg:gap-8 lg:items-center">
               <div className="lg:col-start-2">
-                <h2 className="text-2xl leading-8 font-semibold text-gray-900 sm:text-3xl sm:leading-9">
+                <h2 className="leading-8 font-semibold text-gray-900 text-2xl sm:text-3xl sm:leading-9">
                   Sign up without an email, phone number or password
                 </h2>
                 <p className="mt-3 text-lg leading-7 text-gray-500">
@@ -461,10 +461,10 @@ export default function NotesHome() {
 
       <div className="bg-background flex justify-center py-16 lg:py-20 xl:py-24">
         <div className=" max-w-7xl mx-auto py-6 px-4 sm:px-6 lg:py-6 lg:px-8">
-          <h2 className="inline text-3xl font-semibold text-gray-900 sm:block sm:text-4xl">
+          <h2 className="inline text-2xl font-semibold text-gray-900 sm:block sm:text-3xl">
             Sign up for our newsletter{" "}
           </h2>
-          <p className="inline text-3xl font-semibold text-primary sm:block sm:text-4xl">
+          <p className="inline text-2xl font-semibold text-primary sm:block sm:text-3xl">
             to receive news and product updates
           </p>
           <SubscribeForm convertkitFormId="1781726" />
