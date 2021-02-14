@@ -132,6 +132,23 @@ export default function Home() {
                 your account is lost.
               </p>
             </FaqEntry>
+            <FaqEntry title="How can I restore my account?">
+              <p>
+                Unfortionatly if you loose all your linked devices all your
+                notes, contact and device names can't be restored.
+              </p>
+              <p>
+                For now we highly recommend to recommend to link multiple
+                devices to avoid your data being unrecoverable. In the future we
+                want to establish a secure backup and restore mechanism.
+              </p>
+            </FaqEntry>
+            <FaqEntry title="How can I delete my account?">
+              <p>
+                Find the "Delete User Account" button in the application's
+                settings area.
+              </p>
+            </FaqEntry>
           </dl>
         </FaqSection>
 
