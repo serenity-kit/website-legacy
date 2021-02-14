@@ -86,7 +86,8 @@ export default function Navigation(props) {
   });
   return (
     <>
-      <nav className="relative max-w-screen-xl mx-auto flex items-center justify-between px-4 sm:px-6">
+      {/* z-index needed to make sure the navigation is on top of the svg */}
+      <nav className="relative max-w-screen-xl mx-auto flex items-center justify-between px-4 sm:px-6 z-10">
         <div className="flex items-center flex-1">
           <div className="flex items-center justify-between w-full md:w-auto pb-1">
             <Link href="/en/notes">
