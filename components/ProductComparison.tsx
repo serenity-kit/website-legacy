@@ -55,7 +55,7 @@ const ProductComparison = () => (
       Compare Applications
     </h3>
     <div className="max-w-7xl mx-auto bg-white pb-16 sm:pb-24 pt-8 sm:pt-16 sm:px-6 lg:px-8">
-      <table className="w-full h-px table-fixed">
+      <table className="w-full h-px lg:table-fixed">
         <caption className="sr-only">
           Encryption comparison of various applications
         </caption>
@@ -69,14 +69,14 @@ const ProductComparison = () => (
             </th>
 
             <th
-              className="w-1/4 pb-4 px-6 leading-6 font-medium text-gray-900 text-left"
+              className="w-1/4 pb-4 px-6 leading-6 font-medium text-gray-900 text-left text-sm sm:text-base"
               scope="col"
             >
               End-to-end encryption between your devices
             </th>
 
             <th
-              className="w-1/4 pb-4 px-6 leading-6 font-medium text-gray-900 text-left"
+              className="w-1/4 pb-4 px-6 leading-6 font-medium text-gray-900 text-left text-sm sm:text-base"
               scope="col"
             >
               End-to-end encryption between collaborators
