@@ -31,9 +31,9 @@ export default function Hero() {
                 <span className="text-primary">collaborative notes</span>
               </h1>
               <p className="mt-3 text-base text-gray-500 sm:mt-5 sm:text-xl lg:text-lg xl:text-xl lg:pr-8">
-                Take private notes, optionally share them with others and still
-                stay in control who can access your data. All while having an
-                excellent offline-first experience on all platforms.
+                Compose private notes, optionally share them with others and
+                still stay in control who can access your data. All while having
+                an excellent offline-first experience on all platforms.
               </p>
               <div className="mt-8 sm:max-w-lg sm:mx-auto sm:text-center md:mt-12 lg:text-left lg:mx-0">
                 <p className="text-base font-medium text-gray-900">
