@@ -143,6 +143,12 @@ export default function Home() {
                 want to establish a secure backup and restore mechanism.
               </p>
             </FaqEntry>
+            <FaqEntry title="How can I export all my data?">
+              <p>
+                Unfortionatly the only way is to copy & paste each note
+                manually. In the future we want provide an export functionality.
+              </p>
+            </FaqEntry>
             <FaqEntry title="How can I delete my account?">
               <p>
                 Find the "Delete User Account" button in the application's
@@ -214,6 +220,14 @@ export default function Home() {
               <p>
                 This can be valuable information and that's why we care to store
                 the encrypted data in a secure location.
+              </p>
+            </FaqEntry>
+            <FaqEntry title="Can I synchronize my data via iCloud?">
+              <p>
+                No, it's not possible and we don't intend provide this
+                functionality. It's important to us to offer the service across
+                multiple platforms. An integration into iCloud doesn't align
+                with this goal.
               </p>
             </FaqEntry>
           </dl>
