@@ -20,14 +20,16 @@ const NavAnchor: React.FC<
   >
 > = (props) => {
   return (
-    <a
-      {...props}
-      className={`inline-block font-medium no-underline hover:no-underline cursor-pointer py-2 px-2 ${
-        props.className || ""
-      }`}
-    >
-      {props.children}
-    </a>
+    <Link href={props.href}>
+      <a
+        {...props}
+        className={`inline-block font-medium no-underline hover:no-underline cursor-pointer py-2 px-2 ${
+          props.className || ""
+        }`}
+      >
+        {props.children}
+      </a>
+    </Link>
   );
 };
 
@@ -38,15 +40,17 @@ const MobileEntry: React.FC<
   >
 > = (props) => {
   return (
-    <a
-      role="menuitem"
-      {...props}
-      className={`font-medium no-underline hover:no-underline cursor-pointer block px-3 py-2 rounded-md text-base hover:bg-gray-50 ${
-        props.className || ""
-      }`}
-    >
-      {props.children}
-    </a>
+    <Link href={props.href}>
+      <a
+        role="menuitem"
+        {...props}
+        className={`font-medium no-underline hover:no-underline cursor-pointer block px-3 py-2 rounded-md text-base hover:bg-gray-50 ${
+          props.className || ""
+        }`}
+      >
+        {props.children}
+      </a>
+    </Link>
   );
 };
 
@@ -55,18 +59,17 @@ const LogoutLink: React.FC = (props) => {
   const [, logoutBillingAccount] = useMutation(LogoutBillingAccountMutation);
 
   return (
-    <Link href="/">
-      <NavAnchor
-        className="ml-10"
-        onClick={async (evt) => {
-          evt.preventDefault();
-          await logoutBillingAccount();
-          router.push("/");
-        }}
-      >
-        {props.children}
-      </NavAnchor>
-    </Link>
+    <NavAnchor
+      href="/"
+      className="ml-10"
+      onClick={async (evt) => {
+        evt.preventDefault();
+        await logoutBillingAccount();
+        router.push("/");
+      }}
+    >
+      {props.children}
+    </NavAnchor>
   );
 };
 
@@ -126,26 +129,24 @@ export default function Navigation(props) {
           </div>
 
           <div className="hidden md:block md:ml-8">
-            <Link href="/en/notes/pricing">
-              <NavAnchor>Pricing</NavAnchor>
-            </Link>
-            <Link href="/en/notes/support">
-              <NavAnchor className="ml-6">Support</NavAnchor>
-            </Link>
-            <Link href="/en/notes/roadmap">
-              <NavAnchor className="ml-6">Roadmap</NavAnchor>
-            </Link>
+            <NavAnchor href="/en/notes/pricing">Pricing</NavAnchor>
+            <NavAnchor href="/en/notes/support" className="ml-6">
+              Support
+            </NavAnchor>
+            <NavAnchor href="/en/notes/roadmap" className="ml-6">
+              Roadmap
+            </NavAnchor>
             {isLoggedIn ? (
               <>
-                <Link href="/en/notes/billing-account">
-                  <NavAnchor className="ml-6">Billing Account</NavAnchor>
-                </Link>
+                <NavAnchor href="/en/notes/billing-account" className="ml-6">
+                  Billing Account
+                </NavAnchor>
                 <LogoutLink>Logout</LogoutLink>
               </>
             ) : (
-              <Link href="/en/notes/login">
-                <NavAnchor className="ml-6">Login</NavAnchor>
-              </Link>
+              <NavAnchor href="/en/notes/login" className="ml-6">
+                Login
+              </NavAnchor>
             )}
           </div>
         </div>
@@ -200,36 +201,41 @@ export default function Navigation(props) {
             aria-labelledby="main-menu"
           >
             <div className="px-2 pt-2 pb-3 space-y-1" role="none">
-              <Link href="/en/notes/pricing">
-                <MobileEntry onClick={() => setMobileDropdownOpen(false)}>
-                  Pricing
-                </MobileEntry>
-              </Link>
-              <Link href="/en/notes/support">
-                <MobileEntry onClick={() => setMobileDropdownOpen(false)}>
-                  Support
-                </MobileEntry>
-              </Link>
-              <Link href="/en/notes/roadmap">
-                <MobileEntry onClick={() => setMobileDropdownOpen(false)}>
-                  Roadmap
-                </MobileEntry>
-              </Link>
+              <MobileEntry
+                href="/en/notes/pricing"
+                onClick={() => setMobileDropdownOpen(false)}
+              >
+                Pricing
+              </MobileEntry>
+              <MobileEntry
+                href="/en/notes/support"
+                onClick={() => setMobileDropdownOpen(false)}
+              >
+                Support
+              </MobileEntry>
+              <MobileEntry
+                href="/en/notes/roadmap"
+                onClick={() => setMobileDropdownOpen(false)}
+              >
+                Roadmap
+              </MobileEntry>
               {isLoggedIn ? (
                 <>
-                  <Link href="/en/notes/billing-account">
-                    <MobileEntry onClick={() => setMobileDropdownOpen(false)}>
-                      Billing Account
-                    </MobileEntry>
-                  </Link>
+                  <MobileEntry
+                    href="/en/notes/billing-account"
+                    onClick={() => setMobileDropdownOpen(false)}
+                  >
+                    Billing Account
+                  </MobileEntry>
                   <LogoutLink>Logout</LogoutLink>
                 </>
               ) : (
-                <Link href="/en/notes/login">
-                  <MobileEntry onClick={() => setMobileDropdownOpen(false)}>
-                    Login
-                  </MobileEntry>
-                </Link>
+                <MobileEntry
+                  href="/en/notes/login"
+                  onClick={() => setMobileDropdownOpen(false)}
+                >
+                  Login
+                </MobileEntry>
               )}
             </div>
           </div>

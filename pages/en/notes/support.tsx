@@ -255,19 +255,19 @@ export default function Home() {
               <p>
                 The server code is not open source yet and won't for a
                 forseeable future for the following reasons:
-                <ul className="list-disc pl-6">
-                  <li>
-                    To avoid that some well funded company takes the existing
-                    work with little to no effort, makes a business out of and
-                    harms the productization of Serenity Notes.
-                  </li>
-                  <li>
-                    It shouldn't be necessary to expose the server code, since
-                    the clients should never accept a note, contact or device
-                    that hasn't been added or verified by the user.
-                  </li>
-                </ul>
               </p>
+              <ul className="list-disc pl-6">
+                <li>
+                  To avoid that some well funded company takes the existing work
+                  with little to no effort, makes a business out of and harms
+                  the productization of Serenity Notes.
+                </li>
+                <li>
+                  It shouldn't be necessary to expose the server code, since the
+                  clients should never accept a note, contact or device that
+                  hasn't been added or verified by the user.
+                </li>
+              </ul>
             </FaqEntry>
             <FaqEntry title="Why is the protocol not documented?">
               <p>
