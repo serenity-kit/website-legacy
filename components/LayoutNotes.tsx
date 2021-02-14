@@ -29,6 +29,9 @@ const mdxComponents = {
   img: (props) => <Image {...props} layout="fill" />,
 };
 
+const metaDescription =
+  "End-to-end encrypted private & shared notes. Offline-first on all platforms.";
+
 export default function LayoutNotes(props: Props) {
   return (
     <>
@@ -68,17 +71,11 @@ export default function LayoutNotes(props: Props) {
         <link rel="manifest" href="/site.webmanifest"></link>
         <link rel="icon" href="/favicon.ico" />
         <title>Serenity Notes</title>
-        <meta
-          name="description"
-          content="End-to-end encrypted collaborative notes"
-        />
+        <meta name="description" content={metaDescription} />
         <meta property="og:locale" content="en_US" />
         <meta property="og:type" content="website" />
         <meta property="og:title" content="Serenity Notes" />
-        <meta
-          property="og:description"
-          content="End-to-end encrypted collaborative notes"
-        />
+        <meta property="og:description" content={metaDescription} />
         {/* <meta property="og:url" content={`https://www.serenity.re/{TODO}`} />
         <meta property="og:site_name" content="Serenity Notes" />
         <meta property="og:image" content={TODO} />
