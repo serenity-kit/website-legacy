@@ -143,7 +143,7 @@ export default function NotesHome() {
             </h2>
             <p className="mt-4 max-w-2xl text-xl text-gray-500 md:mx-auto">
               By leveraging state of the art end-to-end encryption you get the
-              control to decide who can access your data
+              control to decide who can access your data.
             </p>
           </div>
 
