@@ -69,6 +69,9 @@ export default function Home() {
             <li>
               <a href="#faq-open-source">Open Source</a>
             </li>
+            <li>
+              <a href="#faq-technical-information">Technical information</a>
+            </li>
           </ul>
         </FaqSection>
         <FaqSection
@@ -254,29 +257,79 @@ export default function Home() {
               </p>
               <p>
                 The server code is not open source yet and won't for a
-                forseeable future for the following reasons:
+                forseeable future for the following reason:
               </p>
               <ul className="list-disc pl-6">
                 <li>
-                  To avoid that some well funded company takes the existing work
+                  To avoid that a well funded company takes the existing work
                   with little to no effort, makes a business out of and harms
                   the productization of Serenity Notes.
                 </li>
-                <li>
-                  It shouldn't be necessary to expose the server code, since the
-                  clients should never accept a note, contact or device that
-                  hasn't been added or verified by the user.
-                </li>
               </ul>
+              <p>
+                While it's not reason to not publish the server code, from a
+                perspective of verifying the security it shouldn't be necessary
+                to expose the server code. The clients should never accept a
+                note, contact or device that hasn't been added or verified by
+                the user.
+              </p>
+            </FaqEntry>
+          </dl>
+        </FaqSection>
+
+        <FaqSection
+          title={
+            <h3
+              id="faq-technical-information"
+              className="text-2xl font-extrabold text-gray-900"
+            >
+              Technical Information
+            </h3>
+          }
+        >
+          <dl className="space-y-12">
+            <FaqEntry title="How are note storred?">
+              <p>
+                A notes is storred as an encoded version of a Yjs CRDT document.
+                To learn more about Yjs visit{" "}
+                <a href="https://github.com/yjs/yjs">
+                  https://github.com/yjs/yjs
+                </a>
+                .
+              </p>
+            </FaqEntry>
+            <FaqEntry title="Why implement a custom protocol and not rather use thre Matrix protocol?">
+              <p>
+                Matrix is a great protocol for messaging systems, but when
+                exchanging data to represent a document receiving and decrypting
+                every change would be very ineffecient.
+              </p>
+              <p>
+                Our protocol, while still naive, is already more effiecient in
+                most cases. We are always encrypting the full CRDT data
+                structure (with tombstones for deleted sections) and sending it
+                to the server. Other clients then only need to fetch the last
+                message. While still very inefficient it works already quite
+                well when not too many devices exchange smaller documents.
+              </p>
+              <p>
+                There are further optimization possible like using snapshots in
+                combination with change messages. In order to implement such
+                optimization we would need to fork Matrix or convince them to
+                adapt the protocol. Instead we decided develop our own protocol
+                with the believe that this will allow us better to experiment on
+                the protocol and evolve it faster.
+              </p>
+              <p>
+                That doesn't mean the Matrix Protocol can't have such
+                optimisations and we would be happy to share our findings and
+                collaborate.
+              </p>
             </FaqEntry>
             <FaqEntry title="Why is the protocol not documented?">
               <p>
-                We initially started out with the ambition to have an Open
-                Source protocol, but noticed during the development that the
-                protocol changed constantly. While the current version works and
-                is stable, we are already considering several optimizations.
-                Therefore we don't feel comfortable to put lots of effort in
-                documenting and maintaining the current state.
+                Its something we want to do, but other topics are more important
+                to us right now.
               </p>
             </FaqEntry>
           </dl>

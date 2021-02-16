@@ -44,7 +44,7 @@ export default function NotesHome() {
                 </li>
                 <li className="mt-10">
                   <h3 className="text-lg leading-6 font-medium text-gray-900">
-                    Media (coming soon …)
+                    Media (coming 2021)
                   </h3>
                   <p className="mt-2 text-base leading-6 text-gray-500">
                     Add Images, Videos or Attachments to enrich your notes.
