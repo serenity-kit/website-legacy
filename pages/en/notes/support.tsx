@@ -332,6 +332,14 @@ export default function Home() {
                 to us right now.
               </p>
             </FaqEntry>
+            <FaqEntry title="Why is the protocol not federated like Matrix?">
+              <p>
+                While we like the idea of federation it creates a lot of
+                overhead for engineering. We feel it would be too effort at this
+                point and rather want to focus on privacy and good user
+                experience.
+              </p>
+            </FaqEntry>
           </dl>
         </FaqSection>
       </div>
