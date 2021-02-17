@@ -106,7 +106,7 @@ export default function Home() {
                 <ul className="mt-6 space-y-4">
                   <PricingFeature>Create up to 3 notes</PricingFeature>
                   <PricingFeature>
-                    Collaborate with up to 3 people per note
+                    Collaborate with up to 3 people
                   </PricingFeature>
                   <PricingFeature>Link up to 3 devices</PricingFeature>
                 </ul>
@@ -149,7 +149,7 @@ export default function Home() {
                 <ul className="mt-6 space-y-4">
                   <PricingFeature>Unlimited notes</PricingFeature>
                   <PricingFeature>
-                    Collaborate with up to 50 people per note
+                    Collaborate with up to 50 people
                   </PricingFeature>
                   <PricingFeature>Link up to 10 devices</PricingFeature>
                   <PricingFeature>Email support</PricingFeature>
@@ -191,7 +191,7 @@ export default function Home() {
                 <ul className="mt-6 space-y-4">
                   <PricingFeature>Unlimited notes</PricingFeature>
                   <PricingFeature>
-                    Collaborate with up to 100 people per note
+                    Collaborate with up to 100 people
                   </PricingFeature>
                   <PricingFeature>
                     Link up to 10 devices per user
