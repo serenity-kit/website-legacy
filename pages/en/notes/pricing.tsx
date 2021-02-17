@@ -45,7 +45,7 @@ export default function Home() {
             <p className="mt-5 text-xl text-gray-500 sm:text-center">
               We need to charge, because we can't sell your data.
             </p>
-            <div className="relative self-center mt-6 bg-gray-100 rounded-lg p-0.5 flex sm:mt-8">
+            <div className="relative self-center mt-6 bg-gray-100 rounded-lg p-0.5 flex sm:mt-8 shadow-inner">
               <button
                 type="button"
                 onClick={(event) => {
@@ -55,7 +55,7 @@ export default function Home() {
                 className={`relative w-1/2 rounded-md py-2 text-sm font-medium text-gray-700 whitespace-nowrap focus:outline-none focus:ring-2 focus:ring-primary-dark focus:z-10 sm:w-auto sm:px-8 ${
                   billedYearly
                     ? "border border-transparent"
-                    : "bg-white border-gray-200 shadow-sm"
+                    : "bg-white border-gray-200 shadow"
                 }`}
               >
                 Monthly billing
@@ -68,7 +68,7 @@ export default function Home() {
                 }}
                 className={`ml-0.5 relative w-1/2 rounded-md py-2 text-sm font-medium text-gray-700 whitespace-nowrap focus:outline-none focus:ring-2 focus:ring-primary-dark focus:z-10 sm:w-auto sm:px-8 ${
                   billedYearly
-                    ? "bg-white border-gray-200 shadow-sm"
+                    ? "bg-white border-gray-200 shadow"
                     : "border border-transparent"
                 }`}
               >
