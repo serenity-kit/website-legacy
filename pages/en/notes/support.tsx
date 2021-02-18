@@ -93,18 +93,18 @@ export default function Home() {
                 While all content is end-to-end encrypted there is so called
                 meta data generated for the whole system to work.
               </p>
-              <p>
+              <p className="mt-2">
                 For example when you share a note with someone the server won't
                 know the content, but is aware that you two collaborate together
                 on one note.
               </p>
               <p>Here are few examples of meta data:</p>
-              <ul className="list-disc pl-6">
+              <ul className="mt-2 list-disc pl-6">
                 <li>Amount of notes</li>
                 <li>Amount of updates per note</li>
                 <li>Who your contacts are (based on IDs)</li>
               </ul>
-              <p>
+              <p className="mt-2">
                 We try to reduce the amount of meta data that is generated, but
                 it takes time and effort.
               </p>
@@ -129,7 +129,7 @@ export default function Home() {
                 authenticate them yourself with the server using public-key
                 cryptography.
               </p>
-              <p>
+              <p className="mt-2">
                 This is one of the reasons why it's recommended to connect
                 multiple devices. Losing your one and only key would mean that
                 your account is lost.
@@ -140,7 +140,7 @@ export default function Home() {
                 Unfortionatly if you loose all your linked devices all your
                 notes, contact and device names can't be restored.
               </p>
-              <p>
+              <p className="mt-2">
                 For now we highly recommend to recommend to link multiple
                 devices to avoid your data being unrecoverable. In the future we
                 want to establish a secure backup and restore mechanism.
@@ -180,7 +180,7 @@ export default function Home() {
             </FaqEntry>
             <FaqEntry title="When will the desktop apps be ready?">
               <p>We hope to have the macOS and Windows latest by mid 2021.</p>
-              <p>
+              <p className="mt-2">
                 In case you have an Apple computer with an M1 processor you can
                 install the{" "}
                 <a href="https://apps.apple.com/at/app/serenity-notes/id1544162074">
@@ -209,7 +209,7 @@ export default function Home() {
                 Heroku is a US company, but the database and all instances are
                 located in Europe.
               </p>
-              <p>
+              <p className="mt-2">
                 While Heroku offers a great product we are considering to
                 migrate our services to a European hosting provider in the long
                 run.
@@ -220,7 +220,7 @@ export default function Home() {
                 While the content itself is encrypted meta data such as who
                 shares documents with whom and when updates took place exist.
               </p>
-              <p>
+              <p className="mt-2">
                 This can be valuable information and that's why we care to store
                 the encrypted data in a secure location.
               </p>
@@ -255,18 +255,18 @@ export default function Home() {
                 </a>
                 .
               </p>
-              <p>
+              <p className="mt-2">
                 The server code is not open source yet and won't for a
                 forseeable future for the following reason:
               </p>
-              <ul className="list-disc pl-6">
+              <ul className="mt-2 list-disc pl-6">
                 <li>
                   To avoid that a well funded company takes the existing work
                   with little to no effort, makes a business out of and harms
                   the productization of Serenity Notes.
                 </li>
               </ul>
-              <p>
+              <p className="mt-2">
                 While it's not reason to not publish the server code, from a
                 perspective of verifying the security it shouldn't be necessary
                 to expose the server code. The clients should never accept a
@@ -304,7 +304,7 @@ export default function Home() {
                 exchanging data to represent a document receiving and decrypting
                 every change would be very ineffecient.
               </p>
-              <p>
+              <p className="mt-2">
                 Our protocol, while still naive, is already more effiecient in
                 most cases. We are always encrypting the full CRDT data
                 structure (with tombstones for deleted sections) and sending it
@@ -312,7 +312,7 @@ export default function Home() {
                 message. While still very inefficient it works already quite
                 well when not too many devices exchange smaller documents.
               </p>
-              <p>
+              <p className="mt-2">
                 There are further optimization possible like using snapshots in
                 combination with change messages. In order to implement such
                 optimization we would need to fork Matrix or convince them to
@@ -320,7 +320,7 @@ export default function Home() {
                 with the believe that this will allow us better to experiment on
                 the protocol and evolve it faster.
               </p>
-              <p>
+              <p className="mt-2">
                 That doesn't mean the Matrix Protocol can't have such
                 optimisations and we would be happy to share our findings and
                 collaborate.
