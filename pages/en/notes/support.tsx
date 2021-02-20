@@ -256,7 +256,7 @@ export default function Home() {
                 .
               </p>
               <p className="mt-2">
-                The server code is not open source yet and won't for a
+                The server code is not open source yet and won't be for a
                 forseeable future for the following reason:
               </p>
               <ul className="mt-2 list-disc pl-6">
