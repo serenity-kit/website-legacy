@@ -54,14 +54,18 @@ const MobileEntry: React.FC<
   );
 };
 
-const LogoutLink: React.FC = (props) => {
+const LogoutLink: React.FC<{
+  type: "mobile" | "desktop";
+  className?: string;
+}> = (props) => {
+  const NavItem = props.type === "mobile" ? MobileEntry : NavAnchor;
   const router = useRouter();
   const [, logoutBillingAccount] = useMutation(LogoutBillingAccountMutation);
 
   return (
-    <NavAnchor
+    <NavItem
+      className={props.className}
       href="/"
-      className="ml-10"
       onClick={async (evt) => {
         evt.preventDefault();
         await logoutBillingAccount();
@@ -69,7 +73,7 @@ const LogoutLink: React.FC = (props) => {
       }}
     >
       {props.children}
-    </NavAnchor>
+    </NavItem>
   );
 };
 
@@ -141,7 +145,9 @@ export default function Navigation(props) {
                 <NavAnchor href="/en/notes/billing-account" className="ml-6">
                   Billing Account
                 </NavAnchor>
-                <LogoutLink>Logout</LogoutLink>
+                <LogoutLink type="desktop" className="ml-6">
+                  Logout
+                </LogoutLink>
               </>
             ) : (
               <NavAnchor href="/en/notes/login" className="ml-6">
@@ -227,7 +233,7 @@ export default function Navigation(props) {
                   >
                     Billing Account
                   </MobileEntry>
-                  <LogoutLink>Logout</LogoutLink>
+                  <LogoutLink type="mobile">Logout</LogoutLink>
                 </>
               ) : (
                 <MobileEntry
