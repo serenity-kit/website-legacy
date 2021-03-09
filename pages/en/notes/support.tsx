@@ -288,9 +288,9 @@ export default function Home() {
           }
         >
           <dl className="space-y-12">
-            <FaqEntry title="How are notes storred?">
+            <FaqEntry title="How are notes stored?">
               <p>
-                A notes is storred as a base64 encoded string of a Yjs CRDT
+                Notes are stored as a base64 encoded string of a Yjs CRDT
                 document. To learn more about Yjs visit{" "}
                 <a href="https://github.com/yjs/yjs">
                   https://github.com/yjs/yjs

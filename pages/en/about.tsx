@@ -46,7 +46,7 @@ const AboutPage: NextPage = () => {
           History
         </h2>
         <p>
-          Most data nowadays is storred unencrypted in the cloud, regardless of
+          Most data nowadays is stored unencrypted in the cloud, regardless of
           how sensible that data is. In addition a user has no idea when someone
           accesses their data and what data is accessed. While this rarely
           happens that someone is looking your data specifically, it also
