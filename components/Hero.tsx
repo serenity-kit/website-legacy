@@ -37,7 +37,7 @@ export default function Hero() {
               </p>
               <div className="mt-8 sm:max-w-lg sm:mx-auto sm:text-center md:mt-12 lg:text-left lg:mx-0">
                 <p className="text-base font-medium text-gray-900">
-                  Download the app and sign up for free
+                  Download the app and sign up for free.
                 </p>
                 <div className="mt-4 mb-4 flex flex-wrap justify-start md:justify-center lg:justify-start ">
                   <a

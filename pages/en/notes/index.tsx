@@ -29,8 +29,7 @@ export default function NotesHome() {
                     Body text, Headlines, Lists
                   </h3>
                   <p className="mt-2 text-base leading-6 text-gray-500">
-                    The editor offers a simple, but effective list of formatting
-                    options.
+                    The app offers simple but effective text formatting options.
                   </p>
                 </li>
                 <li className="mt-10">
@@ -44,10 +43,10 @@ export default function NotesHome() {
                 </li>
                 <li className="mt-10">
                   <h3 className="text-lg leading-6 font-medium text-gray-900">
-                    Media (coming 2021)
+                    Media (coming soon)
                   </h3>
                   <p className="mt-2 text-base leading-6 text-gray-500">
-                    Add Images, Videos or Attachments to enrich your notes.
+                    Add Images, Videos, and Attachments to enrich your notes.
                   </p>
                 </li>
               </ul>

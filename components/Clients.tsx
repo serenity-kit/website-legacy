@@ -18,7 +18,7 @@ export default function Hero() {
                   iOS
                 </h4>
                 <p className="mt-2 text-base leading-6 text-gray-500">
-                  iPhones and iPads are supported
+                  iPhone and iPad are supported
                 </p>
                 <a
                   className="mt-4 block"
