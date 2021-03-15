@@ -233,6 +233,15 @@ export default function Home() {
                 with this goal.
               </p>
             </FaqEntry>
+            <FaqEntry title="Why the .re top-level domain?">
+              <p className="mt-2">
+                .re is administered by{" "}
+                <a href="https://www.afnic.fr/en/">AFNIC</a> which also operates
+                the .fr top-level domain. Since we are a European company it was
+                important to us to use a top-level domain managed by a European
+                organization.
+              </p>
+            </FaqEntry>
           </dl>
         </FaqSection>
 
@@ -257,21 +266,13 @@ export default function Home() {
               </p>
               <p className="mt-2">
                 The server code is not open source yet and won't be for a
-                forseeable future for the following reason:
+                forseeable future.
               </p>
-              <ul className="mt-2 list-disc pl-6">
-                <li>
-                  To avoid that a well funded company takes the existing work
-                  with little to no effort, makes a business out of and harms
-                  the productization of Serenity Notes.
-                </li>
-              </ul>
               <p className="mt-2">
-                While it's not reason to not publish the server code, from a
-                perspective of verifying the security it shouldn't be necessary
-                to expose the server code. The clients should never accept a
-                note, contact or device that hasn't been added or verified by
-                the user.
+                In order to verify the security of Serenity Notes it shouldn't
+                be necessary to expose the server code. The clients should never
+                accept a note, contact or device that hasn't been added or
+                verified by the user.
               </p>
             </FaqEntry>
           </dl>
