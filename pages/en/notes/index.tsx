@@ -112,7 +112,7 @@ export default function NotesHome() {
                     popularised by <a href="https://signal.org/">Signal</a>. It
                     uses the{" "}
                     <a href="https://gitlab.matrix.org/matrix-org/olm">
-                      Olm and Megaolm
+                      Olm and Megolm
                     </a>{" "}
                     implementation which is powering the end-to-end encryption
                     of the <a href="https://matrix.org/">Matrix Protocol</a>.
