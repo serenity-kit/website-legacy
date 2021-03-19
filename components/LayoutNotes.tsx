@@ -76,12 +76,18 @@ export default function LayoutNotes(props: Props) {
         <meta property="og:type" content="website" />
         <meta property="og:title" content="Serenity Notes" />
         <meta property="og:description" content={metaDescription} />
-        {/* <meta property="og:url" content={`https://www.serenity.re/{TODO}`} />
+        {/* <meta property="og:url" content={`https://www.serenity.re/{TODO}`} /> */}
         <meta property="og:site_name" content="Serenity Notes" />
-        <meta property="og:image" content={TODO} />
-        <meta property="og:image:secure_url" content={TODO} />
-        <meta property="og:image:width" content={TODO} />
-        <meta property="og:image:height" content={TODO} /> */}
+        <meta
+          property="og:image"
+          content="https://www.serenity.re/apple-touch-icon.png"
+        />
+        <meta
+          property="og:image:secure_url"
+          content="https://www.serenity.re/apple-touch-icon.png"
+        />
+        <meta property="og:image:width" content="180" />
+        <meta property="og:image:height" content="180" />
       </Head>
 
       <div className="relative bg-white overflow-hidden">
