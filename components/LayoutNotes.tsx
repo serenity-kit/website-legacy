@@ -80,14 +80,14 @@ export default function LayoutNotes(props: Props) {
         <meta property="og:site_name" content="Serenity Notes" />
         <meta
           property="og:image"
-          content="https://www.serenity.re/apple-touch-icon.png"
+          content="https://www.serenity.re/serenity-notes-og-preview.png"
         />
         <meta
           property="og:image:secure_url"
-          content="https://www.serenity.re/apple-touch-icon.png"
+          content="https://www.serenity.re/serenity-notes-og-preview.png"
         />
-        <meta property="og:image:width" content="180" />
-        <meta property="og:image:height" content="180" />
+        <meta property="og:image:width" content="1755" />
+        <meta property="og:image:height" content="919" />
       </Head>
 
       <div className="relative bg-white overflow-hidden">
