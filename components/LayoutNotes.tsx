@@ -94,7 +94,10 @@ export default function LayoutNotes(props: Props) {
           name="twitter:title"
           content="Serenity Notes: end-to-end encrypted notes app"
         />
-        <meta name="twitter:title" content={metaDescription} />
+        <meta
+          name="twitter:description"
+          content="Compose private notes, optionally share them with others and still stay in control who can access your data. All while having an excellent offline-first experience on all platforms."
+        />
       </Head>
 
       <div className="relative bg-white overflow-hidden">
