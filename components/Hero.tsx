@@ -42,7 +42,7 @@ export default function Hero() {
                 <div className="mt-4 mb-4 flex flex-wrap justify-start md:justify-center lg:justify-start ">
                   <a
                     className="block mt-4 mr-4"
-                    href="https://apps.apple.com/at/app/serenity-notes/id1544162074"
+                    href="https://apps.apple.com/app/serenity-notes/id1544162074"
                   >
                     <AppStoreBadge />
                   </a>

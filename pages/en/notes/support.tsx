@@ -183,7 +183,7 @@ export default function Home() {
               <p className="mt-2">
                 In case you have an Apple computer with an M1 processor you can
                 install the{" "}
-                <a href="https://apps.apple.com/at/app/serenity-notes/id1544162074">
+                <a href="https://apps.apple.com/app/serenity-notes/id1544162074">
                   iPad app
                 </a>{" "}
                 on your macOS.

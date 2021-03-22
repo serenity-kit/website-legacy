@@ -22,7 +22,7 @@ export default function Hero() {
                 </p>
                 <a
                   className="mt-4 block"
-                  href="https://apps.apple.com/at/app/serenity-notes/id1544162074"
+                  href="https://apps.apple.com/app/serenity-notes/id1544162074"
                 >
                   <AppStoreBadge />
                 </a>
