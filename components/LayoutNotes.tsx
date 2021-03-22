@@ -88,6 +88,13 @@ export default function LayoutNotes(props: Props) {
         />
         <meta property="og:image:width" content="1755" />
         <meta property="og:image:height" content="919" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:site" content="@serenity_notes_" />
+        <meta
+          name="twitter:title"
+          content="Serenity Notes: end-to-end encrypted notes app"
+        />
+        <meta name="twitter:title" content={metaDescription} />
       </Head>
 
       <div className="relative bg-white overflow-hidden">
