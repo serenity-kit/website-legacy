@@ -137,7 +137,7 @@ export default function Home() {
             </FaqEntry>
             <FaqEntry title="How can I restore my account?">
               <p>
-                Unfortionatly if you loose all your linked devices all your
+                Unfortunately if you loose all your linked devices all your
                 notes, contact and device names can't be restored.
               </p>
               <p className="mt-2">
@@ -148,7 +148,7 @@ export default function Home() {
             </FaqEntry>
             <FaqEntry title="How can I export all my data?">
               <p>
-                Unfortionatly the only way is to copy & paste each note
+                Unfortunately the only way is to copy & paste each note
                 manually. In the future we want provide an export functionality.
               </p>
             </FaqEntry>
