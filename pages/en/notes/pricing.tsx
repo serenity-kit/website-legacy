@@ -124,11 +124,11 @@ export default function Home() {
                 </p>
                 <p className="mt-8 h-14">
                   <span className="text-4xl font-semibold text-gray-900">
-                    ${billedYearly ? "4" : "5"}
+                    ${billedYearly ? "48" : "5"}
                   </span>
                   <span className="text-sm font-medium text-gray-500">
                     {" "}
-                    / month
+                    / {billedYearly ? "year" : "month"}
                   </span>
                 </p>
                 <button
@@ -167,11 +167,11 @@ export default function Home() {
                 </p>
                 <p className="mt-8 h-14">
                   <span className="text-4xl font-semibold text-gray-900">
-                    ${billedYearly ? "8" : "10"}
+                    ${billedYearly ? "96" : "10"}
                   </span>
                   <span className="text-sm font-medium text-gray-500">
                     {" "}
-                    / user / month
+                    / user / {billedYearly ? "year" : "month"}
                   </span>
                 </p>
                 <button
