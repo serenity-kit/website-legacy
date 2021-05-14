@@ -84,6 +84,15 @@ const Footer = () => (
                     </a>
                   </Link>
                 </li>
+
+                <li>
+                  <Link href="/en/notes/technical-documentation">
+                    <a className="text-base text-gray-500 hover:text-gray-900 no-underline">
+                      Tech. Documentation
+                    </a>
+                  </Link>
+                </li>
+
                 <li>
                   <Link href="/en/notes/login">
                     <a className="text-base text-gray-500 hover:text-gray-900 no-underline">
