@@ -185,9 +185,24 @@ The client would then sign the session ID and the server could verify the authen
 
 ### Signup Process
 
-A new device (Ed25519 fingerprint key pair and one Curve25519 identity key pair) are created.
+1. A new device (Ed25519 fingerprint key pair and one Curve25519 identity key pair) are created. In addition one fallback key and several one-time key pairs are created.
+2. A new user Ed25519 fingerprint key pair is created.
+3. A `createUser` mutation is invoked with
 
-Coming soon …
+   - public user Ed25519 key
+   - device:
+     - public Curve25519 identity key
+     - public Ed25519 fingerprint key
+     - public one-time keys
+     - signature (device keys signed with the user's Ed25519 key)
+     - fallbackKey
+     - fallbackKey signature
+
+4. Once the mutation succeeds the private info store is setup and filled with the information of the current device. The private info is encrypted and updated on the server.
+
+#### Possible Improvement
+
+Combine both mutations into one to avoid ending up in a broken state in case the second fails.
 
 ### Device Linking
 
@@ -197,7 +212,7 @@ Coming soon …
 
 ### Removing a device
 
-Coming soon …
+The `deleteDevice` mutation will remove the device from the server. Once that's done device must also be removed from private info and published to the server.
 
 ### Adding and verifying Contacts
 
@@ -205,7 +220,11 @@ Coming soon …
 
 ### Removing a contact
 
-Coming soon …
+The `deleteContact` mutation will remove the contact from the server. This opperation though is only one-sided. Once that's done contact must also be removed from private info and published to the server.
+
+#### Possible Improvement
+
+Remove the contact on both sides and create a contact tombstone for the other user.
 
 ### Updating one-time keys
 
