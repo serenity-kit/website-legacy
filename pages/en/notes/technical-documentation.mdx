@@ -1,7 +1,7 @@
 export const meta = {
   title: "Technical Documentation",
   publishedAt: "2021-05-14",
-  modifiedAt: "2021-05-14",
+  modifiedAt: "2021-05-15",
 };
 
 # Technical Documentation
@@ -100,7 +100,7 @@ Each device is verified using the user Ed25519 keypair and the ones which aren't
 
 A new Megolm group session is initialized and the content of the note is encrypted with it.
 For each verified device a new Olm session is initialized and a message created containing the
-keys to decrypt the Megolm session.
+keys to decrypt the Megolm session. For each Olm session a one-time key per device must be claimed from the server.
 
 The encrypted note as well as all the Olm messages (GroupSessionMessage) are sent to the server via the GraphQL mutation `createRepository`.
 The server responds with an ID and an ID per GroupSessionMessage. On the client the following data is persistet:
@@ -131,11 +131,18 @@ Currently the server determines if there is a `GroupSessionMessages` for every d
 
 #### Adding a contact to a note
 
-Coming soon …
+When one user adds a contact (another user) to a note all the contact's devices are retrieved from the server. The devices are verified and the once that don't pass are filtered out. A one-time key per verified device is claimed and a new Olm session with a `GroupSessionMessage` per device created. It contains the all the information and keys to decrypt the existing Megolm session.
+
+In addition the `addCollaboratorToRepositories` mutation has to be invoked with the `repositoryId` and `contactId`.
+The server will keep the list of contacts the note is shared with.
+
+##### Possible Improvement
+
+The client should sign that this contact can be part of a note. A user can't share a note with anyone that's not a verified contact, but the decision of who a collaborator is should be the responsibility of the client. This would require a system that also handles removal or users.
 
 #### Removing a contact from a Note
 
-Coming soon …
+The `removeCollaboratorFromRepository` mutation has to be invoked with the `repositoryId` and `collaboratorId`. The server will remove the user from the list of contacts the note is shared with.
 
 ### Private info
 
@@ -199,6 +206,15 @@ Coming soon …
 ### Removing a contact
 
 Coming soon …
+
+### Updating one-time keys
+
+Ever device sends it's one-time keys to the server. These one-time keys can be claimed by other devices
+to initiate Olm sessions.
+
+Once an inbound Olm session is initiated the one-time key used to set it up is invalidated.
+
+Devices must perodically if new one-time keys can created. New one-time keys must published to the server.
 
 ## Known meta data to the server
 
