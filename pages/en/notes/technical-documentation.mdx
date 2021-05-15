@@ -66,31 +66,6 @@ The `public_Ed25519_user_signing_key` is included to later support multiple user
 
 One-time key pairs should also have a matching signature for another device to verify if the one-time key was actually created by the expected device.
 
-### Note
-
-#### Creating a Note
-
-When a note is created all devices of a user and one one-time key per devices are fetched from the server.
-Each device is verified using the user Ed25519 keypair and the ones which aren't valid are filtered out.
-
-A new Megolm group session is initialized and the content of the note is encrypted with it.
-For each verified device a new Olm session is initialized and a message created containing the
-keys to decrypt the Megolm session.
-
-The encrypted note as well as all the Olm messages (GroupSessionMessage) are sent to the server via the GraphQL mutation `createRepository`.
-The server responds with an ID and an ID per GroupSessionMessage. On the client the following data is persistet:
-
-- id (server)
-- groupSession
-- groupSessionMessageIds
-- creation time of the group session
-
-#### Updating a Note
-
-If the Note create is older than 24h a new group session must be initialized.
-
-More coming soon …
-
 ### Contact
 
 A contact is another user that has verified through the contact adding/verification flow. In this process
@@ -112,9 +87,47 @@ Since this the same Ed25519 keypair used to sign devices everyone also can verif
 device belongs to this user.
 
 In order to encrypt data for another contact that data is encrypted for each device. In order to
-do so all devices of all contacts must be fetched from the server and verified.
+do so all devices of all contacts must be fetched from the server and verified. This is describe in detail later.
 
 The `public_Ed25519_user_signing_key` is included to later support multiple user signing keys per user.
+
+### Note
+
+#### Creating a Note
+
+When a note is created all devices of a user and one one-time key per devices are fetched from the server.
+Each device is verified using the user Ed25519 keypair and the ones which aren't valid are filtered out.
+
+A new Megolm group session is initialized and the content of the note is encrypted with it.
+For each verified device a new Olm session is initialized and a message created containing the
+keys to decrypt the Megolm session.
+
+The encrypted note as well as all the Olm messages (GroupSessionMessage) are sent to the server via the GraphQL mutation `createRepository`.
+The server responds with an ID and an ID per GroupSessionMessage. On the client the following data is persistet:
+
+- id (server)
+- groupSession
+- groupSessionMessageIds
+- creation time of the group session
+
+#### Updating a Note
+
+Before updating a note all devices of the current user as well as all devices of the participating contacts
+are fetched from the server and verified. Non-verified devices are filtered out.
+
+Now either two things can happen:
+
+- the existing Megolm session is used to encrypt a new message containing the encrypted note
+- a new Megolm session is created
+
+A new Megolm session is created in case the last note update from the current device is older than
+24 hours or the `GroupSessionMessages` sent to the server don't match to the devices.
+This could be the case if the a device was added or removed. The 24 hour limit is in place to
+compensate for the lack of backward secrecy in Megolm as described [here](https://gitlab.matrix.org/matrix-org/olm/-/blob/master/docs/megolm.md#lack-of-backward-secrecy).
+
+##### Possible Improvement
+
+Currently the server determines if there is a `GroupSessionMessages` for every device. This should be done by the client.
 
 #### Adding a contact to a note
 
