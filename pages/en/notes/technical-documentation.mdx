@@ -6,6 +6,24 @@ export const meta = {
 
 # Technical Documentation
 
+Please note that this documentation is a work-in-progress and will be improved over the coming weeks.
+
+## Desired Behaviour
+
+### End-to-end encryption of sensitive information
+
+This includes the content and title of notes, the contact names and the device names.
+
+### Rely on state-of-the-art encryption
+
+The end-to-end encryption must using the [Olm & Megolm](https://gitlab.matrix.org/matrix-org/olm) cryptographic ratchets and follow the documentation's best practices
+e.g. periodically start new sessions to establish [Backward secrecy](https://intensecrypto.org/public/lec_08_hash_functions_part2.html#sec-forward-and-backward-secrecy).
+
+### Devices and contacts must be verified
+
+This means currently data is only encrypted for a user's devices or contacts which have been verified by the user.
+This might change with the introduction of cross-signing for contacts of contacts or the some form of organisation concept.
+
 ## Entities
 
 ### User
@@ -48,10 +66,6 @@ The `public_Ed25519_user_signing_key` is included to later support multiple user
 
 One-time key pairs should also have a matching signature for another device to verify if the one-time key was actually created by the expected device.
 
-### Contact
-
-Coming soon …
-
 ### Note
 
 #### Creating a Note
@@ -76,6 +90,31 @@ The server responds with an ID and an ID per GroupSessionMessage. On the client 
 If the Note create is older than 24h a new group session must be initialized.
 
 More coming soon …
+
+### Contact
+
+A contact is another user that has verified through the contact adding/verification flow. In this process
+each user creates a stringified JSON object with the following structure:
+
+```js
+{
+  version: 1,
+  message: `${public_Ed25519_user_signing_key} ${public_Ed25519_user_signing_key_of_the_other_person}`,
+  signature: `${Ed25519_user_signature_of_the_message}`,
+}
+```
+
+It includes a message which contains the public Ed25519 keys of both users. This message must be
+signed with the users Ed25519 keypair. With this signature all your devices can verify that
+this is the Ed25519 keypair of the other user.
+
+Since this the same Ed25519 keypair used to sign devices everyone also can verify that a certain
+device belongs to this user.
+
+In order to encrypt data for another contact that data is encrypted for each device. In order to
+do so all devices of all contacts must be fetched from the server and verified.
+
+The `public_Ed25519_user_signing_key` is included to later support multiple user signing keys per user.
 
 #### Adding a contact to a note
 
@@ -132,6 +171,8 @@ Coming soon …
 
 ### Device Linking
 
+This flow is designed to mitigate man-in-the-middle attacks.
+
 Coming soon …
 
 ### Removing a device
@@ -145,3 +186,21 @@ Coming soon …
 ### Removing a contact
 
 Coming soon …
+
+## Known meta data to the server
+
+The server's main purpose is to transfer the encrypted data between devices. Nevertheless a lot of meta data can be extracted:
+
+- amount of users
+- amount of notes
+- amount of deleted notes
+- amount of updates per note and when they occured
+- contact connections per user
+- amount of devices per user
+
+In addition once a billing account is setup and connected to the account all the billing information
+can be connected to the user.
+
+### Possible Improvement
+
+In the future only the last or last couple note updates will be stored and older once are removed.
