@@ -158,6 +158,17 @@ The following data is stored in there:
 The private info is encrypted as a Megolm session. For each verified device of user a new Olm session is initialized and a message created containing the
 keys to decrypt the Megolm session. In contrast to notes every update must be a new Megolm session.
 
+### Contact invitation
+
+In order to verify a new contact first a new contact invitation has to be created. It contains the following properties
+
+- name (for the contact)
+- clientSecret (for verification on the other client)
+- serverSecret (for verification by the server)
+- userId (current user's server ID)
+- userSigningKey (current user's public user Ed25519 key)
+- contact invitation ID (provided by the server)
+
 ## Flows
 
 ### Server Authentication
@@ -206,9 +217,59 @@ Combine both mutations into one to avoid ending up in a broken state in case the
 
 ### Device Linking
 
-This flow is designed to mitigate man-in-the-middle attacks.
+This describes the process to add a new device to an existing account.
 
-Coming soon …
+On the new device a "device verification" string is constructed. It is a stringified JSON object with the following structure:
+
+```js
+{
+  version: "1",
+  idKey,
+  signingKey,
+  oneTimeKey,
+  secret,
+  fallbackKey,
+  fallbackKeySignature,
+}
+```
+
+It contains the public Curve25519 identity key and the public Ed25519 signing key from the device. In addition a one-time key, the fallback key, a signature of the fallback key and a randomly generated secret.
+
+This "device verification" must be entered to an existing device. Since there is no sensible information in the "device verification" it doesn't matter if the channel is later compromised.
+
+On the existing device a new Olm session with one message is created for the new device. This message contains:
+
+```
+`${secret} ${verification_code} ${private_user_Ed25519_signing_key} ${server_user_id} ${new_device_fallbackKey}`
+```
+
+The `verification_code` is a randomly generated 6 digit string.
+
+The encrypted message is sent to the server using the `addDevice` mutation with the following data:
+
+- device:
+  - public Curve25519 identity key
+  - public Ed25519 fingerprint key
+  - public one-time keys
+  - signature (device keys signed with the user's Ed25519 key)
+  - fallbackKey
+  - fallbackKey signature
+- verificationMessage (encrypted)
+- serverSecret (randomly generated 6 digits)
+
+On the existing device the user gets presented with a 12 digit string. It consists of the the `serverSecret` and `verification_code`.
+
+```
+`${server_secret}${verification_code}`
+```
+
+Next up on the new device the user must enter the 12 digit code and once submitted the client fetches the encrypted `verificationMessage` from the server using the `fetchAddDeviceVerification` GraphQL query. The query requires the device's public Curve25519 identity key and the `serverSecret`. If both don't match up the server won't return the verification message. The purpose of this is to avoid man-in-the-middle attacks where an attacker would tamper with the `device identification` to get access to the private user Ed25519 signing key. That said if the same channel is used to exchange the `device identification` and the 12 digit verification a man-in-the-middle attack would still be possible.
+
+Once the new device received the encrypted `verificationMessage` it can be decrypted. The private user Ed25519 signing key can be stored in a secure storage and the new device should add itself to the linked device list in the private info store.
+
+#### Possible Improvement
+
+The device is already added on the server once the existing device invokes the `addDevice` GraphQL mutation. This should only happen once the user verifies the full 12 digit verfication code to in order further mitigate man-in-the-middle attacks.
 
 ### Removing a device
 
@@ -220,7 +281,11 @@ Coming soon …
 
 ### Removing a contact
 
-The `deleteContact` mutation will remove the contact from the server. This opperation though is only one-sided. Once that's done contact must also be removed from private info and published to the server.
+The `deleteContact` mutation will remove the contact from the server. This opperation though is only one-sided. Once the server deletion was successfull the contact entry must also be removed from private info and update published to the server.
+
+### Removing a contact invitation
+
+The `deleteContactInvitation` mutation will remove the contact invitation from the server. Once the server deletion was successfull the contact invitation entry must also be removed from private info and the update published to the server.
 
 #### Possible Improvement
 
