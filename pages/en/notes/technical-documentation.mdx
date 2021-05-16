@@ -277,15 +277,56 @@ The `deleteDevice` mutation will remove the device from the server. Once that's 
 
 ### Adding and verifying Contacts
 
-Coming soon …
+In order to verify another user as a contact a user Alice first must create a "contact invitation". In order to create one Alice first must provide a name she wants to use for Bob in their contact list. Once submitted a query string is generated containing the following information:
+
+- version: "1",
+- userId
+- public Ed25519 user signing key
+- serverSecret (randomly generated secret)
+- clientSecret (randomly generated secret)
+
+Next Alice's device invokes the `createContactInvitation` GraphQL invitation with only the `serverSecret` and in return receives a `id` for the contact invitation. The contact invitation with the following information is stored in the private info store:
+
+- name
+- clientSecret
+- serverSecret
+- userId
+- userSigningKey (public Ed25519 user signing key)
+- contactInvitationId
+
+The invitation code Alice created now should be send to another user Bob. Bob must enter the invitation code and provide a name she wants to use for Alice in their contact list. Once submitted the invitation code will be parsed an the GraphQL query `devicesForContactInvitation` invoked with
+
+- userId (of the inviter Alice)
+- userSigningKey (public Ed25519 user signing key of the inviter Alice)
+- serverSecret
+
+If all of them match up the server will return a list of devices. These must be verfied and then an Olm session initialized with one message per device. The message includes the
+
+- clientSecret
+- userId (Bob)
+- userSigningKey (public Ed25519 user signing key of Bob)
+
+Bob must invoke the GraphQL mutation `acceptContactInvitation` with the following parameters:
+
+- userId (of the inviter Alice)
+- userSigningKey (public Ed25519 user signing key of the inviter Alice)
+- serverSecret
+- signature (the signed userSigningKey)
+- contactInfoMessage (a list of all contact info messages)
+
+Once that succeded from Bob's perspective the contact has been established and he must add Alice as contact in the private info store.
+
+Alice periodically must query `contactInvitations` to look for accepted ones and once there is one it must be completed. This can be done by decrypting the `contactInfoMessage` from Bob, verifying the `clientSecret` and invoking the `completeContactInvitation` GraphQL mutation to finish the process from Alice's perspective. After the mutation was successful the private info store must be updated by removing the contact invitation and adding the new contact.
+
+The purpose of the `clientSecret` validation is to avoid that the server can't do a man-in-the-middle attack and send devices and user keys of a different user.
 
 ### Removing a contact
 
-The `deleteContact` mutation will remove the contact from the server. This opperation though is only one-sided. Once the server deletion was successfull the contact entry must also be removed from private info and update published to the server.
+The `deleteContact` mutation will remove the contact from the server. This opperation though is only one-sided. Once the server deletion was successful the contact entry must also be removed from private info and update published to the server.
 
 ### Removing a contact invitation
 
-The `deleteContactInvitation` mutation will remove the contact invitation from the server. Once the server deletion was successfull the contact invitation entry must also be removed from private info and the update published to the server.
+The `deleteContactInvitation` mutation will remove the contact invitation from the server. Once the server deletion was successful the contact invitation entry must also be removed from private info and the update published to the server.
 
 #### Possible Improvement
 
