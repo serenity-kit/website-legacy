@@ -1,3 +1,4 @@
+import Link from "next/link";
 import Hero from "../../../components/Hero";
 import Clients from "../../../components/Clients";
 import Video from "../../../components/Video";
@@ -118,12 +119,16 @@ export default function NotesHome() {
                     of the <a href="https://matrix.org/">Matrix Protocol</a>.
                     Serenity's protocol is inspired by the Matrix protocol but
                     optimized for shared data. The source code of Serenity Notes
-                    iOS and Android client has been open sourced and is
+                    iOS, macOS and Android client has been open sourced and is
                     available{" "}
                     <a href="https://github.com/SerenityNotes/serenity-notes-clients">
                       here
                     </a>
-                    . More details on the protocol will follow in the future …
+                    . More details on the protocol can be found in our{" "}
+                    <Link href="/en/notes/technical-documentation">
+                      technical documentation
+                    </Link>
+                    .
                   </dd>
                 </div>
               </div>
