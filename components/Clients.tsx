@@ -53,8 +53,8 @@ export default function Hero() {
                   Coming 2021
                 </p>
                 <p className="mt-2 text-base leading-6 text-gray-500">
-                  <a href="https://github.com/SerenityNotes/serenity-notes-clients/releases/download/v.0.1.0-beta/Serenity.Notes.0.1.0.dmg">
-                    Download Beta 0.1.0
+                  <a href="https://github.com/SerenityNotes/serenity-notes-clients/releases/download/v.0.1.1-beta/Serenity.Notes.0.1.1.dmg">
+                    Download Beta 0.1.1
                   </a>
                 </p>
               </div>
