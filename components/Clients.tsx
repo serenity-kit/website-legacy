@@ -1,4 +1,5 @@
 import AppStoreBadge from "./AppStoreBadge";
+import DownloadMacOsLink from "./DownloadMacOsLink";
 import GooglePlayBadge from "./GooglePlayBadge";
 
 export default function Hero() {
@@ -53,9 +54,7 @@ export default function Hero() {
                   Coming 2021
                 </p>
                 <p className="mt-2 text-base leading-6 text-gray-500">
-                  <a href="https://github.com/SerenityNotes/serenity-notes-clients/releases/download/v.0.1.1-beta/Serenity.Notes.0.1.1.dmg">
-                    Download Beta 0.1.1
-                  </a>
+                  <DownloadMacOsLink />
                 </p>
               </div>
             </div>

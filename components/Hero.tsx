@@ -1,5 +1,6 @@
 import Image from "next/image";
 import AppStoreBadge from "./AppStoreBadge";
+import DownloadMacOsLink from "./DownloadMacOsLink";
 import GooglePlayBadge from "./GooglePlayBadge";
 
 export default function Hero() {
@@ -52,6 +53,7 @@ export default function Hero() {
                   >
                     <GooglePlayBadge />
                   </a>
+                  <DownloadMacOsLink className="block mt-4" />
                 </div>
               </div>
             </div>
