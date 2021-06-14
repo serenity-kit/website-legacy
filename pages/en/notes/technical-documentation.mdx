@@ -110,6 +110,9 @@ The server responds with an ID and an ID per GroupSessionMessage. On the client 
 - groupSessionMessageIds
 - creation time of the group session
 
+From the App version 1.7.0 on the editor schema version and a signature of the schema version is attached to the note. This way clients
+can check if their editor is up to date to receive the changes.
+
 #### Updating a Note
 
 Before updating a note all devices of the current user as well as all devices of the participating contacts
@@ -124,6 +127,9 @@ A new Megolm session is created in case the last note update from the current de
 24 hours or the `GroupSessionMessages` sent to the server don't match to the devices.
 This could be the case if the a device was added or removed. The 24 hour limit is in place to
 compensate for the lack of backward secrecy in Megolm as described [here](https://gitlab.matrix.org/matrix-org/olm/-/blob/master/docs/megolm.md#lack-of-backward-secrecy).
+
+From the App version 1.7.0 on the editor schema version and a signature of the schema version is attached to the note. This way clients
+can check if their editor is up to date to receive the changes.
 
 ##### Possible Improvement
 
