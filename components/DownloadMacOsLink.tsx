@@ -15,7 +15,7 @@ const DownloadMacOsLink: React.FC<Props> = (props) => (
       Download
       <br />
     </span>
-    macOS Beta 0.3.0
+    macOS Beta 0.4.0
   </a>
 );
 
