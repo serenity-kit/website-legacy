@@ -51,6 +51,8 @@ For the fallback key also a signature must exist signed with the device's Ed2551
 All one-time keys as well as the fallback key must have a corresponding signature signed by the device.
 Whenever a one-time key or fallback key is claimed to initiate an Olm session it must be verified that the expected device signed the key.
 
+Since a devices current state consists of the two private keys and all it's one-time and fallback keys, the serialized state can get larger than the maximum value to be stored in a secure store (e.g Keychain Services or Android keystore system). Therefor from version 1.8.3 on the device is encrypted with AES-256 in CBC mode and stored in an insecure storage. The generated encryption key and IV are stored in the secure store which makes storing the device secure again.
+
 Further every device must have a `signingKey` signed by the user Ed25519 keypair to allow verification
 that this device belongs to this user. This key is a stringified JSON object with the following structure:
 
