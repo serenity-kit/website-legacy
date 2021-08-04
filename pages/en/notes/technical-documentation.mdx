@@ -48,6 +48,8 @@ The private keys of both must never leave the device and must be stored in a sec
 
 In addition each device creates a number of Curve25519 one-time key pairs. These are used to establish Olm session. To avoid running out of possible sessions also a Curve25519 fallback key pair must be available.
 For the fallback key also a signature must exist signed with the device's Ed25519 keypair.
+All one-time keys as well as the fallback key must have a corresponding signature signed by the device.
+Whenever a one-time key or fallback key is claimed to initiate an Olm session it must be verified that the expected device signed the key.
 
 Further every device must have a `signingKey` signed by the user Ed25519 keypair to allow verification
 that this device belongs to this user. This key is a stringified JSON object with the following structure:
@@ -61,10 +63,6 @@ that this device belongs to this user. This key is a stringified JSON object wit
 ```
 
 The `public_Ed25519_user_signing_key` is included to later support multiple user signing keys per user.
-
-#### Possible Improvement
-
-One-time key pairs should also have a matching signature for another device to verify if the one-time key was actually created by the expected device.
 
 ### Contact
 
