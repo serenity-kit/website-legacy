@@ -141,9 +141,9 @@ export default function Home() {
                 notes, contact and device names can't be restored.
               </p>
               <p className="mt-2">
-                For now we highly recommend to recommend to link multiple
-                devices to avoid your data being unrecoverable. In the future we
-                want to establish a secure backup and restore mechanism.
+                For now we highly recommend to link multiple devices to avoid
+                your data being unrecoverable. In the future we want to
+                establish a secure backup and restore mechanism.
               </p>
             </FaqEntry>
             <FaqEntry title="How can I export all my data?">
