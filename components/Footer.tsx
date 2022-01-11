@@ -9,7 +9,7 @@ const Footer = () => (
     <div className="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:py-16 lg:px-8">
       <div className="xl:grid xl:grid-cols-3 xl:gap-8">
         <div className="space-y-8 xl:col-span-1">
-          <p className="text-gray-500 text-base">&copy; 2021 Nikolaus Graf</p>
+          <p className="text-gray-500 text-base">&copy; 2022 Nikolaus Graf</p>
           <div className="flex space-x-6">
             <a
               href="https://github.com/SerenityNotes"

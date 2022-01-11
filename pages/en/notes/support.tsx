@@ -179,7 +179,7 @@ export default function Home() {
               </p>
             </FaqEntry>
             <FaqEntry title="When will the desktop apps be ready?">
-              <p>We hope to have the macOS and Windows latest by mid 2021.</p>
+              <p>We hope to have the macOS and Windows latest by mid 2022.</p>
               <p className="mt-2">
                 In case you have an Apple computer with an M1 processor you can
                 install the{" "}

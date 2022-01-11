@@ -51,7 +51,7 @@ export default function Hero() {
                   macOS
                 </h4>
                 <p className="mt-2 text-base leading-6 text-gray-500">
-                  Coming 2021
+                  Coming 2022
                 </p>
                 <p className="mt-2 text-base leading-6 text-gray-500">
                   <DownloadMacOsLink />
@@ -64,7 +64,7 @@ export default function Hero() {
                   Windows
                 </h4>
                 <p className="mt-2 text-base leading-6 text-gray-500">
-                  Coming 2021
+                  Coming 2022
                 </p>
               </div>
             </div>
