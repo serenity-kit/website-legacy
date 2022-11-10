@@ -55,41 +55,41 @@ const Footer = () => (
               <ul className="mt-4 space-y-4">
                 <li>
                   <Link href="/en/notes">
-                    <a className="text-base text-gray-500 hover:text-gray-900 no-underline">
+                    <span className="text-base text-gray-500 hover:text-gray-900 no-underline">
                       Home
-                    </a>
+                    </span>
                   </Link>
                 </li>
 
                 <li>
                   <Link href="/en/notes/pricing">
-                    <a className="text-base text-gray-500 hover:text-gray-900 no-underline">
+                    <span className="text-base text-gray-500 hover:text-gray-900 no-underline">
                       Pricing
-                    </a>
+                    </span>
                   </Link>
                 </li>
 
                 <li>
                   <Link href="/en/notes/support">
-                    <a className="text-base text-gray-500 hover:text-gray-900 no-underline">
+                    <span className="text-base text-gray-500 hover:text-gray-900 no-underline">
                       Support
-                    </a>
+                    </span>
                   </Link>
                 </li>
 
                 <li>
                   <Link href="/en/notes/technical-documentation">
-                    <a className="text-base text-gray-500 hover:text-gray-900 no-underline">
+                    <span className="text-base text-gray-500 hover:text-gray-900 no-underline">
                       Tech. Documentation
-                    </a>
+                    </span>
                   </Link>
                 </li>
 
                 <li>
                   <Link href="/en/notes/login">
-                    <a className="text-base text-gray-500 hover:text-gray-900 no-underline">
+                    <span className="text-base text-gray-500 hover:text-gray-900 no-underline">
                       Login
-                    </a>
+                    </span>
                   </Link>
                 </li>
               </ul>
@@ -101,9 +101,9 @@ const Footer = () => (
               <ul className="mt-4 space-y-4">
                 <li>
                   <Link href="/en/sdk">
-                    <a className="text-base text-gray-500 hover:text-gray-900 no-underline">
+                    <span className="text-base text-gray-500 hover:text-gray-900 no-underline">
                       Home
-                    </a>
+                    </span>
                   </Link>
                 </li>
               </ul>
@@ -117,16 +117,16 @@ const Footer = () => (
               <ul className="mt-4 space-y-4">
                 <li>
                   <Link href="/en/about">
-                    <a className="text-base text-gray-500 hover:text-gray-900 no-underline">
+                    <span className="text-base text-gray-500 hover:text-gray-900 no-underline">
                       About
-                    </a>
+                    </span>
                   </Link>
                 </li>
                 <li>
                   <Link href="/en/opaque">
-                    <a className="text-base text-gray-500 hover:text-gray-900 no-underline">
+                    <span className="text-base text-gray-500 hover:text-gray-900 no-underline">
                       Opaque
-                    </a>
+                    </span>
                   </Link>
                 </li>
                 {/* <li>
@@ -146,25 +146,25 @@ const Footer = () => (
               <ul className="mt-4 space-y-4">
                 <li>
                   <Link href="/en/notes/privacy-policy">
-                    <a className="text-base text-gray-500 hover:text-gray-900 no-underline">
+                    <span className="text-base text-gray-500 hover:text-gray-900 no-underline">
                       Privacy Policy
-                    </a>
+                    </span>
                   </Link>
                 </li>
 
                 <li>
                   <Link href="/en/notes/terms-of-service">
-                    <a className="text-base text-gray-500 hover:text-gray-900 no-underline">
+                    <span className="text-base text-gray-500 hover:text-gray-900 no-underline">
                       Terms of Service
-                    </a>
+                    </span>
                   </Link>
                 </li>
 
                 <li>
                   <Link href="/en/notes/imprint">
-                    <a className="text-base text-gray-500 hover:text-gray-900 no-underline">
+                    <span className="text-base text-gray-500 hover:text-gray-900 no-underline">
                       Imprint
-                    </a>
+                    </span>
                   </Link>
                 </li>
               </ul>

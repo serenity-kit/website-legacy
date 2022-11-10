@@ -21,14 +21,14 @@ const NavAnchor: React.FC<
 > = (props) => {
   return (
     <Link href={props.href}>
-      <a
+      <span
         {...props}
         className={`inline-block font-medium no-underline hover:no-underline cursor-pointer py-2 px-2 ${
           props.className || ""
         }`}
       >
         {props.children}
-      </a>
+      </span>
     </Link>
   );
 };
@@ -41,7 +41,7 @@ const MobileEntry: React.FC<
 > = (props) => {
   return (
     <Link href={props.href}>
-      <a
+      <span
         role="menuitem"
         {...props}
         className={`font-medium no-underline hover:no-underline cursor-pointer block px-3 py-2 rounded-md text-base hover:bg-gray-50 ${
@@ -49,7 +49,7 @@ const MobileEntry: React.FC<
         }`}
       >
         {props.children}
-      </a>
+      </span>
     </Link>
   );
 };
@@ -98,9 +98,9 @@ export default function Navigation(props) {
         <div className="flex items-center flex-1">
           <div className="flex items-center justify-between w-full md:w-auto pb-1">
             <Link href="/en/notes">
-              <a className="flex items-center">
+              <span className="flex items-center">
                 <Logo width={161.768} height={28.3} />
-              </a>
+              </span>
             </Link>
             <div className="-mr-2 flex items-center md:hidden">
               <button
@@ -164,12 +164,12 @@ export default function Navigation(props) {
         <div className="rounded-lg shadow-md bg-white ring-1 ring-black ring-opacity-5 overflow-hidden">
           <div className="px-5 pt-4 flex items-center justify-between">
             <Link href="/en/notes">
-              <a
+              <span
                 className="flex items-center"
                 onClick={() => setMobileDropdownOpen(false)}
               >
                 <Logo width={161.768} height={28.3} />
-              </a>
+              </span>
             </Link>
             <div className="-mr-2">
               <button
