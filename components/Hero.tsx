@@ -7,7 +7,7 @@ export default function Hero() {
   return (
     <div className="relative h-full">
       <div
-        className="hidden lg:flex absolute w-screen -top-14 h-full pointer-events-none"
+        className="hidden lg:flex absolute w-screen -top-18 h-full pointer-events-none"
         style={{ height: "110%" }}
       >
         <div className="w-1/2"></div>
