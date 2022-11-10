@@ -130,7 +130,13 @@ const Footer = () => (
                     </a>
                   </Link>
                 </li>
-
+                <li>
+                  <Link href="/en/opaque">
+                    <a className="text-base text-gray-500 hover:text-gray-900 no-underline">
+                      Opaque
+                    </a>
+                  </Link>
+                </li>
                 {/* <li>
                   <a
                     href="#"
