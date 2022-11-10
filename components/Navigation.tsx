@@ -137,9 +137,6 @@ export default function Navigation(props) {
             <NavAnchor href="/en/notes/support" className="ml-6">
               Support
             </NavAnchor>
-            <NavAnchor href="/en/notes/roadmap" className="ml-6">
-              Roadmap
-            </NavAnchor>
             {isLoggedIn ? (
               <>
                 <NavAnchor href="/en/notes/billing-account" className="ml-6">
@@ -218,12 +215,6 @@ export default function Navigation(props) {
                 onClick={() => setMobileDropdownOpen(false)}
               >
                 Support
-              </MobileEntry>
-              <MobileEntry
-                href="/en/notes/roadmap"
-                onClick={() => setMobileDropdownOpen(false)}
-              >
-                Roadmap
               </MobileEntry>
               {isLoggedIn ? (
                 <>

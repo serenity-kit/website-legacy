@@ -4,12 +4,13 @@ import Clients from "../../../components/Clients";
 import Video from "../../../components/Video";
 import ProductComparison from "../../../components/ProductComparison";
 import SubscribeForm from "../../../components/SuscribeForm";
+import InfoBanner from "../../../components/InfoBanner";
 
 export default function NotesHome() {
   return (
     <>
+      <InfoBanner text="We are currently working on a new version of Serenity Notes. Please stay tuned." />
       <Hero />
-
       <div className="bg-background overflow-hidden">
         <div className="relative max-w-xl mx-auto px-4 sm:px-6 lg:px-8 lg:max-w-screen-xl">
           <div className="relative my-12 lg:my-24 lg:grid lg:grid-cols-2 lg:gap-8 lg:items-center">
