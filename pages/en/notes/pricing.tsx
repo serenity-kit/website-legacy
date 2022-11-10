@@ -1,5 +1,5 @@
-import { useEffect, useState, useCallback } from "react";
 import { useRouter } from "next/router";
+import { useEffect, useState } from "react";
 import PricingFeature from "../../../components/PricingFeature";
 
 declare global {
@@ -130,7 +130,7 @@ export default function Home() {
                     / user / {billedYearly ? "year" : "month"}
                   </span>
                 </p>
-                <button
+                {/* <button
                   onClick={(event) => {
                     event.preventDefault();
                     billedYearly ? openCheckout(633268) : openCheckout(633267);
@@ -138,7 +138,13 @@ export default function Home() {
                   className="mt-8 block w-full bg-gray-800 border border-gray-800 rounded-md py-2 text-sm font-semibold text-white text-center hover:bg-gray-900 no-underline hover:no-underline"
                 >
                   Contact us
-                </button>
+                </button> */}
+                <a
+                  href="mailto:hi@serenity.re"
+                  className="mt-8 block w-full bg-gray-800 border border-gray-800 rounded-md py-2 text-sm font-semibold text-white text-center hover:bg-gray-900 no-underline hover:no-underline"
+                >
+                  Contact us
+                </a>
               </div>
               <div className="pt-6 pb-8 px-6">
                 <h3 className="text-xs font-medium text-gray-900 tracking-wide uppercase">
