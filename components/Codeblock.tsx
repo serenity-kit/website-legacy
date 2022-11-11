@@ -4,9 +4,10 @@ import Highlight, { defaultProps } from "prism-react-renderer";
 
 type Props = {
   className: string;
+  children?: React.ReactNode;
 };
 
-const CodeBlock: React.FC<Props> = ({ children, className }) => {
+const CodeBlock = ({ children, className }: Props) => {
   const language = className
     ? className.replace(/language-/, "")
     : "";

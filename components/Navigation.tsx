@@ -17,7 +17,7 @@ const NavAnchor: React.FC<
   React.DetailedHTMLProps<
     React.AnchorHTMLAttributes<HTMLAnchorElement>,
     HTMLAnchorElement
-  >
+  > & { children?: React.ReactNode }
 > = (props) => {
   return (
     <Link
@@ -35,7 +35,7 @@ const MobileEntry: React.FC<
   React.DetailedHTMLProps<
     React.AnchorHTMLAttributes<HTMLAnchorElement>,
     HTMLAnchorElement
-  >
+  > & { children?: React.ReactNode }
 > = (props) => {
   return (
     <Link
@@ -53,6 +53,7 @@ const MobileEntry: React.FC<
 const LogoutLink: React.FC<{
   type: "mobile" | "desktop";
   className?: string;
+  children?: React.ReactNode;
 }> = (props) => {
   const NavItem = props.type === "mobile" ? MobileEntry : NavAnchor;
   const router = useRouter();
