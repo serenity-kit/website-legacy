@@ -54,42 +54,47 @@ const Footer = () => (
               </span>
               <ul className="mt-4 space-y-4">
                 <li>
-                  <Link href="/en/notes">
-                    <span className="text-base text-gray-500 hover:text-gray-900 no-underline">
-                      Home
-                    </span>
+                  <Link
+                    href="/en/notes"
+                    className="text-base text-gray-500 hover:text-gray-900 no-underline"
+                  >
+                    Home
                   </Link>
                 </li>
 
                 <li>
-                  <Link href="/en/notes/pricing">
-                    <span className="text-base text-gray-500 hover:text-gray-900 no-underline">
-                      Pricing
-                    </span>
+                  <Link
+                    href="/en/notes/pricing"
+                    className="text-base text-gray-500 hover:text-gray-900 no-underline"
+                  >
+                    Pricing
                   </Link>
                 </li>
 
                 <li>
-                  <Link href="/en/notes/support">
-                    <span className="text-base text-gray-500 hover:text-gray-900 no-underline">
-                      Support
-                    </span>
+                  <Link
+                    href="/en/notes/support"
+                    className="text-base text-gray-500 hover:text-gray-900 no-underline"
+                  >
+                    Support
                   </Link>
                 </li>
 
                 <li>
-                  <Link href="/en/notes/technical-documentation">
-                    <span className="text-base text-gray-500 hover:text-gray-900 no-underline">
-                      Tech. Documentation
-                    </span>
+                  <Link
+                    href="/en/notes/technical-documentation"
+                    className="text-base text-gray-500 hover:text-gray-900 no-underline"
+                  >
+                    Tech. Documentation
                   </Link>
                 </li>
 
                 <li>
-                  <Link href="/en/notes/login">
-                    <span className="text-base text-gray-500 hover:text-gray-900 no-underline">
-                      Login
-                    </span>
+                  <Link
+                    href="/en/notes/login"
+                    className="text-base text-gray-500 hover:text-gray-900 no-underline"
+                  >
+                    Login
                   </Link>
                 </li>
               </ul>
@@ -100,10 +105,11 @@ const Footer = () => (
               </span>
               <ul className="mt-4 space-y-4">
                 <li>
-                  <Link href="/en/sdk">
-                    <span className="text-base text-gray-500 hover:text-gray-900 no-underline">
-                      Home
-                    </span>
+                  <Link
+                    href="/en/sdk"
+                    className="text-base text-gray-500 hover:text-gray-900 no-underline"
+                  >
+                    Home
                   </Link>
                 </li>
               </ul>
@@ -116,17 +122,19 @@ const Footer = () => (
               </span>
               <ul className="mt-4 space-y-4">
                 <li>
-                  <Link href="/en/about">
-                    <span className="text-base text-gray-500 hover:text-gray-900 no-underline">
-                      About
-                    </span>
+                  <Link
+                    href="/en/about"
+                    className="text-base text-gray-500 hover:text-gray-900 no-underline"
+                  >
+                    About
                   </Link>
                 </li>
                 <li>
-                  <Link href="/en/opaque">
-                    <span className="text-base text-gray-500 hover:text-gray-900 no-underline">
-                      Opaque
-                    </span>
+                  <Link
+                    href="/en/opaque"
+                    className="text-base text-gray-500 hover:text-gray-900 no-underline"
+                  >
+                    Opaque
                   </Link>
                 </li>
                 {/* <li>
@@ -145,26 +153,29 @@ const Footer = () => (
               </span>
               <ul className="mt-4 space-y-4">
                 <li>
-                  <Link href="/en/notes/privacy-policy">
-                    <span className="text-base text-gray-500 hover:text-gray-900 no-underline">
-                      Privacy Policy
-                    </span>
+                  <Link
+                    href="/en/notes/privacy-policy"
+                    className="text-base text-gray-500 hover:text-gray-900 no-underline"
+                  >
+                    Privacy Policy
                   </Link>
                 </li>
 
                 <li>
-                  <Link href="/en/notes/terms-of-service">
-                    <span className="text-base text-gray-500 hover:text-gray-900 no-underline">
-                      Terms of Service
-                    </span>
+                  <Link
+                    href="/en/notes/terms-of-service"
+                    className="text-base text-gray-500 hover:text-gray-900 no-underline"
+                  >
+                    Terms of Service
                   </Link>
                 </li>
 
                 <li>
-                  <Link href="/en/notes/imprint">
-                    <span className="text-base text-gray-500 hover:text-gray-900 no-underline">
-                      Imprint
-                    </span>
+                  <Link
+                    href="/en/notes/imprint"
+                    className="text-base text-gray-500 hover:text-gray-900 no-underline"
+                  >
+                    Imprint
                   </Link>
                 </li>
               </ul>

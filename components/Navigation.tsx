@@ -20,15 +20,13 @@ const NavAnchor: React.FC<
   >
 > = (props) => {
   return (
-    <Link href={props.href}>
-      <span
-        {...props}
-        className={`inline-block font-medium no-underline hover:no-underline cursor-pointer py-2 px-2 ${
-          props.className || ""
-        }`}
-      >
-        {props.children}
-      </span>
+    <Link
+      href={props.href}
+      className={`inline-block font-medium no-underline hover:no-underline cursor-pointer py-2 px-2 ${
+        props.className || ""
+      }`}
+    >
+      {props.children}
     </Link>
   );
 };
@@ -40,16 +38,14 @@ const MobileEntry: React.FC<
   >
 > = (props) => {
   return (
-    <Link href={props.href}>
-      <span
-        role="menuitem"
-        {...props}
-        className={`font-medium no-underline hover:no-underline cursor-pointer block px-3 py-2 rounded-md text-base hover:bg-gray-50 ${
-          props.className || ""
-        }`}
-      >
-        {props.children}
-      </span>
+    <Link
+      href={props.href}
+      role="menuitem"
+      className={`font-medium no-underline hover:no-underline cursor-pointer block px-3 py-2 rounded-md text-base hover:bg-gray-50 ${
+        props.className || ""
+      }`}
+    >
+      {props.children}
     </Link>
   );
 };
