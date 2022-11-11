@@ -1,4 +1,6 @@
-const FormError: React.FC = (props) => (
+type Props = { children?: React.ReactNode };
+
+const FormError = (props: Props) => (
   <div className="text-red-500 text-s italic" {...props} />
 );
 

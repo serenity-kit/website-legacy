@@ -1,6 +1,8 @@
 import React from "react";
 
-const PricingFeature: React.FC = (props) => (
+type Props = { children?: React.ReactNode };
+
+const PricingFeature = (props: Props) => (
   <li className="flex space-x-3">
     <svg
       className="flex-shrink-0 h-5 w-5 text-green-500"
