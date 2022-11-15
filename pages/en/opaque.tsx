@@ -10,7 +10,7 @@ const OpaquePage: NextPage = () => {
           <OpaqueLogo width={232} height={59} />
         </h1>
         <p className="text-center">
-          We will be starting work on <b>Opaque</b> in <b>March 2022</b>. <br />
+          We will be starting work on <b>Opaque</b> in <b>March 2023</b>. <br />
           More details and information can be found{" "}
           <a href="https://github.com/SerenityNotes/opaque">here</a>.
         </p>
