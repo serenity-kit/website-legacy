@@ -1,10 +1,10 @@
+import Cookies from "js-cookie";
 import Link from "next/link";
 import { useRouter } from "next/router";
-import { useMutation } from "urql";
 import * as React from "react";
-import Cookies from "js-cookie";
-import Logo from "./Logo";
+import { useMutation } from "urql";
 import useOutsideClick from "../hooks/useOutsideClick";
+import LogoNotes from "./LogoNotes";
 
 const LogoutBillingAccountMutation = `
 mutation logoutBillingAccount {
@@ -96,7 +96,7 @@ export default function Navigation(props) {
           <div className="flex items-center justify-between w-full md:w-auto pb-1">
             <Link href="/en/notes">
               <span className="flex items-center">
-                <Logo width={161.768} height={28.3} />
+                <LogoNotes width={161.768} height={28.3} />
               </span>
             </Link>
             <div className="-mr-2 flex items-center md:hidden">
@@ -165,7 +165,7 @@ export default function Navigation(props) {
                 className="flex items-center"
                 onClick={() => setMobileDropdownOpen(false)}
               >
-                <Logo width={161.768} height={28.3} />
+                <LogoNotes width={161.768} height={28.3} />
               </span>
             </Link>
             <div className="-mr-2">

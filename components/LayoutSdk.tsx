@@ -1,6 +1,6 @@
 import Head from "next/head";
-import NavigationSdk from "./NavigationSdk";
 import Footer from "./Footer";
+import NavigationSdk from "./NavigationSdk";
 
 type Props = {
   children: React.ReactNode;
@@ -28,22 +28,22 @@ export default function LayoutSdk(props: Props) {
         <link
           rel="apple-touch-icon"
           sizes="180x180"
-          href="/apple-touch-icon.png"
+          href="/notes-apple-touch-icon.png"
         />
         <link
           rel="icon"
           type="image/png"
           sizes="32x32"
-          href="/favicon-32x32.png"
+          href="/notes-favicon-32x32.png"
         />
         <link
           rel="icon"
           type="image/png"
           sizes="16x16"
-          href="/favicon-16x16.png"
+          href="/notes-favicon-16x16.png"
         />
         <link rel="manifest" href="/site.webmanifest"></link>
-        <link rel="icon" href="/favicon.ico" />
+        <link rel="icon" href="/notes-favicon.ico" />
         <title>Serenity SDK</title>
         <meta name="description" content="End-to-end encrypted CRDT SDK" />
         <meta property="og:locale" content="en_US" />

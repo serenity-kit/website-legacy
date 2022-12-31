@@ -1,8 +1,8 @@
+import { MDXProvider } from "@mdx-js/react";
 import Head from "next/head";
 import Image from "next/image";
-import { MDXProvider } from "@mdx-js/react";
-import Navigation from "./Navigation";
 import Footer from "./Footer";
+import Navigation from "./Navigation";
 
 type Props = {
   children: React.ReactNode;
@@ -54,22 +54,22 @@ export default function LayoutNotes(props: Props) {
         <link
           rel="apple-touch-icon"
           sizes="180x180"
-          href="/apple-touch-icon.png"
+          href="/notes-apple-touch-icon.png"
         />
         <link
           rel="icon"
           type="image/png"
           sizes="32x32"
-          href="/favicon-32x32.png"
+          href="/notes-favicon-32x32.png"
         />
         <link
           rel="icon"
           type="image/png"
           sizes="16x16"
-          href="/favicon-16x16.png"
+          href="/notes-favicon-16x16.png"
         />
         <link rel="manifest" href="/site.webmanifest"></link>
-        <link rel="icon" href="/favicon.ico" />
+        <link rel="icon" href="/notes-favicon.ico" />
         <title>Serenity Notes</title>
         <meta name="description" content={metaDescription} />
         <meta property="og:locale" content="en_US" />
