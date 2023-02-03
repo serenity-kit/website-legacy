@@ -1,10 +1,10 @@
 import Link from "next/link";
-import Hero from "../../../components/Hero";
 import Clients from "../../../components/Clients";
-import Video from "../../../components/Video";
+import Hero from "../../../components/Hero";
+import InfoBanner from "../../../components/InfoBanner";
 import ProductComparison from "../../../components/ProductComparison";
 import SubscribeForm from "../../../components/SuscribeForm";
-import InfoBanner from "../../../components/InfoBanner";
+import Video from "../../../components/Video";
 
 export default function NotesHome() {
   return (
@@ -125,11 +125,11 @@ export default function NotesHome() {
                       technical documentation
                     </Link>
                     . The source code is Open Source and available on Github:{" "}
-                    <a href="https://github.com/SerenityNotes/serenity-notes-clients">
+                    <a href="https://github.com/serenity-kit/serenity-notes-clients">
                       iOS/Android/macOS clients
                     </a>{" "}
                     and{" "}
-                    <a href="https://github.com/SerenityNotes/serenity-notes-backend">
+                    <a href="https://github.com/serenity-kit/serenity-notes-backend">
                       backend
                     </a>
                     .

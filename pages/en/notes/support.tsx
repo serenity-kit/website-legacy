@@ -259,7 +259,7 @@ export default function Home() {
             <FaqEntry title="Is it Open Source?">
               <p>
                 You can find the source code for the iOS/Android application{" "}
-                <a href="https://github.com/SerenityNotes/serenity-notes-clients">
+                <a href="https://github.com/serenity-kit/serenity-notes-clients">
                   here
                 </a>
                 .

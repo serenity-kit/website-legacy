@@ -1,4 +1,3 @@
-import * as React from "react";
 import { NextPage } from "next";
 import OpaqueLogo from "../../components/LogoOpaque";
 
@@ -12,7 +11,7 @@ const OpaquePage: NextPage = () => {
         <p className="text-center">
           We will be starting work on <b>Opaque</b> in <b>March 2023</b>. <br />
           More details and information can be found{" "}
-          <a href="https://github.com/SerenityNotes/opaque">here</a>.
+          <a href="https://github.com/serenity-kit/opaque">here</a>.
         </p>
       </div>
     </div>

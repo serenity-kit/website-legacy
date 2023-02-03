@@ -1,4 +1,3 @@
-import React from "react";
 import Link from "next/link";
 
 const Footer = () => (
@@ -12,7 +11,7 @@ const Footer = () => (
           <p className="text-gray-500 text-base">&copy; 2022 Nikolaus Graf</p>
           <div className="flex space-x-6">
             <a
-              href="https://github.com/SerenityNotes"
+              href="https://github.com/serenity-kit"
               className="text-gray-400 hover:text-gray-500"
             >
               <span className="sr-only">GitHub</span>
