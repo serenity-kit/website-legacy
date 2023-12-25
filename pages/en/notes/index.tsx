@@ -9,7 +9,22 @@ import Video from "../../../components/Video";
 export default function NotesHome() {
   return (
     <>
-      <InfoBanner text="We are currently working on a new version of Serenity Notes. Please stay tuned." />
+      <InfoBanner
+        text={
+          <>
+            We are working on a new version of Serenity from ground up.
+            <br />
+            Please visit{" "}
+            <a
+              href="https://www.serenity.page/"
+              className="text-white hover:text-gray-300"
+            >
+              https://www.serenity.page/
+            </a>{" "}
+            to learn more.
+          </>
+        }
+      />
       <Hero />
       <div className="bg-background overflow-hidden">
         <div className="relative max-w-xl mx-auto px-4 sm:px-6 lg:px-8 lg:max-w-screen-xl">

@@ -1,13 +1,13 @@
 import React from "react";
 
 type InfoBannerProps = {
-  text: string;
+  text: string | React.ReactNode;
 };
 
 const InfoBanner = ({ text }: InfoBannerProps) => {
   return (
     <div
-      className="flex items-center justify-center mt-4 bg-primary text-white  text-center text-sm font-bold px-8 py-3 w-full"
+      className="flex justify-center mt-4 bg-primary text-white text-center text-xl px-8 py-8 w-full"
       role="alert"
     >
       <svg
